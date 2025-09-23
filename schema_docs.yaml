@@ -1,0 +1,297 @@
+- table_name: mas_employees
+  description: "This is the central table for all employee data. It contains personal details, employment status, contact information, compliance and verification data, and internal system-related information."
+  columns:
+    - name: Fid
+      description: "The primary key for the table. A unique numerical identifier for each employee record."
+    - name: Encrypted_Id
+      description: "A unique encrypted identifier for the employee record."
+    - name: EmployeeName
+      description: "The full name of the employee."
+    - name: EmployeeCategory
+      description: "The primary category or division the employee belongs to. Examples include 'Sales', 'Operations', 'Compliance'."
+    - name: MobileNo
+      description: "The employee's primary mobile phone number."
+    - name: AlternateMobNo
+      description: "An alternative or secondary mobile number for the employee."
+    - name: BloodGroup
+      description: "The employee's blood group (e.g., 'B+', 'A -ve')."
+    - name: Gender
+      description: "The gender of the employee (e.g., 'Male', 'Female')."
+    - name: EmailId
+      description: "The official email address of the employee."
+    - name: JoiningDate
+      description: "The date the employee officially joined the company."
+    - name: BirthDate
+      description: "The employee's date of birth."
+    - name: EmployeeId
+      description: "A human-readable or company-specific employee ID string."
+    - name: MAS_DEPT
+      description: "A foreign key that links to the department table (likely 'mas_dept') to identify the employee's department."
+    - name: MAS_DESG
+      description: "A foreign key that links to the designation table (likely 'mas_desg') to identify the employee's job title or designation."
+    - name: PermanentAddress
+      description: "The employee's permanent home address."
+    - name: PermanentPincode
+      description: "The postal code for the employee's permanent address."
+    - name: CurrentAddress
+      description: "The employee's current residential address."
+    - name: CurrentPincode
+      description: "The postal code for the employee's current address."
+    - name: ReportingManager
+      description: "A foreign key (likely referencing the 'Fid' of another employee in this same table) that identifies the employee's direct manager."
+    - name: AadharNo
+      description: "The employee's unique Aadhar identification number."
+    - name: PANNo
+      description: "The employee's Permanent Account Number for tax purposes."
+    - name: ESICNo
+      description: "The employee's Employee's State Insurance Corporation number."
+    - name: UANNo
+      description: "The employee's Universal Account Number for provident fund."
+    - name: PoliceVerificationStatus
+      description: "A boolean (true/false) indicating if the police verification process is complete."
+    - name: Active
+      description: "A boolean value (true/false) indicating if the employee's record is active in the system."
+    - name: ActiveStatus
+      description: "A descriptive status of the employee's employment, such as 'Active' or 'Deactivate'. This corresponds to the 'Active' boolean flag."
+    - name: Deleted
+      description: "A boolean flag (true/false) indicating if the employee record has been marked for deletion (soft delete)."
+    - name: LeftReason
+      description: "The reason an employee left the company, if applicable."
+    - name: ProfilePic
+      description: "A local file path to the employee's profile picture. This column is not useful for data aggregation."
+    - name: AttendancePic
+      description: "A local file path to the employee's picture used for attendance systems. This column is not useful for data aggregation."
+  extra_info: "To get an employee's department or designation, this table must be joined with 'mas_dept' and 'mas_desg' tables using the MAS_DEPT and MAS_DESG columns respectively. To find an employee's manager, join this table to itself using the ReportingManager column which links to another employee's Fid."
+
+
+- table_name: mas_dept
+  description: "This is a lookup table that stores the list of all company departments."
+  columns:
+    - name: Fid
+      description: "The primary key for the department table. This ID is used in other tables, like 'mas_employees', to reference a department."
+    - name: Encrypted_Id
+      description: "A unique encrypted identifier for the department record."
+    - name: Department
+      description: "The name of the company department (e.g., 'SALES', 'OPERATIONS', 'HR', 'MANAGEMENT'). This is the main descriptive column."
+    - name: Deleted
+      description: "A boolean flag (true/false) indicating if the department is considered deleted or inactive."
+    - name: Fdate
+      description: "An internal system field, likely representing the date the record was created or modified."
+    - name: Mid
+      description: "An internal system field, likely a machine ID associated with the record's creation."
+    - name: Mip
+      description: "An internal system field, likely the IP address associated with the record's creation."
+    - name: UserId
+      description: "An internal system field, likely a foreign key to a user table for tracking who created the record."
+  extra_info: "This table is joined with 'mas_employees' on the 'mas_employees.MAS_DEPT' column to find the name of an employee's department."
+
+
+- table_name: mas_desg
+  description: "A lookup table that stores the list of all official job titles and designations within the company."
+  columns:
+    - name: Fid
+      description: "The primary key for the designation table. This ID is used in other tables, like 'mas_employees', to reference a specific job title."
+    - name: Designation
+      description: "The name of the job title or designation (e.g., 'GM', 'Admin Head', 'Client Relation - Executive'). This is the main descriptive column."
+    - name: IsCRM
+      description: "A boolean flag (true/false) that likely indicates if the role is related to Customer Relationship Management."
+    - name: Deleted
+      description: "A boolean flag (true/false) indicating if the designation is considered inactive or has been removed from use."
+    - name: Encrypted_Id
+      description: "A unique encrypted identifier for the designation record."
+    - name: Fdate
+      description: "An internal system field, likely the date the record was created or modified."
+    - name: Mid
+      description: "An internal system field, likely a machine ID associated with the record's creation."
+    - name: Mip
+      description: "An internal system field, likely the IP address associated with the record's creation."
+    - name: UserId
+      description: "An internal system field, likely a foreign key to a user table for tracking who created the record."
+  extra_info: "This table is joined with 'mas_employees' on the 'mas_employees.MAS_DESG' column to find the full name of an employee's job title or designation."
+
+
+- table_name: Accsites
+  description: "Stores detailed information about operational client sites or locations. This includes location data, site status, and links to the primary client account and specific contracts."
+  columns:
+    - name: Fid
+      description: "The primary key for the table. A unique numerical identifier for each site."
+    - name: SiteName
+      description: "The full, descriptive name of the site or client location (e.g., 'Accenture Solutions Private Limited - MDC 7A')."
+    - name: SiteCode
+      description: "A unique, human-readable code assigned to the site."
+    - name: ACCMAIN_Fid
+      description: "A foreign key that links to the 'Accmain' table to identify the primary client account associated with this site."
+    - name: ACCCONTRACT_Fid
+      description: "A foreign key that links to the 'Accontract' table to identify the specific business contract governing this site."
+    - name: ACCCONTACT_Fid
+      description: "A foreign key that links to the 'Acccontact' table for key contact persons at this site."
+    - name: Lattitude
+      description: "The geographic latitude of the site."
+    - name: Longitude
+      description: "The geographic longitude of the site."
+    - name: SiteOpenDate
+      description: "The date the site was officially opened or services began."
+    - name: SiteCloseDate
+      description: "The date the site was closed or services ended."
+    - name: SiteStatus
+      description: "The current operational status of the site (e.g., 'Active', 'Deactive')."
+    - name: SiteGrading
+      description: "An internal classification or grade for the site (e.g., 'A', 'B')."
+    - name: SiteType
+      description: "The type of site (e.g., 'Permanent')."
+    - name: IsWeekOff
+      description: "A boolean flag (true/false) indicating if the site has a designated weekly off day."
+    - name: Deleted
+      description: "A boolean flag (true/false) indicating if the site record has been soft-deleted."
+    - name: Encrypted_Id
+      description: "An internal system field for a unique encrypted identifier."
+    - name: BUCode
+      description: "An internal system field for a Business Unit code."
+  extra_info: "This is a central table for client locations. To find the client company's name, join with the 'Accmain' table using ACCMAIN_Fid. To get the financial or contract details for this site, join with the 'Accontract' table using ACCCONTRACT_Fid."
+
+
+- table_name: Acccontact
+  description: "Stores contact information for individuals associated with specific client accounts."
+  columns:
+    - name: Fid
+      description: "The primary key for the contact record."
+    - name: ACCMAIN_Fid
+      description: "A foreign key that links to the 'Accmain' table, associating this contact person with a specific client account."
+    - name: ContactPerson
+      description: "The full name of the contact person."
+    - name: EmailId
+      description: "The contact person's email address."
+    - name: MobileNo
+      description: "The contact person's primary mobile phone number."
+    - name: WhatsappNo
+      description: "The contact person's WhatsApp number."
+    - name: Designation
+      description: "A foreign key that links to the 'mas_desg' table to identify the contact person's job title."
+    - name: Department
+      description: "A foreign key that links to the 'mas_dept' table to identify the contact person's department."
+    - name: IsPrimaryContact
+      description: "A boolean flag (true/false) indicating if this individual is the main point of contact for the client account."
+    - name: Deleted
+      description: "A boolean flag (true/false) indicating if the contact record has been soft-deleted."
+    - name: LinkedInProfile
+      description: "A URL to the contact person's LinkedIn profile."
+  extra_info: "This table stores individual contacts for clients. To find which company a contact works for, join with the 'Accmain' table using ACCMAIN_Fid. To find the name of the contact's department and designation, join this table with 'mas_dept' and 'mas_desg'."
+
+
+- table_name: Acccontract
+  description: "Contains detailed information about specific business contracts with clients, including financial values, timelines, and terms."
+  columns:
+    - name: Fid
+      description: "The primary key for the contract record."
+    - name: ACCMAIN_Fid
+      description: "A foreign key that links to the 'Accmain' table to associate this contract with a specific client account."
+    - name: LegalEntityName
+      description: "The official legal name of the entity the contract is with, which may be a specific branch or subsidiary of the main client."
+    - name: ContractStartDate
+      description: "The date the contract becomes effective."
+    - name: ContractEndDate
+      description: "The date the contract expires."
+    - name: TotalContractValue
+      description: "The total monetary value of the entire contract over its full tenure."
+    - name: MonthlyContractValue
+      description: "The calculated monthly value of the contract."
+    - name: AnnualContractValue
+      description: "The calculated annual value of the contract."
+    - name: ManagementFeeInPercent
+      description: "The management fee charged as a percentage."
+    - name: TaxPercentage
+      description: "The tax rate applied to the contract value, as a percentage."
+    - name: PaymentTermsInDays
+      description: "The number of days within which payment is due after invoicing (e.g., 30, 45)."
+    - name: IsContractExtended
+      description: "A boolean flag (true/false) indicating if the contract has been extended beyond its original end date."
+    - name: ContractExtendedDate
+      description: "The new expiration date if the contract was extended."
+    - name: Active
+      description: "A boolean flag (true/false) indicating if the contract is currently active."
+    - name: Deleted
+      description: "A boolean flag (true/false) indicating if the contract record has been soft-deleted."
+    - name: Attachment
+      description: "A local file path to the primary contract document."
+    - name: ContractAttachment
+      description: "A local file path to a secondary or alternative contract document."
+  extra_info: "This table holds the financial and legal agreements. To find which client this contract belongs to, join with the 'Accmain' table using ACCMAIN_Fid. This table can also be linked to specific operational sites in 'Accsites'."
+
+
+- table_name: Accsiteloct
+  description: "Stores the specific physical address and location details for operational sites. Each record represents a distinct address associated with a site from the 'Accsites' table."
+  columns:
+    - name: Fid
+      description: "The primary key for the site location record."
+    - name: ACCSITES_Fid
+      description: "A foreign key that links this specific address to an operational site in the 'Accsites' table."
+    - name: LocationName
+      description: "A human-readable name for the specific location, building, or address (e.g., 'MDC 7A', 'K-1')."
+    - name: Address
+      description: "The full, detailed street address of the site location."
+    - name: GPSLattitude
+      description: "The geographic latitude coordinate for the location."
+    - name: GPSLongitude
+      description: "The geographic longitude coordinate for the location."
+    - name: IsAttendanceLocation
+      description: "A boolean flag (true/false) indicating if this location is used for employee attendance tracking."
+    - name: Active
+      description: "A boolean flag (true/false) indicating if this location record is currently active."
+    - name: LocationClosedDate
+      description: "The date a location was officially closed, if applicable."
+  extra_info: "This table contains the specific physical addresses for sites. To find the address for a site listed in 'Accsites', join this table with 'Accsites' using the ACCSITES_Fid column."
+
+
+
+- table_name: Acclocation
+  description: "Stores general geographic location information, such as city, state, area, and specific addresses associated with client accounts."
+  columns:
+    - name: Fid
+      description: "The primary key for the location record."
+    - name: ACCMAIN_Fid
+      description: "A foreign key that links this location to a specific client account in the 'Accmain' table."
+    - name: MAS_COUNTRY_Fid
+      description: "A foreign key that likely links to a 'mas_country' table to identify the country."
+    - name: MAS_STATE_Fid
+      description: "A foreign key that likely links to a 'mas_state' table to identify the state."
+    - name: City
+      description: "The city where the location is situated (e.g., 'Mumbai', 'Pune')."
+    - name: LocationName
+      description: "A descriptive name for the location or building (e.g., 'Andheri Railway Station', 'Mercedes Benz')."
+    - name: Area
+      description: "A more specific area or neighborhood within the city (e.g., 'Andheri', 'BHOSARI')."
+    - name: Address
+      description: "The full street address of the location."
+    - name: Pincode
+      description: "The postal code for the address."
+    - name: IsHeadOffice
+      description: "A boolean flag (true/false) indicating if this location is the client's head office."
+    - name: Deleted
+      description: "A boolean flag (true/false) indicating if the location record has been soft-deleted."
+  extra_info: "This table contains address details for clients. To find which company a specific location belongs to, join with the 'Accmain' table using the ACCMAIN_Fid column."
+
+
+- table_name: Accmain
+  description: "Stores primary information about client accounts or business leads. This table acts as the central hub for client data."
+  columns:
+    - name: Fid
+      description: "The primary key for the table. A unique numerical identifier for each client account or lead."
+    - name: CompanyName
+      description: "The name of the client company or lead."
+    - name: LeadName
+      description: "The specific name of the lead, which may be the same as the company name or provide more detail."
+    - name: LeadPriority
+      description: "The priority level assigned to the lead (e.g., 'High', 'Hot')."
+    - name: BUCode
+      description: "An internal code representing the Business Unit associated with the lead."
+    - name: UserId
+      description: "A foreign key that likely links to a user table, identifying the user responsible for the lead."
+    - name: Encrypted_Id
+      description: "A unique encrypted identifier for the account record."
+    - name: Fdate
+      description: "An internal system field, likely the date the record was created or modified."
+    - name: Mid
+      description: "An internal system field, likely a machine ID associated with the record's creation."
+    - name: Mip
+      description: "An internal system field, likely the IP address associated with the record's creation."
+  extra_info: "This is the main table for client accounts. Its primary key, 'Fid', is used as a foreign key in other tables like 'Accontract', 'Accsites', and 'Acccontact' to link contracts, sites, and contacts back to a specific client."

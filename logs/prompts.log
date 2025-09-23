@@ -1,0 +1,200 @@
+{"environment":"development","level":"info","message":"🚀 Server started successfully","nodeVersion":"v23.1.0","port":"3000","service":"text-to-sql-api","timestamp":"2025-09-22T10:11:02.869Z"}
+{"environment":"development","level":"info","message":"🚀 Server started successfully","nodeVersion":"v23.1.0","port":"3000","service":"text-to-sql-api","timestamp":"2025-09-22T10:11:51.049Z"}
+{"environment":"development","level":"info","message":"🚀 Server started successfully","nodeVersion":"v23.1.0","port":"3000","service":"text-to-sql-api","timestamp":"2025-09-22T10:12:10.791Z"}
+{"contentType":"application/json","ip":"::1","level":"info","message":"POST /ask","service":"text-to-sql-api","timestamp":"2025-09-22T10:12:19.306Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"Processing question","question":"give me the dtails of 10 employes","requestId":"mfuyw6webhnh07j9hcp","service":"text-to-sql-api","timestamp":"2025-09-22T10:12:19.311Z"}
+{"level":"debug","message":"Cache miss, processing new question","requestId":"mfuyw6webhnh07j9hcp","service":"text-to-sql-api","timestamp":"2025-09-22T10:12:19.315Z"}
+{"level":"debug","message":"Starting RAG retrieval","requestId":"mfuyw6webhnh07j9hcp","service":"text-to-sql-api","timestamp":"2025-09-22T10:12:19.317Z"}
+{"event":"retrieval_start","level":"debug","message":"Starting schema retrieval","question":"give me the dtails of 10 employes","questionId":"b7eb4ed2-5a12-4a21-b2d5-7ea3ef5e47db","questionLength":33,"service":"text-to-sql-api","timestamp":"2025-09-22T10:12:19.324Z"}
+{"collectionName":"sql_schemas","level":"info","message":"✅ Connected to ChromaDB successfully","service":"text-to-sql-api","timestamp":"2025-09-22T10:12:19.757Z"}
+{"level":"debug","message":"Generating embedding for question","questionId":"b7eb4ed2-5a12-4a21-b2d5-7ea3ef5e47db","service":"text-to-sql-api","timestamp":"2025-09-22T10:12:19.758Z"}
+{"level":"debug","message":"Querying ChromaDB for similar schemas","questionId":"b7eb4ed2-5a12-4a21-b2d5-7ea3ef5e47db","service":"text-to-sql-api","timestamp":"2025-09-22T10:12:20.426Z"}
+{"data":{"question":"","questionLength":0,"retrievedTables":["mas_employees","mas_dept"],"schemaContextLength":4236,"similarities":[0.8400769,1.0367757],"status":"success","tableCount":2,"timestamp":"2025-09-22T10:12:20.495Z"},"event":"rag_retrieval","level":"info","message":"RAG retrieval process","questionId":"b7eb4ed2-5a12-4a21-b2d5-7ea3ef5e47db","service":"text-to-sql-api","timestamp":"2025-09-22T10:12:20.495Z"}
+{"contextLength":4236,"level":"debug","message":"Schema context created","questionId":"b7eb4ed2-5a12-4a21-b2d5-7ea3ef5e47db","service":"text-to-sql-api","tableCount":2,"timestamp":"2025-09-22T10:12:20.497Z"}
+{"error":"schemaContext.trim is not a function","level":"error","message":"Error processing question","question":"give me the dtails of 10 employes","requestId":"mfuyw6webhnh07j9hcp","responseTime":1189,"service":"text-to-sql-api","timestamp":"2025-09-22T10:12:20.499Z"}
+{"environment":"development","level":"info","message":"🚀 Server started successfully","nodeVersion":"v23.1.0","port":"3000","service":"text-to-sql-api","timestamp":"2025-09-22T10:12:38.077Z"}
+{
+  service: 'text-to-sql-api',
+  port: '3000',
+  environment: 'development',
+  nodeVersion: 'v23.1.0',
+  level: 'info',
+  message: '🚀 Server started successfully',
+  timestamp: '2025-09-22T10:15:34.537Z'
+}
+{
+  service: 'text-to-sql-api',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  contentType: 'application/json',
+  level: 'info',
+  message: 'POST /ask',
+  timestamp: '2025-09-22T10:15:43.382Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuz0kd9qv40oxgvmzo',
+  question: 'give me the dtails of 10 employes',
+  ip: '::1',
+  level: 'info',
+  message: 'Processing question',
+  timestamp: '2025-09-22T10:15:43.389Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuz0kd9qv40oxgvmzo',
+  level: 'debug',
+  message: 'Cache miss, processing new question',
+  timestamp: '2025-09-22T10:15:43.391Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuz0kd9qv40oxgvmzo',
+  level: 'debug',
+  message: 'Starting RAG retrieval',
+  timestamp: '2025-09-22T10:15:43.393Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me the dtails of 10 employes',
+  questionLength: 33,
+  level: 'debug',
+  message: 'Starting schema retrieval',
+  timestamp: '2025-09-22T10:15:43.395Z'
+}
+{
+  service: 'text-to-sql-api',
+  collectionName: 'sql_schemas',
+  level: 'info',
+  message: '✅ Connected to ChromaDB successfully',
+  timestamp: '2025-09-22T10:15:43.635Z'
+}
+{
+  message: 'Generating embedding for question',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T10:15:43.636Z'
+}
+{
+  message: 'Querying ChromaDB for similar schemas',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T10:15:44.486Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me the dtails of 10 employes',
+  retrievedTables: [ 'mas_employees', 'mas_dept' ],
+  tableCount: 2,
+  similarities: [ 0.8400769, 1.0367757 ],
+  level: 'info',
+  message: 'Retrieved relevant schemas',
+  timestamp: '2025-09-22T10:15:44.520Z'
+}
+{
+  service: 'text-to-sql-api',
+  contextLength: 4236,
+  tableCount: 2,
+  level: 'debug',
+  message: 'Schema context created',
+  timestamp: '2025-09-22T10:15:44.521Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuz0kd9qv40oxgvmzo',
+  level: 'debug',
+  message: 'Generating SQL query',
+  timestamp: '2025-09-22T10:15:44.522Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me the dtails of 10 employes',
+  schemaLength: 4236,
+  promptLength: 5423,
+  level: 'debug',
+  message: 'Generating SQL - Attempt 1',
+  timestamp: '2025-09-22T10:15:44.524Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  generationTime: 3582,
+  queryLength: 900,
+  question: 'give me the dtails of 10 employes',
+  level: 'info',
+  message: 'SQL generated successfully',
+  timestamp: '2025-09-22T10:15:48.105Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuz0kd9qv40oxgvmzo',
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-22T10:15:48.106Z'
+}
+{
+  service: 'text-to-sql-api',
+  server: '115.124.123.77',
+  database: 'AI_DB',
+  level: 'info',
+  message: '✅ Connected to SQL Server successfully!',
+  timestamp: '2025-09-22T10:15:57.739Z'
+}
+{
+  service: 'text-to-sql-api',
+  query: 'SELECT DISTINCT TOP (10) dbo.mas_employees.Fid, dbo.mas_employees.Encrypted_Id, dbo.mas_employees.EmployeeName, dbo.mas_employees.EmployeeCategory, dbo.mas_employees.MobileNo, dbo.mas_employees.Altern...',
+  queryLength: 900,
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-22T10:15:57.740Z'
+}
+{
+  service: 'text-to-sql-api',
+  executionTime: 11162,
+  rowCount: 10,
+  queryLength: 900,
+  level: 'info',
+  message: 'SQL query executed successfully',
+  timestamp: '2025-09-22T10:15:59.269Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuz0kd9qv40oxgvmzo',
+  level: 'debug',
+  message: 'Generating analysis',
+  timestamp: '2025-09-22T10:15:59.271Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me the dtails of 10 employes',
+  resultCount: 10,
+  promptLength: 10541,
+  level: 'debug',
+  message: 'Generating analysis - Attempt 1',
+  timestamp: '2025-09-22T10:15:59.273Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  analysisTime: 1741,
+  responseLength: 450,
+  question: 'give me the dtails of 10 employes',
+  level: 'info',
+  message: 'Analysis generated successfully',
+  timestamp: '2025-09-22T10:16:01.013Z'
+}
+{
+  message: 'Cache SET: Z2l2ZSBtZSB0aGUgZHRhaWxzIG9mIDEwIGVtcGxveWVz',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T10:16:01.014Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuz0kd9qv40oxgvmzo',
+  responseTime: 17626,
+  resultCount: 10,
+  level: 'info',
+  message: 'Question processed successfully',
+  timestamp: '2025-09-22T10:16:01.015Z'
+}

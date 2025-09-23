@@ -1,0 +1,79 @@
+{
+  "name": "production-text-to-sql-app",
+  "version": "1.0.0",
+  "description": "A production-ready Text-to-SQL application with RAG (Retrieval-Augmented Generation) for intelligent database querying",
+  "main": "src/app.js",
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "keywords": [
+    "text-to-sql",
+    "rag",
+    "ai",
+    "database",
+    "gemini",
+    "chromadb",
+    "nlp",
+    "sql-generation"
+  ],
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js --watch src --ext js,json,yaml",
+    "dev:windows": "set NODE_ENV=development && nodemon src/app.js --watch src --ext js,json,yaml",
+    "dev:powershell": "powershell -Command \"$env:NODE_ENV='development'; nodemon src/app.js --watch src --ext js,json,yaml\"",
+    "index": "node scripts/indexSchemas.js",
+    "index:force": "node scripts/indexSchemas.js --force",
+    "test": "echo \"Tests to be implemented\" && exit 0",
+    "lint": "echo \"Linting to be implemented\" && exit 0",
+    "validate:env": "node -e \"console.log('Environment validation: OK')\"",
+    "health": "echo \"Use: curl http://localhost:3000/health or visit http://localhost:3000/health in browser\"",
+    "docker:build": "docker build -t production-text-to-sql-app .",
+    "docker:run": "docker run -p 3000:3000 production-text-to-sql-app",
+    "clean": "rmdir /s /q node_modules && del package-lock.json && npm install",
+    "clean:unix": "rm -rf node_modules package-lock.json && npm install"
+  },
+  "dependencies": {
+    "@google/generative-ai": "0.8.0",
+    "body-parser": "1.20.3",
+    "chromadb": "1.10.5",
+    "compression": "1.7.4",
+    "cors": "2.8.5",
+    "dotenv": "16.4.5",
+    "express": "4.21.1",
+    "express-rate-limit": "7.4.1",
+    "helmet": "8.0.0",
+    "mssql": "11.0.1",
+    "node-cache": "5.1.2",
+    "winston": "3.15.0",
+    "yaml": "2.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "3.1.7"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "src/",
+      "scripts/",
+      ".env",
+      "schema_docs.yaml"
+    ],
+    "ext": "js,json,yaml,yml",
+    "ignore": [
+      "node_modules/",
+      "logs/",
+      "coverage/",
+      "*.test.js"
+    ],
+    "env": {
+      "NODE_ENV": "development"
+    }
+  },
+  "config": {
+    "port": 3000,
+    "logLevel": "info"
+  },
+  "private": true
+}

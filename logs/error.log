@@ -1,0 +1,73 @@
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuyw6webhnh07j9hcp',
+  error: 'schemaContext.trim is not a function',
+  responseTime: 1189,
+  question: 'give me the dtails of 10 employes',
+  level: 'error',
+  message: 'Error processing question',
+  timestamp: '2025-09-22T10:12:20.499Z'
+}
+{
+  service: 'text-to-sql-api',
+  error: "Invalid object name 'dbo.Accontract'.",
+  executionTime: 1162,
+  query: 'SELECT DISTINCT TOP (5) dbo.Accontract.Fid, dbo.Accontract.ACCMAIN_Fid, dbo.Accontract.LegalEntityName, dbo.Accontract.ContractStartDate, dbo.Accontract.ContractEndDate, dbo.Accontract.TotalContractVa...',
+  sqlState: 'EREQUEST',
+  sqlNumber: 208,
+  level: 'error',
+  message: 'SQL query execution error',
+  timestamp: '2025-09-22T10:52:08.642Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv0bar0vtd1gley7y',
+  error: "Invalid table name in the generated query. Technical details: Invalid object name 'dbo.Accontract'.",
+  responseTime: 4888,
+  question: '"Show me the first 5 contracts."',
+  level: 'error',
+  message: 'Error processing question',
+  timestamp: '2025-09-22T10:52:08.644Z'
+}
+{
+  service: 'text-to-sql-api',
+  error: "Invalid object name 'dbo.Accontract'.",
+  executionTime: 395,
+  query: 'SELECT DISTINCT TOP (5) dbo.Accontract.Fid, dbo.Accontract.ACCMAIN_Fid, dbo.Accontract.LegalEntityName, dbo.Accontract.ContractStartDate, dbo.Accontract.ContractEndDate, dbo.Accontract.TotalContractVa...',
+  sqlState: 'EREQUEST',
+  sqlNumber: 208,
+  level: 'error',
+  message: 'SQL query execution error',
+  timestamp: '2025-09-22T10:54:09.529Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv0dwrhy1c1y0r3p5a',
+  error: "Invalid table name in the generated query. Technical details: Invalid object name 'dbo.Accontract'.",
+  responseTime: 3933,
+  question: 'Show me the first 5 contracts.',
+  level: 'error',
+  message: 'Error processing question',
+  timestamp: '2025-09-22T10:54:09.530Z'
+}
+{
+  service: 'text-to-sql-api',
+  error: "Invalid object name 'dbo.Accontract'.",
+  executionTime: 268,
+  query: 'SELECT DISTINCT TOP (5) Fid, ACCMAIN_Fid, LegalEntityName, ContractStartDate, ContractEndDate, TotalContractValue, MonthlyContractValue, AnnualContractValue, ManagementFeeInPercent, TaxPercentage, Pay...',
+  sqlState: 'EREQUEST',
+  sqlNumber: 208,
+  level: 'error',
+  message: 'SQL query execution error',
+  timestamp: '2025-09-22T10:56:52.737Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv0hfgx7uxbqm0iaj8',
+  error: "Invalid table name in the generated query. Technical details: Invalid object name 'dbo.Accontract'.",
+  responseTime: 2929,
+  question: 'Show me the first 5 contracts.',
+  level: 'error',
+  message: 'Error processing question',
+  timestamp: '2025-09-22T10:56:52.738Z'
+}

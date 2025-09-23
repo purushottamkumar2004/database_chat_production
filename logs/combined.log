@@ -1,0 +1,3873 @@
+{
+  service: 'text-to-sql-api',
+  port: '3000',
+  environment: 'development',
+  nodeVersion: 'v23.1.0',
+  level: 'info',
+  message: '🚀 Server started successfully',
+  timestamp: '2025-09-22T07:47:13.839Z'
+}
+{
+  service: 'text-to-sql-api',
+  ip: '::1',
+  userAgent: 'curl/8.14.1',
+  contentType: 'application/json',
+  level: 'info',
+  message: 'POST /ask',
+  timestamp: '2025-09-22T07:47:26.028Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfutpv4f0mvlg925z7ok',
+  question: 'Show me 10 employee details',
+  ip: '::1',
+  level: 'info',
+  message: 'Processing question',
+  timestamp: '2025-09-22T07:47:26.031Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfutpv4f0mvlg925z7ok',
+  level: 'debug',
+  message: 'Cache miss, processing new question',
+  timestamp: '2025-09-22T07:47:26.033Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfutpv4f0mvlg925z7ok',
+  level: 'debug',
+  message: 'Starting RAG retrieval',
+  timestamp: '2025-09-22T07:47:26.034Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'Show me 10 employee details',
+  questionLength: 27,
+  level: 'debug',
+  message: 'Starting schema retrieval',
+  timestamp: '2025-09-22T07:47:26.035Z'
+}
+{
+  service: 'text-to-sql-api',
+  collectionName: 'sql_schemas',
+  level: 'info',
+  message: '✅ Connected to ChromaDB successfully',
+  timestamp: '2025-09-22T07:47:26.109Z'
+}
+{
+  message: 'Generating embedding for question',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T07:47:26.110Z'
+}
+{
+  message: 'Querying ChromaDB for similar schemas',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T07:47:26.658Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'Show me 10 employee details',
+  retrievedTables: [ 'mas_employees' ],
+  tableCount: 1,
+  similarities: [ 0.81811666 ],
+  level: 'info',
+  message: 'Retrieved relevant schemas',
+  timestamp: '2025-09-22T07:47:26.668Z'
+}
+{
+  service: 'text-to-sql-api',
+  contextLength: 3134,
+  tableCount: 1,
+  level: 'debug',
+  message: 'Schema context created',
+  timestamp: '2025-09-22T07:47:26.669Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfutpv4f0mvlg925z7ok',
+  level: 'debug',
+  message: 'Generating SQL query',
+  timestamp: '2025-09-22T07:47:26.670Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'Show me 10 employee details',
+  schemaLength: 3134,
+  promptLength: 4315,
+  level: 'debug',
+  message: 'Generating SQL - Attempt 1',
+  timestamp: '2025-09-22T07:47:26.672Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  generationTime: 1972,
+  queryLength: 396,
+  question: 'Show me 10 employee details',
+  level: 'info',
+  message: 'SQL generated successfully',
+  timestamp: '2025-09-22T07:47:28.643Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfutpv4f0mvlg925z7ok',
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-22T07:47:28.644Z'
+}
+{
+  service: 'text-to-sql-api',
+  server: '115.124.123.77',
+  database: 'AI_DB',
+  level: 'info',
+  message: '✅ Connected to SQL Server successfully!',
+  timestamp: '2025-09-22T07:47:28.755Z'
+}
+{
+  service: 'text-to-sql-api',
+  query: 'SELECT DISTINCT TOP (10) Fid, Encrypted_Id, EmployeeName, EmployeeCategory, MobileNo, AlternateMobNo, BloodGroup, Gender, EmailId, JoiningDate, BirthDate, EmployeeId, MAS_DEPT, MAS_DESG, PermanentAddr...',
+  queryLength: 396,
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-22T07:47:28.756Z'
+}
+{
+  service: 'text-to-sql-api',
+  executionTime: 213,
+  rowCount: 10,
+  queryLength: 396,
+  level: 'info',
+  message: 'SQL query executed successfully',
+  timestamp: '2025-09-22T07:47:28.858Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfutpv4f0mvlg925z7ok',
+  level: 'debug',
+  message: 'Generating analysis',
+  timestamp: '2025-09-22T07:47:28.859Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'Show me 10 employee details',
+  resultCount: 10,
+  promptLength: 10535,
+  level: 'debug',
+  message: 'Generating analysis - Attempt 1',
+  timestamp: '2025-09-22T07:47:28.860Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  analysisTime: 1350,
+  responseLength: 482,
+  question: 'Show me 10 employee details',
+  level: 'info',
+  message: 'Analysis generated successfully',
+  timestamp: '2025-09-22T07:47:30.210Z'
+}
+{
+  message: 'Cache SET: c2hvdyBtZSAxMCBlbXBsb3llZSBkZXRhaWxz',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T07:47:30.211Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfutpv4f0mvlg925z7ok',
+  responseTime: 4180,
+  resultCount: 10,
+  level: 'info',
+  message: 'Question processed successfully',
+  timestamp: '2025-09-22T07:47:30.211Z'
+}
+{
+  message: 'Received SIGINT. Starting graceful shutdown...',
+  level: 'info',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T07:55:13.099Z'
+}
+{
+  service: 'text-to-sql-api',
+  port: '3000',
+  environment: 'development',
+  nodeVersion: 'v23.1.0',
+  level: 'info',
+  message: '🚀 Server started successfully',
+  timestamp: '2025-09-22T07:55:16.690Z'
+}
+{
+  service: 'text-to-sql-api',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  contentType: 'application/json',
+  level: 'info',
+  message: 'POST /ask',
+  timestamp: '2025-09-22T07:55:31.001Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuu09buj6l48h3qpsf',
+  question: 'give me the employee details',
+  ip: '::1',
+  level: 'info',
+  message: 'Processing question',
+  timestamp: '2025-09-22T07:55:31.002Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuu09buj6l48h3qpsf',
+  level: 'debug',
+  message: 'Cache miss, processing new question',
+  timestamp: '2025-09-22T07:55:31.004Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuu09buj6l48h3qpsf',
+  level: 'debug',
+  message: 'Starting RAG retrieval',
+  timestamp: '2025-09-22T07:55:31.004Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me the employee details',
+  questionLength: 28,
+  level: 'debug',
+  message: 'Starting schema retrieval',
+  timestamp: '2025-09-22T07:55:31.005Z'
+}
+{
+  service: 'text-to-sql-api',
+  collectionName: 'sql_schemas',
+  level: 'info',
+  message: '✅ Connected to ChromaDB successfully',
+  timestamp: '2025-09-22T07:55:31.128Z'
+}
+{
+  message: 'Generating embedding for question',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T07:55:31.129Z'
+}
+{
+  message: 'Querying ChromaDB for similar schemas',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T07:55:31.666Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me the employee details',
+  retrievedTables: [ 'mas_employees' ],
+  tableCount: 1,
+  similarities: [ 0.70005625 ],
+  level: 'info',
+  message: 'Retrieved relevant schemas',
+  timestamp: '2025-09-22T07:55:31.686Z'
+}
+{
+  service: 'text-to-sql-api',
+  contextLength: 3134,
+  tableCount: 1,
+  level: 'debug',
+  message: 'Schema context created',
+  timestamp: '2025-09-22T07:55:31.687Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuu09buj6l48h3qpsf',
+  level: 'debug',
+  message: 'Generating SQL query',
+  timestamp: '2025-09-22T07:55:31.687Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me the employee details',
+  schemaLength: 3134,
+  promptLength: 4316,
+  level: 'debug',
+  message: 'Generating SQL - Attempt 1',
+  timestamp: '2025-09-22T07:55:31.688Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  generationTime: 1963,
+  queryLength: 396,
+  question: 'give me the employee details',
+  level: 'info',
+  message: 'SQL generated successfully',
+  timestamp: '2025-09-22T07:55:33.651Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuu09buj6l48h3qpsf',
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-22T07:55:33.652Z'
+}
+{
+  service: 'text-to-sql-api',
+  server: '115.124.123.77',
+  database: 'AI_DB',
+  level: 'info',
+  message: '✅ Connected to SQL Server successfully!',
+  timestamp: '2025-09-22T07:55:33.741Z'
+}
+{
+  service: 'text-to-sql-api',
+  query: 'SELECT DISTINCT TOP (20) Fid, Encrypted_Id, EmployeeName, EmployeeCategory, MobileNo, AlternateMobNo, BloodGroup, Gender, EmailId, JoiningDate, BirthDate, EmployeeId, MAS_DEPT, MAS_DESG, PermanentAddr...',
+  queryLength: 396,
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-22T07:55:33.742Z'
+}
+{
+  service: 'text-to-sql-api',
+  executionTime: 194,
+  rowCount: 20,
+  queryLength: 396,
+  level: 'info',
+  message: 'SQL query executed successfully',
+  timestamp: '2025-09-22T07:55:33.847Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuu09buj6l48h3qpsf',
+  level: 'debug',
+  message: 'Generating analysis',
+  timestamp: '2025-09-22T07:55:33.848Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me the employee details',
+  resultCount: 20,
+  promptLength: 20779,
+  level: 'debug',
+  message: 'Generating analysis - Attempt 1',
+  timestamp: '2025-09-22T07:55:33.849Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  analysisTime: 1349,
+  responseLength: 391,
+  question: 'give me the employee details',
+  level: 'info',
+  message: 'Analysis generated successfully',
+  timestamp: '2025-09-22T07:55:35.198Z'
+}
+{
+  message: 'Cache SET: Z2l2ZSBtZSB0aGUgZW1wbG95ZWUgZGV0YWlscw==',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T07:55:35.200Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuu09buj6l48h3qpsf',
+  responseTime: 4198,
+  resultCount: 20,
+  level: 'info',
+  message: 'Question processed successfully',
+  timestamp: '2025-09-22T07:55:35.200Z'
+}
+{
+  message: 'Cache EXPIRED: Z2l2ZSBtZSB0aGUgZW1wbG95ZWUgZGV0YWlscw==',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T08:16:31.253Z'
+}
+{
+  service: 'text-to-sql-api',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  contentType: 'application/json',
+  level: 'info',
+  message: 'POST /ask',
+  timestamp: '2025-09-22T08:17:51.292Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuuszi6p74t8plgclk',
+  question: 'give me the details of employess only the importent one',
+  ip: '::1',
+  level: 'info',
+  message: 'Processing question',
+  timestamp: '2025-09-22T08:17:51.295Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuuszi6p74t8plgclk',
+  level: 'debug',
+  message: 'Cache miss, processing new question',
+  timestamp: '2025-09-22T08:17:51.295Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuuszi6p74t8plgclk',
+  level: 'debug',
+  message: 'Starting RAG retrieval',
+  timestamp: '2025-09-22T08:17:51.296Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me the details of employess only the importent one',
+  questionLength: 55,
+  level: 'debug',
+  message: 'Starting schema retrieval',
+  timestamp: '2025-09-22T08:17:51.296Z'
+}
+{
+  message: 'Generating embedding for question',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T08:17:51.297Z'
+}
+{
+  message: 'Querying ChromaDB for similar schemas',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T08:17:51.878Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me the details of employess only the importen',
+  retrievedTables: [ 'mas_employees' ],
+  tableCount: 1,
+  similarities: [ 0.7829162 ],
+  level: 'info',
+  message: 'Retrieved relevant schemas',
+  timestamp: '2025-09-22T08:17:51.969Z'
+}
+{
+  service: 'text-to-sql-api',
+  contextLength: 3134,
+  tableCount: 1,
+  level: 'debug',
+  message: 'Schema context created',
+  timestamp: '2025-09-22T08:17:51.969Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuuszi6p74t8plgclk',
+  level: 'debug',
+  message: 'Generating SQL query',
+  timestamp: '2025-09-22T08:17:51.970Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me the details of employess only the importent one',
+  schemaLength: 3134,
+  promptLength: 4343,
+  level: 'debug',
+  message: 'Generating SQL - Attempt 1',
+  timestamp: '2025-09-22T08:17:51.971Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  generationTime: 2187,
+  queryLength: 315,
+  question: 'give me the details of employess only the importen',
+  level: 'info',
+  message: 'SQL generated successfully',
+  timestamp: '2025-09-22T08:17:54.157Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuuszi6p74t8plgclk',
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-22T08:17:54.158Z'
+}
+{
+  service: 'text-to-sql-api',
+  query: 'SELECT DISTINCT TOP (20) dbo.mas_employees.Fid, dbo.mas_employees.Encrypted_Id, dbo.mas_employees.EmployeeName, dbo.mas_employees.EmployeeCategory, dbo.mas_employees.MobileNo, dbo.mas_employees.EmailI...',
+  queryLength: 315,
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-22T08:17:54.159Z'
+}
+{
+  service: 'text-to-sql-api',
+  executionTime: 103,
+  rowCount: 20,
+  queryLength: 315,
+  level: 'info',
+  message: 'SQL query executed successfully',
+  timestamp: '2025-09-22T08:17:54.262Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuuszi6p74t8plgclk',
+  level: 'debug',
+  message: 'Generating analysis',
+  timestamp: '2025-09-22T08:17:54.263Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me the details of employess only the importent one',
+  resultCount: 20,
+  promptLength: 8088,
+  level: 'debug',
+  message: 'Generating analysis - Attempt 1',
+  timestamp: '2025-09-22T08:17:54.264Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  analysisTime: 1193,
+  responseLength: 237,
+  question: 'give me the details of employess only the importen',
+  level: 'info',
+  message: 'Analysis generated successfully',
+  timestamp: '2025-09-22T08:17:55.457Z'
+}
+{
+  message: 'Cache SET: Z2l2ZSBtZSB0aGUgZGV0YWlscyBvZiBlbXBsb3llc3Mgb25seSB0aGUgaW1wb3J0ZW50IG9uZQ==',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T08:17:55.457Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuuszi6p74t8plgclk',
+  responseTime: 4164,
+  resultCount: 20,
+  level: 'info',
+  message: 'Question processed successfully',
+  timestamp: '2025-09-22T08:17:55.458Z'
+}
+{
+  message: 'Cache EXPIRED: Z2l2ZSBtZSB0aGUgZGV0YWlscyBvZiBlbXBsb3llc3Mgb25seSB0aGUgaW1wb3J0ZW50IG9uZQ==',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T08:26:31.281Z'
+}
+{
+  message: 'Received SIGINT. Starting graceful shutdown...',
+  level: 'info',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T08:41:47.884Z'
+}
+{
+  service: 'text-to-sql-api',
+  port: '3000',
+  environment: 'development',
+  nodeVersion: 'v23.1.0',
+  level: 'info',
+  message: '🚀 Server started successfully',
+  timestamp: '2025-09-22T08:48:35.634Z'
+}
+{
+  service: 'text-to-sql-api',
+  ip: '::1',
+  userAgent: 'curl/8.14.1',
+  contentType: 'application/json',
+  level: 'info',
+  message: 'POST /ask',
+  timestamp: '2025-09-22T08:49:13.775Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuvxc1eid123e98ijh',
+  question: 'Show me 10 employee department wise',
+  ip: '::1',
+  level: 'info',
+  message: 'Processing question',
+  timestamp: '2025-09-22T08:49:13.778Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuvxc1eid123e98ijh',
+  level: 'debug',
+  message: 'Cache miss, processing new question',
+  timestamp: '2025-09-22T08:49:13.780Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuvxc1eid123e98ijh',
+  level: 'debug',
+  message: 'Starting RAG retrieval',
+  timestamp: '2025-09-22T08:49:13.781Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'Show me 10 employee department wise',
+  questionLength: 35,
+  level: 'debug',
+  message: 'Starting schema retrieval',
+  timestamp: '2025-09-22T08:49:13.783Z'
+}
+{
+  service: 'text-to-sql-api',
+  collectionName: 'sql_schemas',
+  level: 'info',
+  message: '✅ Connected to ChromaDB successfully',
+  timestamp: '2025-09-22T08:49:13.867Z'
+}
+{
+  message: 'Generating embedding for question',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T08:49:13.867Z'
+}
+{
+  message: 'Querying ChromaDB for similar schemas',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T08:49:14.414Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'Show me 10 employee department wise',
+  retrievedTables: [ 'mas_employees', 'mas_dept' ],
+  tableCount: 2,
+  similarities: [ 0.83611023, 0.89113146 ],
+  level: 'info',
+  message: 'Retrieved relevant schemas',
+  timestamp: '2025-09-22T08:49:14.437Z'
+}
+{
+  service: 'text-to-sql-api',
+  contextLength: 4236,
+  tableCount: 2,
+  level: 'debug',
+  message: 'Schema context created',
+  timestamp: '2025-09-22T08:49:14.438Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuvxc1eid123e98ijh',
+  level: 'debug',
+  message: 'Generating SQL query',
+  timestamp: '2025-09-22T08:49:14.439Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'Show me 10 employee department wise',
+  schemaLength: 4236,
+  promptLength: 5425,
+  level: 'debug',
+  message: 'Generating SQL - Attempt 1',
+  timestamp: '2025-09-22T08:49:14.441Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  generationTime: 1631,
+  queryLength: 177,
+  question: 'Show me 10 employee department wise',
+  level: 'info',
+  message: 'SQL generated successfully',
+  timestamp: '2025-09-22T08:49:16.072Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuvxc1eid123e98ijh',
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-22T08:49:16.073Z'
+}
+{
+  service: 'text-to-sql-api',
+  server: '115.124.123.77',
+  database: 'AI_DB',
+  level: 'info',
+  message: '✅ Connected to SQL Server successfully!',
+  timestamp: '2025-09-22T08:49:16.139Z'
+}
+{
+  service: 'text-to-sql-api',
+  query: 'SELECT DISTINCT TOP (10) dbo.mas_employees.EmployeeName, dbo.mas_dept.Department\n' +
+    'FROM dbo.mas_employees\n' +
+    'INNER JOIN dbo.mas_dept ON dbo.mas_employees.MAS_DEPT = dbo.mas_dept.Fid;',
+  queryLength: 177,
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-22T08:49:16.140Z'
+}
+{
+  service: 'text-to-sql-api',
+  executionTime: 254,
+  rowCount: 10,
+  queryLength: 177,
+  level: 'info',
+  message: 'SQL query executed successfully',
+  timestamp: '2025-09-22T08:49:16.328Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuvxc1eid123e98ijh',
+  level: 'debug',
+  message: 'Generating analysis',
+  timestamp: '2025-09-22T08:49:16.329Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'Show me 10 employee department wise',
+  resultCount: 10,
+  promptLength: 1196,
+  level: 'debug',
+  message: 'Generating analysis - Attempt 1',
+  timestamp: '2025-09-22T08:49:16.330Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  analysisTime: 809,
+  responseLength: 173,
+  question: 'Show me 10 employee department wise',
+  level: 'info',
+  message: 'Analysis generated successfully',
+  timestamp: '2025-09-22T08:49:17.139Z'
+}
+{
+  message: 'Cache SET: c2hvdyBtZSAxMCBlbXBsb3llZSBkZXBhcnRtZW50IHdpc2U=',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T08:49:17.141Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuvxc1eid123e98ijh',
+  responseTime: 3364,
+  resultCount: 10,
+  level: 'info',
+  message: 'Question processed successfully',
+  timestamp: '2025-09-22T08:49:17.142Z'
+}
+{
+  service: 'text-to-sql-api',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  contentType: 'application/json',
+  level: 'info',
+  message: 'POST /ask',
+  timestamp: '2025-09-22T08:49:43.448Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuvxyxlddqjg8jz0cg',
+  question: 'give me 10 employee details department wise',
+  ip: '::1',
+  level: 'info',
+  message: 'Processing question',
+  timestamp: '2025-09-22T08:49:43.450Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuvxyxlddqjg8jz0cg',
+  level: 'debug',
+  message: 'Cache miss, processing new question',
+  timestamp: '2025-09-22T08:49:43.451Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuvxyxlddqjg8jz0cg',
+  level: 'debug',
+  message: 'Starting RAG retrieval',
+  timestamp: '2025-09-22T08:49:43.451Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me 10 employee details department wise',
+  questionLength: 43,
+  level: 'debug',
+  message: 'Starting schema retrieval',
+  timestamp: '2025-09-22T08:49:43.451Z'
+}
+{
+  message: 'Generating embedding for question',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T08:49:43.452Z'
+}
+{
+  message: 'Querying ChromaDB for similar schemas',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T08:49:43.974Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me 10 employee details department wise',
+  retrievedTables: [ 'mas_employees', 'mas_dept' ],
+  tableCount: 2,
+  similarities: [ 0.7492256, 0.82900226 ],
+  level: 'info',
+  message: 'Retrieved relevant schemas',
+  timestamp: '2025-09-22T08:49:43.993Z'
+}
+{
+  service: 'text-to-sql-api',
+  contextLength: 4236,
+  tableCount: 2,
+  level: 'debug',
+  message: 'Schema context created',
+  timestamp: '2025-09-22T08:49:43.994Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuvxyxlddqjg8jz0cg',
+  level: 'debug',
+  message: 'Generating SQL query',
+  timestamp: '2025-09-22T08:49:43.995Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me 10 employee details department wise',
+  schemaLength: 4236,
+  promptLength: 5433,
+  level: 'debug',
+  message: 'Generating SQL - Attempt 1',
+  timestamp: '2025-09-22T08:49:43.995Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  generationTime: 1710,
+  queryLength: 177,
+  question: 'give me 10 employee details department wise',
+  level: 'info',
+  message: 'SQL generated successfully',
+  timestamp: '2025-09-22T08:49:45.705Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuvxyxlddqjg8jz0cg',
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-22T08:49:45.705Z'
+}
+{
+  service: 'text-to-sql-api',
+  query: 'SELECT DISTINCT TOP (10) dbo.mas_employees.EmployeeName, dbo.mas_dept.Department\n' +
+    'FROM dbo.mas_employees\n' +
+    'INNER JOIN dbo.mas_dept ON dbo.mas_employees.MAS_DEPT = dbo.mas_dept.Fid;',
+  queryLength: 177,
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-22T08:49:45.706Z'
+}
+{
+  service: 'text-to-sql-api',
+  executionTime: 30,
+  rowCount: 10,
+  queryLength: 177,
+  level: 'info',
+  message: 'SQL query executed successfully',
+  timestamp: '2025-09-22T08:49:45.736Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuvxyxlddqjg8jz0cg',
+  level: 'debug',
+  message: 'Generating analysis',
+  timestamp: '2025-09-22T08:49:45.736Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me 10 employee details department wise',
+  resultCount: 10,
+  promptLength: 1204,
+  level: 'debug',
+  message: 'Generating analysis - Attempt 1',
+  timestamp: '2025-09-22T08:49:45.737Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  analysisTime: 1244,
+  responseLength: 327,
+  question: 'give me 10 employee details department wise',
+  level: 'info',
+  message: 'Analysis generated successfully',
+  timestamp: '2025-09-22T08:49:46.981Z'
+}
+{
+  message: 'Cache SET: Z2l2ZSBtZSAxMCBlbXBsb3llZSBkZXRhaWxzIGRlcGFydG1lbnQgd2lzZQ==',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T08:49:46.981Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuvxyxlddqjg8jz0cg',
+  responseTime: 3532,
+  resultCount: 10,
+  level: 'info',
+  message: 'Question processed successfully',
+  timestamp: '2025-09-22T08:49:46.982Z'
+}
+{
+  service: 'text-to-sql-api',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  contentType: 'application/json',
+  level: 'info',
+  message: 'POST /ask',
+  timestamp: '2025-09-22T08:51:03.391Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuvzom8qnss1he3ymg',
+  question: 'give me the employee name only for 10 employess',
+  ip: '::1',
+  level: 'info',
+  message: 'Processing question',
+  timestamp: '2025-09-22T08:51:03.392Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuvzom8qnss1he3ymg',
+  level: 'debug',
+  message: 'Cache miss, processing new question',
+  timestamp: '2025-09-22T08:51:03.393Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuvzom8qnss1he3ymg',
+  level: 'debug',
+  message: 'Starting RAG retrieval',
+  timestamp: '2025-09-22T08:51:03.393Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me the employee name only for 10 employess',
+  questionLength: 47,
+  level: 'debug',
+  message: 'Starting schema retrieval',
+  timestamp: '2025-09-22T08:51:03.394Z'
+}
+{
+  message: 'Generating embedding for question',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T08:51:03.394Z'
+}
+{
+  message: 'Querying ChromaDB for similar schemas',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T08:51:03.937Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me the employee name only for 10 employess',
+  retrievedTables: [ 'mas_employees', 'mas_dept' ],
+  tableCount: 2,
+  similarities: [ 0.8213383, 0.9546298 ],
+  level: 'info',
+  message: 'Retrieved relevant schemas',
+  timestamp: '2025-09-22T08:51:03.961Z'
+}
+{
+  service: 'text-to-sql-api',
+  contextLength: 4236,
+  tableCount: 2,
+  level: 'debug',
+  message: 'Schema context created',
+  timestamp: '2025-09-22T08:51:03.962Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuvzom8qnss1he3ymg',
+  level: 'debug',
+  message: 'Generating SQL query',
+  timestamp: '2025-09-22T08:51:03.963Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me the employee name only for 10 employess',
+  schemaLength: 4236,
+  promptLength: 5437,
+  level: 'debug',
+  message: 'Generating SQL - Attempt 1',
+  timestamp: '2025-09-22T08:51:03.963Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  generationTime: 1450,
+  queryLength: 61,
+  question: 'give me the employee name only for 10 employess',
+  level: 'info',
+  message: 'SQL generated successfully',
+  timestamp: '2025-09-22T08:51:05.413Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuvzom8qnss1he3ymg',
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-22T08:51:05.413Z'
+}
+{
+  service: 'text-to-sql-api',
+  query: 'SELECT DISTINCT TOP (10) EmployeeName FROM dbo.mas_employees;',
+  queryLength: 61,
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-22T08:51:05.414Z'
+}
+{
+  service: 'text-to-sql-api',
+  executionTime: 69,
+  rowCount: 10,
+  queryLength: 61,
+  level: 'info',
+  message: 'SQL query executed successfully',
+  timestamp: '2025-09-22T08:51:05.483Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuvzom8qnss1he3ymg',
+  level: 'debug',
+  message: 'Generating analysis',
+  timestamp: '2025-09-22T08:51:05.483Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me the employee name only for 10 employess',
+  resultCount: 10,
+  promptLength: 912,
+  level: 'debug',
+  message: 'Generating analysis - Attempt 1',
+  timestamp: '2025-09-22T08:51:05.484Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  analysisTime: 1148,
+  responseLength: 259,
+  question: 'give me the employee name only for 10 employess',
+  level: 'info',
+  message: 'Analysis generated successfully',
+  timestamp: '2025-09-22T08:51:06.632Z'
+}
+{
+  message: 'Cache SET: Z2l2ZSBtZSB0aGUgZW1wbG95ZWUgbmFtZSBvbmx5IGZvciAxMCBlbXBsb3llc3M=',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T08:51:06.633Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuvzom8qnss1he3ymg',
+  responseTime: 3241,
+  resultCount: 10,
+  level: 'info',
+  message: 'Question processed successfully',
+  timestamp: '2025-09-22T08:51:06.633Z'
+}
+{
+  message: 'Cache EXPIRED: c2hvdyBtZSAxMCBlbXBsb3llZSBkZXBhcnRtZW50IHdpc2U=',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T08:58:35.629Z'
+}
+{
+  message: 'Cache EXPIRED: Z2l2ZSBtZSAxMCBlbXBsb3llZSBkZXRhaWxzIGRlcGFydG1lbnQgd2lzZQ==',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T08:58:35.630Z'
+}
+{
+  message: 'Cache EXPIRED: Z2l2ZSBtZSB0aGUgZW1wbG95ZWUgbmFtZSBvbmx5IGZvciAxMCBlbXBsb3llc3M=',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T08:58:35.630Z'
+}
+{
+  service: 'text-to-sql-api',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  contentType: 'application/json',
+  level: 'info',
+  message: 'POST /ask',
+  timestamp: '2025-09-22T09:02:04.417Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuwduo2gfrqiwlyfwu',
+  question: 'give the name of 10 employees',
+  ip: '::1',
+  level: 'info',
+  message: 'Processing question',
+  timestamp: '2025-09-22T09:02:04.418Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuwduo2gfrqiwlyfwu',
+  level: 'debug',
+  message: 'Cache miss, processing new question',
+  timestamp: '2025-09-22T09:02:04.419Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuwduo2gfrqiwlyfwu',
+  level: 'debug',
+  message: 'Starting RAG retrieval',
+  timestamp: '2025-09-22T09:02:04.419Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give the name of 10 employees',
+  questionLength: 29,
+  level: 'debug',
+  message: 'Starting schema retrieval',
+  timestamp: '2025-09-22T09:02:04.419Z'
+}
+{
+  message: 'Generating embedding for question',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T09:02:04.420Z'
+}
+{
+  message: 'Querying ChromaDB for similar schemas',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T09:02:04.986Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give the name of 10 employees',
+  retrievedTables: [ 'mas_employees', 'mas_dept' ],
+  tableCount: 2,
+  similarities: [ 1.0455716, 1.1610459 ],
+  level: 'info',
+  message: 'Retrieved relevant schemas',
+  timestamp: '2025-09-22T09:02:05.051Z'
+}
+{
+  service: 'text-to-sql-api',
+  contextLength: 4236,
+  tableCount: 2,
+  level: 'debug',
+  message: 'Schema context created',
+  timestamp: '2025-09-22T09:02:05.051Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuwduo2gfrqiwlyfwu',
+  level: 'debug',
+  message: 'Generating SQL query',
+  timestamp: '2025-09-22T09:02:05.052Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give the name of 10 employees',
+  schemaLength: 4236,
+  promptLength: 5419,
+  level: 'debug',
+  message: 'Generating SQL - Attempt 1',
+  timestamp: '2025-09-22T09:02:05.052Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  generationTime: 1368,
+  queryLength: 61,
+  question: 'give the name of 10 employees',
+  level: 'info',
+  message: 'SQL generated successfully',
+  timestamp: '2025-09-22T09:02:06.420Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuwduo2gfrqiwlyfwu',
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-22T09:02:06.421Z'
+}
+{
+  service: 'text-to-sql-api',
+  query: 'SELECT DISTINCT TOP (10) EmployeeName FROM dbo.mas_employees;',
+  queryLength: 61,
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-22T09:02:06.421Z'
+}
+{
+  service: 'text-to-sql-api',
+  executionTime: 681,
+  rowCount: 10,
+  queryLength: 61,
+  level: 'info',
+  message: 'SQL query executed successfully',
+  timestamp: '2025-09-22T09:02:07.102Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuwduo2gfrqiwlyfwu',
+  level: 'debug',
+  message: 'Generating analysis',
+  timestamp: '2025-09-22T09:02:07.103Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give the name of 10 employees',
+  resultCount: 10,
+  promptLength: 894,
+  level: 'debug',
+  message: 'Generating analysis - Attempt 1',
+  timestamp: '2025-09-22T09:02:07.103Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  analysisTime: 1245,
+  responseLength: 251,
+  question: 'give the name of 10 employees',
+  level: 'info',
+  message: 'Analysis generated successfully',
+  timestamp: '2025-09-22T09:02:08.348Z'
+}
+{
+  message: 'Cache SET: Z2l2ZSB0aGUgbmFtZSBvZiAxMCBlbXBsb3llZXM=',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T09:02:08.349Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuwduo2gfrqiwlyfwu',
+  responseTime: 3932,
+  resultCount: 10,
+  level: 'info',
+  message: 'Question processed successfully',
+  timestamp: '2025-09-22T09:02:08.350Z'
+}
+{
+  message: 'Cache EXPIRED: Z2l2ZSB0aGUgbmFtZSBvZiAxMCBlbXBsb3llZXM=',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T09:08:35.637Z'
+}
+{
+  service: 'text-to-sql-api',
+  port: '3000',
+  environment: 'development',
+  nodeVersion: 'v23.1.0',
+  level: 'info',
+  message: '🚀 Server started successfully',
+  timestamp: '2025-09-22T09:26:14.635Z'
+}
+{
+  service: 'text-to-sql-api',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  contentType: 'application/json',
+  level: 'info',
+  message: 'POST /ask',
+  timestamp: '2025-09-22T09:26:27.714Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfux97r9vx3u4gz9saf',
+  question: 'give the name of 10 employees',
+  ip: '::1',
+  level: 'info',
+  message: 'Processing question',
+  timestamp: '2025-09-22T09:26:27.717Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfux97r9vx3u4gz9saf',
+  level: 'debug',
+  message: 'Cache miss, processing new question',
+  timestamp: '2025-09-22T09:26:27.718Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfux97r9vx3u4gz9saf',
+  level: 'debug',
+  message: 'Starting RAG retrieval',
+  timestamp: '2025-09-22T09:26:27.718Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give the name of 10 employees',
+  questionLength: 29,
+  level: 'debug',
+  message: 'Starting schema retrieval',
+  timestamp: '2025-09-22T09:26:27.719Z'
+}
+{
+  service: 'text-to-sql-api',
+  collectionName: 'sql_schemas',
+  level: 'info',
+  message: '✅ Connected to ChromaDB successfully',
+  timestamp: '2025-09-22T09:26:27.902Z'
+}
+{
+  message: 'Generating embedding for question',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T09:26:27.903Z'
+}
+{
+  message: 'Querying ChromaDB for similar schemas',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T09:26:28.519Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give the name of 10 employees',
+  retrievedTables: [ 'mas_employees', 'mas_dept' ],
+  tableCount: 2,
+  similarities: [ 1.0455716, 1.1610459 ],
+  level: 'info',
+  message: 'Retrieved relevant schemas',
+  timestamp: '2025-09-22T09:26:28.542Z'
+}
+{
+  service: 'text-to-sql-api',
+  contextLength: 4236,
+  tableCount: 2,
+  level: 'debug',
+  message: 'Schema context created',
+  timestamp: '2025-09-22T09:26:28.543Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfux97r9vx3u4gz9saf',
+  level: 'debug',
+  message: 'Generating SQL query',
+  timestamp: '2025-09-22T09:26:28.543Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give the name of 10 employees',
+  schemaLength: 4236,
+  promptLength: 5419,
+  level: 'debug',
+  message: 'Generating SQL - Attempt 1',
+  timestamp: '2025-09-22T09:26:28.544Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  generationTime: 673,
+  queryLength: 61,
+  question: 'give the name of 10 employees',
+  level: 'info',
+  message: 'SQL generated successfully',
+  timestamp: '2025-09-22T09:26:29.217Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfux97r9vx3u4gz9saf',
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-22T09:26:29.217Z'
+}
+{
+  service: 'text-to-sql-api',
+  server: '115.124.123.77',
+  database: 'AI_DB',
+  level: 'info',
+  message: '✅ Connected to SQL Server successfully!',
+  timestamp: '2025-09-22T09:26:29.388Z'
+}
+{
+  service: 'text-to-sql-api',
+  query: 'SELECT DISTINCT TOP (10) EmployeeName FROM dbo.mas_employees;',
+  queryLength: 61,
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-22T09:26:29.389Z'
+}
+{
+  service: 'text-to-sql-api',
+  executionTime: 436,
+  rowCount: 10,
+  queryLength: 61,
+  level: 'info',
+  message: 'SQL query executed successfully',
+  timestamp: '2025-09-22T09:26:29.654Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfux97r9vx3u4gz9saf',
+  level: 'debug',
+  message: 'Generating analysis',
+  timestamp: '2025-09-22T09:26:29.655Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give the name of 10 employees',
+  resultCount: 10,
+  promptLength: 894,
+  level: 'debug',
+  message: 'Generating analysis - Attempt 1',
+  timestamp: '2025-09-22T09:26:29.656Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  analysisTime: 1193,
+  responseLength: 251,
+  question: 'give the name of 10 employees',
+  level: 'info',
+  message: 'Analysis generated successfully',
+  timestamp: '2025-09-22T09:26:30.849Z'
+}
+{
+  message: 'Cache SET: Z2l2ZSB0aGUgbmFtZSBvZiAxMCBlbXBsb3llZXM=',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T09:26:30.851Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfux97r9vx3u4gz9saf',
+  responseTime: 3134,
+  resultCount: 10,
+  level: 'info',
+  message: 'Question processed successfully',
+  timestamp: '2025-09-22T09:26:30.851Z'
+}
+{
+  message: 'Cache EXPIRED: Z2l2ZSB0aGUgbmFtZSBvZiAxMCBlbXBsb3llZXM=',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T09:36:14.621Z'
+}
+{
+  message: 'ChromaDB connection attempt 1...',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T09:45:30.541Z'
+}
+{
+  service: 'text-to-sql-api',
+  port: '3000',
+  environment: 'development',
+  nodeVersion: 'v23.1.0',
+  level: 'info',
+  message: '🚀 Server started successfully',
+  timestamp: '2025-09-22T09:45:30.597Z'
+}
+{
+  service: 'text-to-sql-api',
+  collectionName: 'sql_schemas',
+  level: 'info',
+  message: '✅ Connected to ChromaDB successfully',
+  timestamp: '2025-09-22T09:45:30.671Z'
+}
+{
+  service: 'text-to-sql-api',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  contentType: 'application/json',
+  level: 'info',
+  message: 'POST /ask',
+  timestamp: '2025-09-22T09:45:50.245Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuxy4rrja7ukgnoaj8',
+  question: 'give me the dtails of 10 employes',
+  ip: '::1',
+  level: 'info',
+  message: 'Processing question',
+  timestamp: '2025-09-22T09:45:50.247Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuxy4rrja7ukgnoaj8',
+  level: 'debug',
+  message: 'Cache miss, processing new question',
+  timestamp: '2025-09-22T09:45:50.249Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuxy4rrja7ukgnoaj8',
+  level: 'debug',
+  message: 'Starting RAG retrieval',
+  timestamp: '2025-09-22T09:45:50.250Z'
+}
+{
+  message: 'Text being sent for embedding: "give me the dtails of 10 employes"',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T09:45:50.251Z'
+}
+{
+  service: 'text-to-sql-api',
+  retrievedTables: [ 'mas_employees', 'mas_dept' ],
+  similarities: [ 0.8400769, 1.0367757 ],
+  level: 'info',
+  message: 'Retrieved relevant schemas',
+  timestamp: '2025-09-22T09:45:50.876Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuxy4rrja7ukgnoaj8',
+  level: 'debug',
+  message: 'Generating SQL query',
+  timestamp: '2025-09-22T09:45:50.878Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me the dtails of 10 employes',
+  schemaLength: 4236,
+  promptLength: 5423,
+  level: 'debug',
+  message: 'Generating SQL - Attempt 1',
+  timestamp: '2025-09-22T09:45:50.879Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  generationTime: 3155,
+  queryLength: 900,
+  question: 'give me the dtails of 10 employes',
+  level: 'info',
+  message: 'SQL generated successfully',
+  timestamp: '2025-09-22T09:45:54.034Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuxy4rrja7ukgnoaj8',
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-22T09:45:54.035Z'
+}
+{
+  service: 'text-to-sql-api',
+  server: '115.124.123.77',
+  database: 'AI_DB',
+  level: 'info',
+  message: '✅ Connected to SQL Server successfully!',
+  timestamp: '2025-09-22T09:45:54.261Z'
+}
+{
+  service: 'text-to-sql-api',
+  query: 'SELECT DISTINCT TOP (10) dbo.mas_employees.Fid, dbo.mas_employees.Encrypted_Id, dbo.mas_employees.EmployeeName, dbo.mas_employees.EmployeeCategory, dbo.mas_employees.MobileNo, dbo.mas_employees.Altern...',
+  queryLength: 900,
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-22T09:45:54.262Z'
+}
+{
+  service: 'text-to-sql-api',
+  executionTime: 333,
+  rowCount: 10,
+  queryLength: 900,
+  level: 'info',
+  message: 'SQL query executed successfully',
+  timestamp: '2025-09-22T09:45:54.368Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuxy4rrja7ukgnoaj8',
+  level: 'debug',
+  message: 'Generating analysis',
+  timestamp: '2025-09-22T09:45:54.368Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me the dtails of 10 employes',
+  resultCount: 10,
+  promptLength: 10541,
+  level: 'debug',
+  message: 'Generating analysis - Attempt 1',
+  timestamp: '2025-09-22T09:45:54.369Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  analysisTime: 1437,
+  responseLength: 508,
+  question: 'give me the dtails of 10 employes',
+  level: 'info',
+  message: 'Analysis generated successfully',
+  timestamp: '2025-09-22T09:45:55.806Z'
+}
+{
+  message: 'Cache SET: Z2l2ZSBtZSB0aGUgZHRhaWxzIG9mIDEwIGVtcGxveWVz',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T09:45:55.807Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuxy4rrja7ukgnoaj8',
+  responseTime: 5561,
+  resultCount: 10,
+  level: 'info',
+  message: 'Question processed successfully',
+  timestamp: '2025-09-22T09:45:55.808Z'
+}
+{
+  service: 'text-to-sql-api',
+  port: '3000',
+  environment: 'development',
+  nodeVersion: 'v23.1.0',
+  level: 'info',
+  message: '🚀 Server started successfully',
+  timestamp: '2025-09-22T09:47:18.402Z'
+}
+{
+  service: 'text-to-sql-api',
+  port: '3000',
+  environment: 'development',
+  nodeVersion: 'v23.1.0',
+  level: 'info',
+  message: '🚀 Server started successfully',
+  timestamp: '2025-09-22T09:47:26.178Z'
+}
+{
+  service: 'text-to-sql-api',
+  port: '3000',
+  environment: 'development',
+  nodeVersion: 'v23.1.0',
+  level: 'info',
+  message: '🚀 Server started successfully',
+  timestamp: '2025-09-22T10:00:42.319Z'
+}
+{
+  service: 'text-to-sql-api',
+  port: '3000',
+  environment: 'development',
+  nodeVersion: 'v23.1.0',
+  level: 'info',
+  message: '🚀 Server started successfully',
+  timestamp: '2025-09-22T10:09:40.592Z'
+}
+{
+  service: 'text-to-sql-api',
+  port: '3000',
+  environment: 'development',
+  nodeVersion: 'v23.1.0',
+  level: 'info',
+  message: '🚀 Server started successfully',
+  timestamp: '2025-09-22T10:10:51.559Z'
+}
+{
+  service: 'text-to-sql-api',
+  port: '3000',
+  environment: 'development',
+  nodeVersion: 'v23.1.0',
+  level: 'info',
+  message: '🚀 Server started successfully',
+  timestamp: '2025-09-22T10:11:02.869Z'
+}
+{
+  service: 'text-to-sql-api',
+  port: '3000',
+  environment: 'development',
+  nodeVersion: 'v23.1.0',
+  level: 'info',
+  message: '🚀 Server started successfully',
+  timestamp: '2025-09-22T10:11:09.677Z'
+}
+{
+  service: 'text-to-sql-api',
+  port: '3000',
+  environment: 'development',
+  nodeVersion: 'v23.1.0',
+  level: 'info',
+  message: '🚀 Server started successfully',
+  timestamp: '2025-09-22T10:11:51.049Z'
+}
+{
+  service: 'text-to-sql-api',
+  port: '3000',
+  environment: 'development',
+  nodeVersion: 'v23.1.0',
+  level: 'info',
+  message: '🚀 Server started successfully',
+  timestamp: '2025-09-22T10:12:10.791Z'
+}
+{
+  service: 'text-to-sql-api',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  contentType: 'application/json',
+  level: 'info',
+  message: 'POST /ask',
+  timestamp: '2025-09-22T10:12:19.306Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuyw6webhnh07j9hcp',
+  question: 'give me the dtails of 10 employes',
+  ip: '::1',
+  level: 'info',
+  message: 'Processing question',
+  timestamp: '2025-09-22T10:12:19.311Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuyw6webhnh07j9hcp',
+  level: 'debug',
+  message: 'Cache miss, processing new question',
+  timestamp: '2025-09-22T10:12:19.315Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuyw6webhnh07j9hcp',
+  level: 'debug',
+  message: 'Starting RAG retrieval',
+  timestamp: '2025-09-22T10:12:19.317Z'
+}
+{
+  service: 'text-to-sql-api',
+  event: 'retrieval_start',
+  questionId: 'b7eb4ed2-5a12-4a21-b2d5-7ea3ef5e47db',
+  question: 'give me the dtails of 10 employes',
+  questionLength: 33,
+  timestamp: '2025-09-22T10:12:19.324Z',
+  level: 'debug',
+  message: 'Starting schema retrieval'
+}
+{
+  service: 'text-to-sql-api',
+  collectionName: 'sql_schemas',
+  level: 'info',
+  message: '✅ Connected to ChromaDB successfully',
+  timestamp: '2025-09-22T10:12:19.757Z'
+}
+{
+  service: 'text-to-sql-api',
+  questionId: 'b7eb4ed2-5a12-4a21-b2d5-7ea3ef5e47db',
+  level: 'debug',
+  message: 'Generating embedding for question',
+  timestamp: '2025-09-22T10:12:19.758Z'
+}
+{
+  service: 'text-to-sql-api',
+  questionId: 'b7eb4ed2-5a12-4a21-b2d5-7ea3ef5e47db',
+  level: 'debug',
+  message: 'Querying ChromaDB for similar schemas',
+  timestamp: '2025-09-22T10:12:20.426Z'
+}
+{
+  service: 'text-to-sql-api',
+  event: 'rag_retrieval',
+  questionId: 'b7eb4ed2-5a12-4a21-b2d5-7ea3ef5e47db',
+  data: {
+    question: '',
+    questionLength: 0,
+    status: 'success',
+    retrievedTables: [ 'mas_employees', 'mas_dept' ],
+    similarities: [ 0.8400769, 1.0367757 ],
+    schemaContextLength: 4236,
+    tableCount: 2,
+    timestamp: '2025-09-22T10:12:20.495Z'
+  },
+  level: 'info',
+  message: 'RAG retrieval process',
+  timestamp: '2025-09-22T10:12:20.495Z'
+}
+{
+  service: 'text-to-sql-api',
+  questionId: 'b7eb4ed2-5a12-4a21-b2d5-7ea3ef5e47db',
+  contextLength: 4236,
+  tableCount: 2,
+  level: 'debug',
+  message: 'Schema context created',
+  timestamp: '2025-09-22T10:12:20.497Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuyw6webhnh07j9hcp',
+  error: 'schemaContext.trim is not a function',
+  responseTime: 1189,
+  question: 'give me the dtails of 10 employes',
+  level: 'error',
+  message: 'Error processing question',
+  timestamp: '2025-09-22T10:12:20.499Z'
+}
+{
+  service: 'text-to-sql-api',
+  port: '3000',
+  environment: 'development',
+  nodeVersion: 'v23.1.0',
+  level: 'info',
+  message: '🚀 Server started successfully',
+  timestamp: '2025-09-22T10:12:38.077Z'
+}
+{
+  service: 'text-to-sql-api',
+  port: '3000',
+  environment: 'development',
+  nodeVersion: 'v23.1.0',
+  level: 'info',
+  message: '🚀 Server started successfully',
+  timestamp: '2025-09-22T10:12:46.489Z'
+}
+{
+  service: 'text-to-sql-api',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  contentType: 'application/json',
+  level: 'info',
+  message: 'POST /ask',
+  timestamp: '2025-09-22T10:12:46.556Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuywrxcuhri9dzetdl',
+  question: 'give me the dtails of 10 employes',
+  ip: '::1',
+  level: 'info',
+  message: 'Processing question',
+  timestamp: '2025-09-22T10:12:46.560Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuywrxcuhri9dzetdl',
+  level: 'debug',
+  message: 'Cache miss, processing new question',
+  timestamp: '2025-09-22T10:12:46.562Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuywrxcuhri9dzetdl',
+  level: 'debug',
+  message: 'Starting RAG retrieval',
+  timestamp: '2025-09-22T10:12:46.564Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me the dtails of 10 employes',
+  questionLength: 33,
+  level: 'debug',
+  message: 'Starting schema retrieval',
+  timestamp: '2025-09-22T10:12:46.566Z'
+}
+{
+  service: 'text-to-sql-api',
+  collectionName: 'sql_schemas',
+  level: 'info',
+  message: '✅ Connected to ChromaDB successfully',
+  timestamp: '2025-09-22T10:12:46.721Z'
+}
+{
+  message: 'Generating embedding for question',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T10:12:46.723Z'
+}
+{
+  message: 'Querying ChromaDB for similar schemas',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T10:12:47.479Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me the dtails of 10 employes',
+  retrievedTables: [ 'mas_employees', 'mas_dept' ],
+  tableCount: 2,
+  similarities: [ 0.8400769, 1.0367757 ],
+  level: 'info',
+  message: 'Retrieved relevant schemas',
+  timestamp: '2025-09-22T10:12:47.512Z'
+}
+{
+  service: 'text-to-sql-api',
+  contextLength: 4236,
+  tableCount: 2,
+  level: 'debug',
+  message: 'Schema context created',
+  timestamp: '2025-09-22T10:12:47.514Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuywrxcuhri9dzetdl',
+  level: 'debug',
+  message: 'Generating SQL query',
+  timestamp: '2025-09-22T10:12:47.516Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me the dtails of 10 employes',
+  schemaLength: 4236,
+  promptLength: 5423,
+  level: 'debug',
+  message: 'Generating SQL - Attempt 1',
+  timestamp: '2025-09-22T10:12:47.518Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  generationTime: 3409,
+  queryLength: 900,
+  question: 'give me the dtails of 10 employes',
+  level: 'info',
+  message: 'SQL generated successfully',
+  timestamp: '2025-09-22T10:12:50.927Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuywrxcuhri9dzetdl',
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-22T10:12:50.928Z'
+}
+{
+  service: 'text-to-sql-api',
+  server: '115.124.123.77',
+  database: 'AI_DB',
+  level: 'info',
+  message: '✅ Connected to SQL Server successfully!',
+  timestamp: '2025-09-22T10:12:53.561Z'
+}
+{
+  service: 'text-to-sql-api',
+  query: 'SELECT DISTINCT TOP (10) dbo.mas_employees.Fid, dbo.mas_employees.Encrypted_Id, dbo.mas_employees.EmployeeName, dbo.mas_employees.EmployeeCategory, dbo.mas_employees.MobileNo, dbo.mas_employees.Altern...',
+  queryLength: 900,
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-22T10:12:53.563Z'
+}
+{
+  service: 'text-to-sql-api',
+  executionTime: 2874,
+  rowCount: 10,
+  queryLength: 900,
+  level: 'info',
+  message: 'SQL query executed successfully',
+  timestamp: '2025-09-22T10:12:53.803Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuywrxcuhri9dzetdl',
+  level: 'debug',
+  message: 'Generating analysis',
+  timestamp: '2025-09-22T10:12:53.804Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me the dtails of 10 employes',
+  resultCount: 10,
+  promptLength: 10541,
+  level: 'debug',
+  message: 'Generating analysis - Attempt 1',
+  timestamp: '2025-09-22T10:12:53.805Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  analysisTime: 1827,
+  responseLength: 572,
+  question: 'give me the dtails of 10 employes',
+  level: 'info',
+  message: 'Analysis generated successfully',
+  timestamp: '2025-09-22T10:12:55.632Z'
+}
+{
+  message: 'Cache SET: Z2l2ZSBtZSB0aGUgZHRhaWxzIG9mIDEwIGVtcGxveWVz',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T10:12:55.634Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuywrxcuhri9dzetdl',
+  responseTime: 9074,
+  resultCount: 10,
+  level: 'info',
+  message: 'Question processed successfully',
+  timestamp: '2025-09-22T10:12:55.634Z'
+}
+{
+  service: 'text-to-sql-api',
+  port: '3000',
+  environment: 'development',
+  nodeVersion: 'v23.1.0',
+  level: 'info',
+  message: '🚀 Server started successfully',
+  timestamp: '2025-09-22T10:15:24.761Z'
+}
+{
+  service: 'text-to-sql-api',
+  port: '3000',
+  environment: 'development',
+  nodeVersion: 'v23.1.0',
+  level: 'info',
+  message: '🚀 Server started successfully',
+  timestamp: '2025-09-22T10:15:34.537Z'
+}
+{
+  service: 'text-to-sql-api',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  contentType: 'application/json',
+  level: 'info',
+  message: 'POST /ask',
+  timestamp: '2025-09-22T10:15:43.382Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuz0kd9qv40oxgvmzo',
+  question: 'give me the dtails of 10 employes',
+  ip: '::1',
+  level: 'info',
+  message: 'Processing question',
+  timestamp: '2025-09-22T10:15:43.389Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuz0kd9qv40oxgvmzo',
+  level: 'debug',
+  message: 'Cache miss, processing new question',
+  timestamp: '2025-09-22T10:15:43.391Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuz0kd9qv40oxgvmzo',
+  level: 'debug',
+  message: 'Starting RAG retrieval',
+  timestamp: '2025-09-22T10:15:43.393Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me the dtails of 10 employes',
+  questionLength: 33,
+  level: 'debug',
+  message: 'Starting schema retrieval',
+  timestamp: '2025-09-22T10:15:43.395Z'
+}
+{
+  service: 'text-to-sql-api',
+  collectionName: 'sql_schemas',
+  level: 'info',
+  message: '✅ Connected to ChromaDB successfully',
+  timestamp: '2025-09-22T10:15:43.635Z'
+}
+{
+  message: 'Generating embedding for question',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T10:15:43.636Z'
+}
+{
+  message: 'Querying ChromaDB for similar schemas',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T10:15:44.486Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me the dtails of 10 employes',
+  retrievedTables: [ 'mas_employees', 'mas_dept' ],
+  tableCount: 2,
+  similarities: [ 0.8400769, 1.0367757 ],
+  level: 'info',
+  message: 'Retrieved relevant schemas',
+  timestamp: '2025-09-22T10:15:44.520Z'
+}
+{
+  service: 'text-to-sql-api',
+  contextLength: 4236,
+  tableCount: 2,
+  level: 'debug',
+  message: 'Schema context created',
+  timestamp: '2025-09-22T10:15:44.521Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuz0kd9qv40oxgvmzo',
+  level: 'debug',
+  message: 'Generating SQL query',
+  timestamp: '2025-09-22T10:15:44.522Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me the dtails of 10 employes',
+  schemaLength: 4236,
+  promptLength: 5423,
+  level: 'debug',
+  message: 'Generating SQL - Attempt 1',
+  timestamp: '2025-09-22T10:15:44.524Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  generationTime: 3582,
+  queryLength: 900,
+  question: 'give me the dtails of 10 employes',
+  level: 'info',
+  message: 'SQL generated successfully',
+  timestamp: '2025-09-22T10:15:48.105Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuz0kd9qv40oxgvmzo',
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-22T10:15:48.106Z'
+}
+{
+  service: 'text-to-sql-api',
+  server: '115.124.123.77',
+  database: 'AI_DB',
+  level: 'info',
+  message: '✅ Connected to SQL Server successfully!',
+  timestamp: '2025-09-22T10:15:57.739Z'
+}
+{
+  service: 'text-to-sql-api',
+  query: 'SELECT DISTINCT TOP (10) dbo.mas_employees.Fid, dbo.mas_employees.Encrypted_Id, dbo.mas_employees.EmployeeName, dbo.mas_employees.EmployeeCategory, dbo.mas_employees.MobileNo, dbo.mas_employees.Altern...',
+  queryLength: 900,
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-22T10:15:57.740Z'
+}
+{
+  service: 'text-to-sql-api',
+  executionTime: 11162,
+  rowCount: 10,
+  queryLength: 900,
+  level: 'info',
+  message: 'SQL query executed successfully',
+  timestamp: '2025-09-22T10:15:59.269Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuz0kd9qv40oxgvmzo',
+  level: 'debug',
+  message: 'Generating analysis',
+  timestamp: '2025-09-22T10:15:59.271Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me the dtails of 10 employes',
+  resultCount: 10,
+  promptLength: 10541,
+  level: 'debug',
+  message: 'Generating analysis - Attempt 1',
+  timestamp: '2025-09-22T10:15:59.273Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  analysisTime: 1741,
+  responseLength: 450,
+  question: 'give me the dtails of 10 employes',
+  level: 'info',
+  message: 'Analysis generated successfully',
+  timestamp: '2025-09-22T10:16:01.013Z'
+}
+{
+  message: 'Cache SET: Z2l2ZSBtZSB0aGUgZHRhaWxzIG9mIDEwIGVtcGxveWVz',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T10:16:01.014Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuz0kd9qv40oxgvmzo',
+  responseTime: 17626,
+  resultCount: 10,
+  level: 'info',
+  message: 'Question processed successfully',
+  timestamp: '2025-09-22T10:16:01.015Z'
+}
+{
+  service: 'text-to-sql-api',
+  port: '3000',
+  environment: 'development',
+  nodeVersion: 'v23.1.0',
+  level: 'info',
+  message: '🚀 Server started successfully',
+  timestamp: '2025-09-22T10:17:02.555Z'
+}
+{
+  service: 'text-to-sql-api',
+  port: '3000',
+  environment: 'development',
+  nodeVersion: 'v23.1.0',
+  level: 'info',
+  message: '🚀 Server started successfully',
+  timestamp: '2025-09-22T10:17:08.750Z'
+}
+{
+  service: 'text-to-sql-api',
+  port: '3000',
+  environment: 'development',
+  nodeVersion: 'v23.1.0',
+  level: 'info',
+  message: '🚀 Server started successfully',
+  timestamp: '2025-09-22T10:19:06.304Z'
+}
+{
+  service: 'text-to-sql-api',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  contentType: 'application/json',
+  level: 'info',
+  message: 'POST /ask',
+  timestamp: '2025-09-22T10:20:07.938Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuz68hzc3knv4d7gtu',
+  question: 'give me the dtails of 10 employes',
+  ip: '::1',
+  level: 'info',
+  message: 'Processing question',
+  timestamp: '2025-09-22T10:20:07.944Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuz68hzc3knv4d7gtu',
+  level: 'debug',
+  message: 'Cache miss, processing new question',
+  timestamp: '2025-09-22T10:20:07.947Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuz68hzc3knv4d7gtu',
+  level: 'debug',
+  message: 'Starting RAG retrieval',
+  timestamp: '2025-09-22T10:20:07.949Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me the dtails of 10 employes',
+  questionLength: 33,
+  level: 'debug',
+  message: 'Starting schema retrieval',
+  timestamp: '2025-09-22T10:20:07.950Z'
+}
+{
+  service: 'text-to-sql-api',
+  collectionName: 'sql_schemas',
+  level: 'info',
+  message: '✅ Connected to ChromaDB successfully',
+  timestamp: '2025-09-22T10:20:08.263Z'
+}
+{
+  message: 'Generating embedding for question',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T10:20:08.265Z'
+}
+{
+  message: 'Querying ChromaDB for similar schemas',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T10:20:09.109Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me the dtails of 10 employes',
+  retrievedTables: [ 'mas_employees', 'mas_dept' ],
+  tableCount: 2,
+  similarities: [ 0.8400769, 1.0367757 ],
+  level: 'info',
+  message: 'Retrieved relevant schemas',
+  timestamp: '2025-09-22T10:20:09.166Z'
+}
+{
+  service: 'text-to-sql-api',
+  contextLength: 4236,
+  tableCount: 2,
+  level: 'debug',
+  message: 'Schema context created',
+  timestamp: '2025-09-22T10:20:09.167Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuz68hzc3knv4d7gtu',
+  level: 'debug',
+  message: 'Generating SQL query',
+  timestamp: '2025-09-22T10:20:09.168Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me the dtails of 10 employes',
+  schemaLength: 4236,
+  promptLength: 5423,
+  level: 'debug',
+  message: 'Generating SQL - Attempt 1',
+  timestamp: '2025-09-22T10:20:09.170Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  generationTime: 1269,
+  queryLength: 396,
+  question: 'give me the dtails of 10 employes',
+  level: 'info',
+  message: 'SQL generated successfully',
+  timestamp: '2025-09-22T10:20:10.439Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuz68hzc3knv4d7gtu',
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-22T10:20:10.440Z'
+}
+{
+  service: 'text-to-sql-api',
+  server: '115.124.123.77',
+  database: 'AI_DB',
+  level: 'info',
+  message: '✅ Connected to SQL Server successfully!',
+  timestamp: '2025-09-22T10:20:10.611Z'
+}
+{
+  service: 'text-to-sql-api',
+  query: 'SELECT DISTINCT TOP (10) Fid, Encrypted_Id, EmployeeName, EmployeeCategory, MobileNo, AlternateMobNo, BloodGroup, Gender, EmailId, JoiningDate, BirthDate, EmployeeId, MAS_DEPT, MAS_DESG, PermanentAddr...',
+  queryLength: 396,
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-22T10:20:10.613Z'
+}
+{
+  service: 'text-to-sql-api',
+  executionTime: 370,
+  rowCount: 10,
+  queryLength: 396,
+  level: 'info',
+  message: 'SQL query executed successfully',
+  timestamp: '2025-09-22T10:20:10.811Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuz68hzc3knv4d7gtu',
+  level: 'debug',
+  message: 'Generating analysis',
+  timestamp: '2025-09-22T10:20:10.812Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me the dtails of 10 employes',
+  resultCount: 10,
+  promptLength: 10541,
+  level: 'debug',
+  message: 'Generating analysis - Attempt 1',
+  timestamp: '2025-09-22T10:20:10.814Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  analysisTime: 1477,
+  responseLength: 487,
+  question: 'give me the dtails of 10 employes',
+  level: 'info',
+  message: 'Analysis generated successfully',
+  timestamp: '2025-09-22T10:20:12.291Z'
+}
+{
+  message: 'Cache SET: Z2l2ZSBtZSB0aGUgZHRhaWxzIG9mIDEwIGVtcGxveWVz',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T10:20:12.294Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfuz68hzc3knv4d7gtu',
+  responseTime: 4353,
+  resultCount: 10,
+  level: 'info',
+  message: 'Question processed successfully',
+  timestamp: '2025-09-22T10:20:12.296Z'
+}
+{
+  message: 'Received SIGINT. Starting graceful shutdown...',
+  level: 'info',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T10:22:19.335Z'
+}
+{
+  service: 'text-to-sql-api',
+  port: '3000',
+  environment: 'development',
+  nodeVersion: 'v23.1.0',
+  level: 'info',
+  message: '🚀 Server started successfully',
+  timestamp: '2025-09-22T10:50:31.289Z'
+}
+{
+  service: 'text-to-sql-api',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  contentType: 'application/json',
+  level: 'info',
+  message: 'POST /ask',
+  timestamp: '2025-09-22T10:52:03.751Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv0bar0vtd1gley7y',
+  question: '"Show me the first 5 contracts."',
+  ip: '::1',
+  level: 'info',
+  message: 'Processing question',
+  timestamp: '2025-09-22T10:52:03.757Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv0bar0vtd1gley7y',
+  level: 'debug',
+  message: 'Cache miss, processing new question',
+  timestamp: '2025-09-22T10:52:03.761Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv0bar0vtd1gley7y',
+  level: 'debug',
+  message: 'Starting RAG retrieval',
+  timestamp: '2025-09-22T10:52:03.763Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: '"Show me the first 5 contracts."',
+  questionLength: 32,
+  level: 'debug',
+  message: 'Starting schema retrieval',
+  timestamp: '2025-09-22T10:52:03.766Z'
+}
+{
+  service: 'text-to-sql-api',
+  collectionName: 'sql_schemas',
+  level: 'info',
+  message: '✅ Connected to ChromaDB successfully',
+  timestamp: '2025-09-22T10:52:04.172Z'
+}
+{
+  message: 'Generating embedding for question',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T10:52:04.174Z'
+}
+{
+  message: 'Querying ChromaDB for similar schemas',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T10:52:05.067Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: '"Show me the first 5 contracts."',
+  retrievedTables: [ 'Accontract', 'Accmain', 'Accsites' ],
+  tableCount: 3,
+  similarities: [ 0.9457866, 1.1639466, 1.2274597 ],
+  level: 'info',
+  message: 'Retrieved relevant schemas',
+  timestamp: '2025-09-22T10:52:05.170Z'
+}
+{
+  service: 'text-to-sql-api',
+  contextLength: 5050,
+  tableCount: 3,
+  level: 'debug',
+  message: 'Schema context created',
+  timestamp: '2025-09-22T10:52:05.171Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv0bar0vtd1gley7y',
+  level: 'debug',
+  message: 'Generating SQL query',
+  timestamp: '2025-09-22T10:52:05.172Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: '"Show me the first 5 contracts."',
+  schemaLength: 5050,
+  promptLength: 6236,
+  level: 'debug',
+  message: 'Generating SQL - Attempt 1',
+  timestamp: '2025-09-22T10:52:05.174Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  generationTime: 2304,
+  queryLength: 582,
+  question: '"Show me the first 5 contracts."',
+  level: 'info',
+  message: 'SQL generated successfully',
+  timestamp: '2025-09-22T10:52:07.478Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv0bar0vtd1gley7y',
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-22T10:52:07.479Z'
+}
+{
+  service: 'text-to-sql-api',
+  server: '115.124.123.77',
+  database: 'AI_DB',
+  level: 'info',
+  message: '✅ Connected to SQL Server successfully!',
+  timestamp: '2025-09-22T10:52:08.107Z'
+}
+{
+  service: 'text-to-sql-api',
+  query: 'SELECT DISTINCT TOP (5) dbo.Accontract.Fid, dbo.Accontract.ACCMAIN_Fid, dbo.Accontract.LegalEntityName, dbo.Accontract.ContractStartDate, dbo.Accontract.ContractEndDate, dbo.Accontract.TotalContractVa...',
+  queryLength: 582,
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-22T10:52:08.108Z'
+}
+{
+  service: 'text-to-sql-api',
+  error: "Invalid object name 'dbo.Accontract'.",
+  executionTime: 1162,
+  query: 'SELECT DISTINCT TOP (5) dbo.Accontract.Fid, dbo.Accontract.ACCMAIN_Fid, dbo.Accontract.LegalEntityName, dbo.Accontract.ContractStartDate, dbo.Accontract.ContractEndDate, dbo.Accontract.TotalContractVa...',
+  sqlState: 'EREQUEST',
+  sqlNumber: 208,
+  level: 'error',
+  message: 'SQL query execution error',
+  timestamp: '2025-09-22T10:52:08.642Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv0bar0vtd1gley7y',
+  error: "Invalid table name in the generated query. Technical details: Invalid object name 'dbo.Accontract'.",
+  responseTime: 4888,
+  question: '"Show me the first 5 contracts."',
+  level: 'error',
+  message: 'Error processing question',
+  timestamp: '2025-09-22T10:52:08.644Z'
+}
+{
+  service: 'text-to-sql-api',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  contentType: 'application/json',
+  level: 'info',
+  message: 'POST /ask',
+  timestamp: '2025-09-22T10:54:05.593Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv0dwrhy1c1y0r3p5a',
+  question: 'Show me the first 5 contracts.',
+  ip: '::1',
+  level: 'info',
+  message: 'Processing question',
+  timestamp: '2025-09-22T10:54:05.597Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv0dwrhy1c1y0r3p5a',
+  level: 'debug',
+  message: 'Cache miss, processing new question',
+  timestamp: '2025-09-22T10:54:05.598Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv0dwrhy1c1y0r3p5a',
+  level: 'debug',
+  message: 'Starting RAG retrieval',
+  timestamp: '2025-09-22T10:54:05.599Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'Show me the first 5 contracts.',
+  questionLength: 30,
+  level: 'debug',
+  message: 'Starting schema retrieval',
+  timestamp: '2025-09-22T10:54:05.600Z'
+}
+{
+  message: 'Generating embedding for question',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T10:54:05.602Z'
+}
+{
+  message: 'Querying ChromaDB for similar schemas',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T10:54:06.575Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'Show me the first 5 contracts.',
+  retrievedTables: [ 'Accontract', 'Accmain', 'Accsites' ],
+  tableCount: 3,
+  similarities: [ 0.9201237, 1.1674044, 1.2200985 ],
+  level: 'info',
+  message: 'Retrieved relevant schemas',
+  timestamp: '2025-09-22T10:54:06.685Z'
+}
+{
+  service: 'text-to-sql-api',
+  contextLength: 5050,
+  tableCount: 3,
+  level: 'debug',
+  message: 'Schema context created',
+  timestamp: '2025-09-22T10:54:06.686Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv0dwrhy1c1y0r3p5a',
+  level: 'debug',
+  message: 'Generating SQL query',
+  timestamp: '2025-09-22T10:54:06.689Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'Show me the first 5 contracts.',
+  schemaLength: 5050,
+  promptLength: 6234,
+  level: 'debug',
+  message: 'Generating SQL - Attempt 1',
+  timestamp: '2025-09-22T10:54:06.689Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  generationTime: 2443,
+  queryLength: 582,
+  question: 'Show me the first 5 contracts.',
+  level: 'info',
+  message: 'SQL generated successfully',
+  timestamp: '2025-09-22T10:54:09.132Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv0dwrhy1c1y0r3p5a',
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-22T10:54:09.133Z'
+}
+{
+  service: 'text-to-sql-api',
+  query: 'SELECT DISTINCT TOP (5) dbo.Accontract.Fid, dbo.Accontract.ACCMAIN_Fid, dbo.Accontract.LegalEntityName, dbo.Accontract.ContractStartDate, dbo.Accontract.ContractEndDate, dbo.Accontract.TotalContractVa...',
+  queryLength: 582,
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-22T10:54:09.135Z'
+}
+{
+  service: 'text-to-sql-api',
+  error: "Invalid object name 'dbo.Accontract'.",
+  executionTime: 395,
+  query: 'SELECT DISTINCT TOP (5) dbo.Accontract.Fid, dbo.Accontract.ACCMAIN_Fid, dbo.Accontract.LegalEntityName, dbo.Accontract.ContractStartDate, dbo.Accontract.ContractEndDate, dbo.Accontract.TotalContractVa...',
+  sqlState: 'EREQUEST',
+  sqlNumber: 208,
+  level: 'error',
+  message: 'SQL query execution error',
+  timestamp: '2025-09-22T10:54:09.529Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv0dwrhy1c1y0r3p5a',
+  error: "Invalid table name in the generated query. Technical details: Invalid object name 'dbo.Accontract'.",
+  responseTime: 3933,
+  question: 'Show me the first 5 contracts.',
+  level: 'error',
+  message: 'Error processing question',
+  timestamp: '2025-09-22T10:54:09.530Z'
+}
+{
+  message: 'Received SIGINT. Starting graceful shutdown...',
+  level: 'info',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T10:56:26.038Z'
+}
+{
+  service: 'text-to-sql-api',
+  port: '3000',
+  environment: 'development',
+  nodeVersion: 'v23.1.0',
+  level: 'info',
+  message: '🚀 Server started successfully',
+  timestamp: '2025-09-22T10:56:46.240Z'
+}
+{
+  service: 'text-to-sql-api',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  contentType: 'application/json',
+  level: 'info',
+  message: 'POST /ask',
+  timestamp: '2025-09-22T10:56:49.804Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv0hfgx7uxbqm0iaj8',
+  question: 'Show me the first 5 contracts.',
+  ip: '::1',
+  level: 'info',
+  message: 'Processing question',
+  timestamp: '2025-09-22T10:56:49.810Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv0hfgx7uxbqm0iaj8',
+  level: 'debug',
+  message: 'Cache miss, processing new question',
+  timestamp: '2025-09-22T10:56:49.812Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv0hfgx7uxbqm0iaj8',
+  level: 'debug',
+  message: 'Starting RAG retrieval',
+  timestamp: '2025-09-22T10:56:49.813Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'Show me the first 5 contracts.',
+  questionLength: 30,
+  level: 'debug',
+  message: 'Starting schema retrieval',
+  timestamp: '2025-09-22T10:56:49.816Z'
+}
+{
+  service: 'text-to-sql-api',
+  collectionName: 'sql_schemas',
+  level: 'info',
+  message: '✅ Connected to ChromaDB successfully',
+  timestamp: '2025-09-22T10:56:49.984Z'
+}
+{
+  message: 'Generating embedding for question',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T10:56:49.985Z'
+}
+{
+  message: 'Querying ChromaDB for similar schemas',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T10:56:50.623Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'Show me the first 5 contracts.',
+  retrievedTables: [ 'Accontract', 'Acccontract', 'Accmain' ],
+  tableCount: 3,
+  similarities: [ 0.9201237, 0.9251308, 1.1674044 ],
+  level: 'info',
+  message: 'Retrieved relevant schemas',
+  timestamp: '2025-09-22T10:56:50.646Z'
+}
+{
+  service: 'text-to-sql-api',
+  contextLength: 5000,
+  tableCount: 3,
+  level: 'debug',
+  message: 'Schema context created',
+  timestamp: '2025-09-22T10:56:50.648Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv0hfgx7uxbqm0iaj8',
+  level: 'debug',
+  message: 'Generating SQL query',
+  timestamp: '2025-09-22T10:56:50.648Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'Show me the first 5 contracts.',
+  schemaLength: 5000,
+  promptLength: 6184,
+  level: 'debug',
+  message: 'Generating SQL - Attempt 1',
+  timestamp: '2025-09-22T10:56:50.652Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  generationTime: 1815,
+  queryLength: 327,
+  question: 'Show me the first 5 contracts.',
+  level: 'info',
+  message: 'SQL generated successfully',
+  timestamp: '2025-09-22T10:56:52.466Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv0hfgx7uxbqm0iaj8',
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-22T10:56:52.467Z'
+}
+{
+  service: 'text-to-sql-api',
+  server: '115.124.123.77',
+  database: 'AI_DB',
+  level: 'info',
+  message: '✅ Connected to SQL Server successfully!',
+  timestamp: '2025-09-22T10:56:52.613Z'
+}
+{
+  service: 'text-to-sql-api',
+  query: 'SELECT DISTINCT TOP (5) Fid, ACCMAIN_Fid, LegalEntityName, ContractStartDate, ContractEndDate, TotalContractValue, MonthlyContractValue, AnnualContractValue, ManagementFeeInPercent, TaxPercentage, Pay...',
+  queryLength: 327,
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-22T10:56:52.614Z'
+}
+{
+  service: 'text-to-sql-api',
+  error: "Invalid object name 'dbo.Accontract'.",
+  executionTime: 268,
+  query: 'SELECT DISTINCT TOP (5) Fid, ACCMAIN_Fid, LegalEntityName, ContractStartDate, ContractEndDate, TotalContractValue, MonthlyContractValue, AnnualContractValue, ManagementFeeInPercent, TaxPercentage, Pay...',
+  sqlState: 'EREQUEST',
+  sqlNumber: 208,
+  level: 'error',
+  message: 'SQL query execution error',
+  timestamp: '2025-09-22T10:56:52.737Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv0hfgx7uxbqm0iaj8',
+  error: "Invalid table name in the generated query. Technical details: Invalid object name 'dbo.Accontract'.",
+  responseTime: 2929,
+  question: 'Show me the first 5 contracts.',
+  level: 'error',
+  message: 'Error processing question',
+  timestamp: '2025-09-22T10:56:52.738Z'
+}
+{
+  message: 'Received SIGINT. Starting graceful shutdown...',
+  level: 'info',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T10:59:24.936Z'
+}
+{
+  service: 'text-to-sql-api',
+  port: '3000',
+  environment: 'development',
+  nodeVersion: 'v23.1.0',
+  level: 'info',
+  message: '🚀 Server started successfully',
+  timestamp: '2025-09-22T11:08:33.074Z'
+}
+{
+  service: 'text-to-sql-api',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  contentType: 'application/json',
+  level: 'info',
+  message: 'POST /ask',
+  timestamp: '2025-09-22T11:11:30.642Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv10b4m9pg37j3djw',
+  question: 'Show me the first 5 contracts.',
+  ip: '::1',
+  level: 'info',
+  message: 'Processing question',
+  timestamp: '2025-09-22T11:11:30.646Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv10b4m9pg37j3djw',
+  level: 'debug',
+  message: 'Cache miss, processing new question',
+  timestamp: '2025-09-22T11:11:30.648Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv10b4m9pg37j3djw',
+  level: 'debug',
+  message: 'Starting RAG retrieval',
+  timestamp: '2025-09-22T11:11:30.649Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'Show me the first 5 contracts.',
+  questionLength: 30,
+  level: 'debug',
+  message: 'Starting schema retrieval',
+  timestamp: '2025-09-22T11:11:30.651Z'
+}
+{
+  service: 'text-to-sql-api',
+  collectionName: 'sql_schemas',
+  level: 'info',
+  message: '✅ Connected to ChromaDB successfully',
+  timestamp: '2025-09-22T11:11:30.806Z'
+}
+{
+  message: 'Generating embedding for question',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T11:11:30.807Z'
+}
+{
+  message: 'Querying ChromaDB for similar schemas',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T11:11:31.835Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'Show me the first 5 contracts.',
+  retrievedTables: [ 'Acccontract', 'Accmain', 'Accsites' ],
+  tableCount: 3,
+  similarities: [ 0.9251308, 1.1674044, 1.2200985 ],
+  level: 'info',
+  message: 'Retrieved relevant schemas',
+  timestamp: '2025-09-22T11:11:31.895Z'
+}
+{
+  service: 'text-to-sql-api',
+  contextLength: 5051,
+  tableCount: 3,
+  level: 'debug',
+  message: 'Schema context created',
+  timestamp: '2025-09-22T11:11:31.896Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv10b4m9pg37j3djw',
+  level: 'debug',
+  message: 'Generating SQL query',
+  timestamp: '2025-09-22T11:11:31.896Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'Show me the first 5 contracts.',
+  schemaLength: 5051,
+  promptLength: 6235,
+  level: 'debug',
+  message: 'Generating SQL - Attempt 1',
+  timestamp: '2025-09-22T11:11:31.898Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  generationTime: 1971,
+  queryLength: 328,
+  question: 'Show me the first 5 contracts.',
+  level: 'info',
+  message: 'SQL generated successfully',
+  timestamp: '2025-09-22T11:11:33.869Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv10b4m9pg37j3djw',
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-22T11:11:33.869Z'
+}
+{
+  service: 'text-to-sql-api',
+  server: '115.124.123.77',
+  database: 'AI_DB',
+  level: 'info',
+  message: '✅ Connected to SQL Server successfully!',
+  timestamp: '2025-09-22T11:11:36.512Z'
+}
+{
+  service: 'text-to-sql-api',
+  query: 'SELECT DISTINCT TOP (5) Fid, ACCMAIN_Fid, LegalEntityName, ContractStartDate, ContractEndDate, TotalContractValue, MonthlyContractValue, AnnualContractValue, ManagementFeeInPercent, TaxPercentage, Pay...',
+  queryLength: 328,
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-22T11:11:36.513Z'
+}
+{
+  service: 'text-to-sql-api',
+  executionTime: 4951,
+  rowCount: 5,
+  queryLength: 328,
+  level: 'info',
+  message: 'SQL query executed successfully',
+  timestamp: '2025-09-22T11:11:38.822Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv10b4m9pg37j3djw',
+  level: 'debug',
+  message: 'Generating analysis',
+  timestamp: '2025-09-22T11:11:38.822Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'Show me the first 5 contracts.',
+  resultCount: 5,
+  promptLength: 3731,
+  level: 'debug',
+  message: 'Generating analysis - Attempt 1',
+  timestamp: '2025-09-22T11:11:38.824Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  analysisTime: 3438,
+  responseLength: 862,
+  question: 'Show me the first 5 contracts.',
+  level: 'info',
+  message: 'Analysis generated successfully',
+  timestamp: '2025-09-22T11:11:42.262Z'
+}
+{
+  message: 'Cache SET: c2hvdyBtZSB0aGUgZmlyc3QgNSBjb250cmFjdHMu',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T11:11:42.264Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv10b4m9pg37j3djw',
+  responseTime: 11618,
+  resultCount: 5,
+  level: 'info',
+  message: 'Question processed successfully',
+  timestamp: '2025-09-22T11:11:42.264Z'
+}
+{
+  service: 'text-to-sql-api',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  contentType: 'application/json',
+  level: 'info',
+  message: 'POST /ask',
+  timestamp: '2025-09-22T11:17:04.188Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv17ghqqrtyx0z5xvk',
+  question: '"List all locations in Pune."',
+  ip: '::1',
+  level: 'info',
+  message: 'Processing question',
+  timestamp: '2025-09-22T11:17:04.190Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv17ghqqrtyx0z5xvk',
+  level: 'debug',
+  message: 'Cache miss, processing new question',
+  timestamp: '2025-09-22T11:17:04.191Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv17ghqqrtyx0z5xvk',
+  level: 'debug',
+  message: 'Starting RAG retrieval',
+  timestamp: '2025-09-22T11:17:04.192Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: '"List all locations in Pune."',
+  questionLength: 29,
+  level: 'debug',
+  message: 'Starting schema retrieval',
+  timestamp: '2025-09-22T11:17:04.192Z'
+}
+{
+  message: 'Generating embedding for question',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T11:17:04.193Z'
+}
+{
+  message: 'Querying ChromaDB for similar schemas',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T11:17:04.756Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: '"List all locations in Pune."',
+  retrievedTables: [ 'Acclocation', 'Accsites', 'Accsiteloct' ],
+  tableCount: 3,
+  similarities: [ 0.9068977, 0.9620098, 1.0671223 ],
+  level: 'info',
+  message: 'Retrieved relevant schemas',
+  timestamp: '2025-09-22T11:17:04.825Z'
+}
+{
+  service: 'text-to-sql-api',
+  contextLength: 4386,
+  tableCount: 3,
+  level: 'debug',
+  message: 'Schema context created',
+  timestamp: '2025-09-22T11:17:04.826Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv17ghqqrtyx0z5xvk',
+  level: 'debug',
+  message: 'Generating SQL query',
+  timestamp: '2025-09-22T11:17:04.827Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: '"List all locations in Pune."',
+  schemaLength: 4386,
+  promptLength: 5569,
+  level: 'debug',
+  message: 'Generating SQL - Attempt 1',
+  timestamp: '2025-09-22T11:17:04.827Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  generationTime: 1684,
+  queryLength: 180,
+  question: '"List all locations in Pune."',
+  level: 'info',
+  message: 'SQL generated successfully',
+  timestamp: '2025-09-22T11:17:06.511Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv17ghqqrtyx0z5xvk',
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-22T11:17:06.512Z'
+}
+{
+  service: 'text-to-sql-api',
+  query: 'SELECT DISTINCT TOP (20) dbo.Acclocation.City, dbo.Acclocation.LocationName, dbo.Acclocation.Area, dbo.Acclocation.Address\n' +
+    'FROM dbo.Acclocation\n' +
+    "WHERE dbo.Acclocation.City = 'Pune';",
+  queryLength: 180,
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-22T11:17:06.513Z'
+}
+{
+  service: 'text-to-sql-api',
+  executionTime: 1708,
+  rowCount: 20,
+  queryLength: 180,
+  level: 'info',
+  message: 'SQL query executed successfully',
+  timestamp: '2025-09-22T11:17:08.221Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv17ghqqrtyx0z5xvk',
+  level: 'debug',
+  message: 'Generating analysis',
+  timestamp: '2025-09-22T11:17:08.222Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: '"List all locations in Pune."',
+  resultCount: 20,
+  promptLength: 4230,
+  level: 'debug',
+  message: 'Generating analysis - Attempt 1',
+  timestamp: '2025-09-22T11:17:08.223Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  analysisTime: 1346,
+  responseLength: 347,
+  question: '"List all locations in Pune."',
+  level: 'info',
+  message: 'Analysis generated successfully',
+  timestamp: '2025-09-22T11:17:09.569Z'
+}
+{
+  message: 'Cache SET: Imxpc3QgYWxsIGxvY2F0aW9ucyBpbiBwdW5lLiI=',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T11:17:09.571Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv17ghqqrtyx0z5xvk',
+  responseTime: 5381,
+  resultCount: 20,
+  level: 'info',
+  message: 'Question processed successfully',
+  timestamp: '2025-09-22T11:17:09.571Z'
+}
+{
+  message: 'Cache EXPIRED: c2hvdyBtZSB0aGUgZmlyc3QgNSBjb250cmFjdHMu',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T11:18:33.045Z'
+}
+{
+  service: 'text-to-sql-api',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  contentType: 'application/json',
+  level: 'info',
+  message: 'POST /ask',
+  timestamp: '2025-09-22T11:18:54.739Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv19tskta6ryy3tb2j',
+  question: '"What are the names of all the contacts?"',
+  ip: '::1',
+  level: 'info',
+  message: 'Processing question',
+  timestamp: '2025-09-22T11:18:54.740Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv19tskta6ryy3tb2j',
+  level: 'debug',
+  message: 'Cache miss, processing new question',
+  timestamp: '2025-09-22T11:18:54.741Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv19tskta6ryy3tb2j',
+  level: 'debug',
+  message: 'Starting RAG retrieval',
+  timestamp: '2025-09-22T11:18:54.742Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: '"What are the names of all the contacts?"',
+  questionLength: 41,
+  level: 'debug',
+  message: 'Starting schema retrieval',
+  timestamp: '2025-09-22T11:18:54.742Z'
+}
+{
+  message: 'Generating embedding for question',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T11:18:54.743Z'
+}
+{
+  message: 'Querying ChromaDB for similar schemas',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T11:18:55.837Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: '"What are the names of all the contacts?"',
+  retrievedTables: [ 'Acccontact', 'mas_employees', 'Accmain' ],
+  tableCount: 3,
+  similarities: [ 0.8517286, 1.1269, 1.1608658 ],
+  level: 'info',
+  message: 'Retrieved relevant schemas',
+  timestamp: '2025-09-22T11:18:55.906Z'
+}
+{
+  service: 'text-to-sql-api',
+  contextLength: 5718,
+  tableCount: 3,
+  level: 'debug',
+  message: 'Schema context created',
+  timestamp: '2025-09-22T11:18:55.907Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv19tskta6ryy3tb2j',
+  level: 'debug',
+  message: 'Generating SQL query',
+  timestamp: '2025-09-22T11:18:55.908Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: '"What are the names of all the contacts?"',
+  schemaLength: 5718,
+  promptLength: 6913,
+  level: 'debug',
+  message: 'Generating SQL - Attempt 1',
+  timestamp: '2025-09-22T11:18:55.909Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  generationTime: 1307,
+  queryLength: 59,
+  question: '"What are the names of all the contacts?"',
+  level: 'info',
+  message: 'SQL generated successfully',
+  timestamp: '2025-09-22T11:18:57.216Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv19tskta6ryy3tb2j',
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-22T11:18:57.217Z'
+}
+{
+  service: 'text-to-sql-api',
+  query: 'SELECT DISTINCT TOP (20) ContactPerson FROM dbo.Acccontact;',
+  queryLength: 59,
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-22T11:18:57.218Z'
+}
+{
+  service: 'text-to-sql-api',
+  executionTime: 846,
+  rowCount: 20,
+  queryLength: 59,
+  level: 'info',
+  message: 'SQL query executed successfully',
+  timestamp: '2025-09-22T11:18:58.064Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv19tskta6ryy3tb2j',
+  level: 'debug',
+  message: 'Generating analysis',
+  timestamp: '2025-09-22T11:18:58.064Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: '"What are the names of all the contacts?"',
+  resultCount: 20,
+  promptLength: 1245,
+  level: 'debug',
+  message: 'Generating analysis - Attempt 1',
+  timestamp: '2025-09-22T11:18:58.066Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  analysisTime: 1077,
+  responseLength: 257,
+  question: '"What are the names of all the contacts?"',
+  level: 'info',
+  message: 'Analysis generated successfully',
+  timestamp: '2025-09-22T11:18:59.143Z'
+}
+{
+  message: 'Cache SET: IndoYXQgYXJlIHRoZSBuYW1lcyBvZiBhbGwgdGhlIGNvbnRhY3RzPyI=',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T11:18:59.144Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv19tskta6ryy3tb2j',
+  responseTime: 4405,
+  resultCount: 20,
+  level: 'info',
+  message: 'Question processed successfully',
+  timestamp: '2025-09-22T11:18:59.145Z'
+}
+{
+  service: 'text-to-sql-api',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  contentType: 'application/json',
+  level: 'info',
+  message: 'POST /ask',
+  timestamp: '2025-09-22T11:19:25.684Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv1aho60rh6ujj2z2k',
+  question: 'give the employe detailas designationl wise',
+  ip: '::1',
+  level: 'info',
+  message: 'Processing question',
+  timestamp: '2025-09-22T11:19:25.686Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv1aho60rh6ujj2z2k',
+  level: 'debug',
+  message: 'Cache miss, processing new question',
+  timestamp: '2025-09-22T11:19:25.688Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv1aho60rh6ujj2z2k',
+  level: 'debug',
+  message: 'Starting RAG retrieval',
+  timestamp: '2025-09-22T11:19:25.689Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give the employe detailas designationl wise',
+  questionLength: 43,
+  level: 'debug',
+  message: 'Starting schema retrieval',
+  timestamp: '2025-09-22T11:19:25.690Z'
+}
+{
+  message: 'Generating embedding for question',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T11:19:25.691Z'
+}
+{
+  message: 'Querying ChromaDB for similar schemas',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T11:19:26.763Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give the employe detailas designationl wise',
+  retrievedTables: [ 'mas_employees', 'mas_desg', 'Acccontact' ],
+  tableCount: 3,
+  similarities: [ 0.74424744, 0.8452133, 0.99834794 ],
+  level: 'info',
+  message: 'Retrieved relevant schemas',
+  timestamp: '2025-09-22T11:19:26.809Z'
+}
+{
+  service: 'text-to-sql-api',
+  contextLength: 5735,
+  tableCount: 3,
+  level: 'debug',
+  message: 'Schema context created',
+  timestamp: '2025-09-22T11:19:26.810Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv1aho60rh6ujj2z2k',
+  level: 'debug',
+  message: 'Generating SQL query',
+  timestamp: '2025-09-22T11:19:26.810Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give the employe detailas designationl wise',
+  schemaLength: 5735,
+  promptLength: 6932,
+  level: 'debug',
+  message: 'Generating SQL - Attempt 1',
+  timestamp: '2025-09-22T11:19:26.811Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  generationTime: 1939,
+  queryLength: 178,
+  question: 'give the employe detailas designationl wise',
+  level: 'info',
+  message: 'SQL generated successfully',
+  timestamp: '2025-09-22T11:19:28.750Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv1aho60rh6ujj2z2k',
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-22T11:19:28.751Z'
+}
+{
+  service: 'text-to-sql-api',
+  query: 'SELECT DISTINCT TOP (20) dbo.mas_employees.EmployeeName, dbo.mas_desg.Designation\n' +
+    'FROM dbo.mas_employees\n' +
+    'INNER JOIN dbo.mas_desg ON dbo.mas_employees.MAS_DESG = dbo.mas_desg.Fid;',
+  queryLength: 178,
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-22T11:19:28.751Z'
+}
+{
+  service: 'text-to-sql-api',
+  executionTime: 530,
+  rowCount: 20,
+  queryLength: 178,
+  level: 'info',
+  message: 'SQL query executed successfully',
+  timestamp: '2025-09-22T11:19:29.281Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv1aho60rh6ujj2z2k',
+  level: 'debug',
+  message: 'Generating analysis',
+  timestamp: '2025-09-22T11:19:29.282Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give the employe detailas designationl wise',
+  resultCount: 20,
+  promptLength: 2197,
+  level: 'debug',
+  message: 'Generating analysis - Attempt 1',
+  timestamp: '2025-09-22T11:19:29.283Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  analysisTime: 2703,
+  responseLength: 870,
+  question: 'give the employe detailas designationl wise',
+  level: 'info',
+  message: 'Analysis generated successfully',
+  timestamp: '2025-09-22T11:19:31.985Z'
+}
+{
+  message: 'Cache SET: Z2l2ZSB0aGUgZW1wbG95ZSBkZXRhaWxhcyBkZXNpZ25hdGlvbmwgd2lzZQ==',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T11:19:31.986Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv1aho60rh6ujj2z2k',
+  responseTime: 6301,
+  resultCount: 20,
+  level: 'info',
+  message: 'Question processed successfully',
+  timestamp: '2025-09-22T11:19:31.987Z'
+}
+{
+  service: 'text-to-sql-api',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  contentType: 'application/json',
+  level: 'info',
+  message: 'POST /ask',
+  timestamp: '2025-09-22T11:26:03.137Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv1j0cigh0yrpabl57',
+  question: '"How many employees are in the Sales category?"',
+  ip: '::1',
+  level: 'info',
+  message: 'Processing question',
+  timestamp: '2025-09-22T11:26:03.138Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv1j0cigh0yrpabl57',
+  level: 'debug',
+  message: 'Cache miss, processing new question',
+  timestamp: '2025-09-22T11:26:03.139Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv1j0cigh0yrpabl57',
+  level: 'debug',
+  message: 'Starting RAG retrieval',
+  timestamp: '2025-09-22T11:26:03.139Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: '"How many employees are in the Sales category?"',
+  questionLength: 47,
+  level: 'debug',
+  message: 'Starting schema retrieval',
+  timestamp: '2025-09-22T11:26:03.140Z'
+}
+{
+  message: 'Generating embedding for question',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T11:26:03.141Z'
+}
+{
+  message: 'Querying ChromaDB for similar schemas',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T11:26:05.319Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: '"How many employees are in the Sales category?"',
+  retrievedTables: [ 'mas_employees', 'mas_desg', 'mas_dept' ],
+  tableCount: 3,
+  similarities: [ 1.0020037, 1.0536357, 1.0844127 ],
+  level: 'info',
+  message: 'Retrieved relevant schemas',
+  timestamp: '2025-09-22T11:26:05.382Z'
+}
+{
+  service: 'text-to-sql-api',
+  contextLength: 5535,
+  tableCount: 3,
+  level: 'debug',
+  message: 'Schema context created',
+  timestamp: '2025-09-22T11:26:05.383Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv1j0cigh0yrpabl57',
+  level: 'debug',
+  message: 'Generating SQL query',
+  timestamp: '2025-09-22T11:26:05.384Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: '"How many employees are in the Sales category?"',
+  schemaLength: 5535,
+  promptLength: 6736,
+  level: 'debug',
+  message: 'Generating SQL - Attempt 1',
+  timestamp: '2025-09-22T11:26:05.385Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  generationTime: 1501,
+  queryLength: 90,
+  question: '"How many employees are in the Sales category?"',
+  level: 'info',
+  message: 'SQL generated successfully',
+  timestamp: '2025-09-22T11:26:06.886Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv1j0cigh0yrpabl57',
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-22T11:26:06.887Z'
+}
+{
+  service: 'text-to-sql-api',
+  query: "SELECT DISTINCT TOP (20) COUNT(*) FROM dbo.mas_employees WHERE EmployeeCategory = 'Sales';",
+  queryLength: 90,
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-22T11:26:06.888Z'
+}
+{
+  service: 'text-to-sql-api',
+  executionTime: 966,
+  rowCount: 1,
+  queryLength: 90,
+  level: 'info',
+  message: 'SQL query executed successfully',
+  timestamp: '2025-09-22T11:26:07.855Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv1j0cigh0yrpabl57',
+  level: 'debug',
+  message: 'Generating analysis',
+  timestamp: '2025-09-22T11:26:07.855Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: '"How many employees are in the Sales category?"',
+  resultCount: 1,
+  promptLength: 412,
+  level: 'debug',
+  message: 'Generating analysis - Attempt 1',
+  timestamp: '2025-09-22T11:26:07.856Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  analysisTime: 1018,
+  responseLength: 44,
+  question: '"How many employees are in the Sales category?"',
+  level: 'info',
+  message: 'Analysis generated successfully',
+  timestamp: '2025-09-22T11:26:08.874Z'
+}
+{
+  message: 'Cache SET: ImhvdyBtYW55IGVtcGxveWVlcyBhcmUgaW4gdGhlIHNhbGVzIGNhdGVnb3J5PyI=',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T11:26:08.875Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv1j0cigh0yrpabl57',
+  responseTime: 5738,
+  resultCount: 1,
+  level: 'info',
+  message: 'Question processed successfully',
+  timestamp: '2025-09-22T11:26:08.876Z'
+}
+{
+  service: 'text-to-sql-api',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  contentType: 'application/json',
+  level: 'info',
+  message: 'POST /ask',
+  timestamp: '2025-09-22T11:26:46.213Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv1jxl2i1dbznv3eyj',
+  question: '"Show me employees who are not active."',
+  ip: '::1',
+  level: 'info',
+  message: 'Processing question',
+  timestamp: '2025-09-22T11:26:46.214Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv1jxl2i1dbznv3eyj',
+  level: 'debug',
+  message: 'Cache miss, processing new question',
+  timestamp: '2025-09-22T11:26:46.219Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv1jxl2i1dbznv3eyj',
+  level: 'debug',
+  message: 'Starting RAG retrieval',
+  timestamp: '2025-09-22T11:26:46.221Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: '"Show me employees who are not active."',
+  questionLength: 39,
+  level: 'debug',
+  message: 'Starting schema retrieval',
+  timestamp: '2025-09-22T11:26:46.223Z'
+}
+{
+  message: 'Generating embedding for question',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T11:26:46.224Z'
+}
+{
+  message: 'Querying ChromaDB for similar schemas',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T11:26:47.519Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: '"Show me employees who are not active."',
+  retrievedTables: [ 'mas_employees', 'mas_dept', 'Acccontact' ],
+  tableCount: 3,
+  similarities: [ 0.84551173, 1.0502656, 1.0651715 ],
+  level: 'info',
+  message: 'Retrieved relevant schemas',
+  timestamp: '2025-09-22T11:26:47.546Z'
+}
+{
+  service: 'text-to-sql-api',
+  contextLength: 5538,
+  tableCount: 3,
+  level: 'debug',
+  message: 'Schema context created',
+  timestamp: '2025-09-22T11:26:47.548Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv1jxl2i1dbznv3eyj',
+  level: 'debug',
+  message: 'Generating SQL query',
+  timestamp: '2025-09-22T11:26:47.548Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: '"Show me employees who are not active."',
+  schemaLength: 5538,
+  promptLength: 6731,
+  level: 'debug',
+  message: 'Generating SQL - Attempt 1',
+  timestamp: '2025-09-22T11:26:47.549Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  generationTime: 1707,
+  queryLength: 69,
+  question: '"Show me employees who are not active."',
+  level: 'info',
+  message: 'SQL generated successfully',
+  timestamp: '2025-09-22T11:26:49.256Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv1jxl2i1dbznv3eyj',
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-22T11:26:49.257Z'
+}
+{
+  service: 'text-to-sql-api',
+  query: 'SELECT DISTINCT TOP (20) Fid FROM dbo.mas_employees WHERE Active = 0;',
+  queryLength: 69,
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-22T11:26:49.258Z'
+}
+{
+  service: 'text-to-sql-api',
+  executionTime: 1700,
+  rowCount: 20,
+  queryLength: 69,
+  level: 'info',
+  message: 'SQL query executed successfully',
+  timestamp: '2025-09-22T11:26:50.957Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv1jxl2i1dbznv3eyj',
+  level: 'debug',
+  message: 'Generating analysis',
+  timestamp: '2025-09-22T11:26:50.958Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: '"Show me employees who are not active."',
+  resultCount: 20,
+  promptLength: 857,
+  level: 'debug',
+  message: 'Generating analysis - Attempt 1',
+  timestamp: '2025-09-22T11:26:50.959Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  analysisTime: 1469,
+  responseLength: 148,
+  question: '"Show me employees who are not active."',
+  level: 'info',
+  message: 'Analysis generated successfully',
+  timestamp: '2025-09-22T11:26:52.428Z'
+}
+{
+  message: 'Cache SET: InNob3cgbWUgZW1wbG95ZWVzIHdobyBhcmUgbm90IGFjdGl2ZS4i',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T11:26:52.429Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mfv1jxl2i1dbznv3eyj',
+  responseTime: 6216,
+  resultCount: 20,
+  level: 'info',
+  message: 'Question processed successfully',
+  timestamp: '2025-09-22T11:26:52.430Z'
+}
+{
+  message: 'Cache EXPIRED: Imxpc3QgYWxsIGxvY2F0aW9ucyBpbiBwdW5lLiI=',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T11:28:33.046Z'
+}
+{
+  message: 'Cache EXPIRED: IndoYXQgYXJlIHRoZSBuYW1lcyBvZiBhbGwgdGhlIGNvbnRhY3RzPyI=',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T11:28:33.047Z'
+}
+{
+  message: 'Cache EXPIRED: Z2l2ZSB0aGUgZW1wbG95ZSBkZXRhaWxhcyBkZXNpZ25hdGlvbmwgd2lzZQ==',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T11:28:33.047Z'
+}
+{
+  message: 'Cache EXPIRED: ImhvdyBtYW55IGVtcGxveWVlcyBhcmUgaW4gdGhlIHNhbGVzIGNhdGVnb3J5PyI=',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T11:38:33.059Z'
+}
+{
+  message: 'Cache EXPIRED: InNob3cgbWUgZW1wbG95ZWVzIHdobyBhcmUgbm90IGFjdGl2ZS4i',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-22T11:38:33.104Z'
+}
