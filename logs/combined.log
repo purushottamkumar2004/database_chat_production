@@ -3871,3 +3871,2425 @@
   service: 'text-to-sql-api',
   timestamp: '2025-09-22T11:38:33.104Z'
 }
+{
+  service: 'text-to-sql-api',
+  port: '3000',
+  environment: 'development',
+  nodeVersion: 'v23.1.0',
+  level: 'info',
+  message: '🚀 Server started successfully',
+  timestamp: '2025-09-29T08:29:07.301Z'
+}
+{
+  service: 'text-to-sql-api',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  contentType: 'application/json',
+  level: 'info',
+  message: 'POST /ask',
+  timestamp: '2025-09-29T08:30:15.939Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mg4vbwqtbu1rjlm151q',
+  question: 'give me employee details',
+  ip: '::1',
+  level: 'info',
+  message: 'Processing question',
+  timestamp: '2025-09-29T08:30:15.942Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mg4vbwqtbu1rjlm151q',
+  level: 'debug',
+  message: 'Cache miss, processing new question',
+  timestamp: '2025-09-29T08:30:15.945Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mg4vbwqtbu1rjlm151q',
+  level: 'debug',
+  message: 'Starting RAG retrieval',
+  timestamp: '2025-09-29T08:30:15.945Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me employee details',
+  questionLength: 24,
+  level: 'debug',
+  message: 'Starting schema retrieval',
+  timestamp: '2025-09-29T08:30:15.947Z'
+}
+{
+  service: 'text-to-sql-api',
+  collectionName: 'sql_schemas',
+  level: 'info',
+  message: '✅ Connected to ChromaDB successfully',
+  timestamp: '2025-09-29T08:30:16.248Z'
+}
+{
+  message: 'Generating embedding for question',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T08:30:16.249Z'
+}
+{
+  service: 'text-to-sql-api',
+  error: '[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/text-embedding-004:embedContent: [400 Bad Request] API key not valid. Please pass a valid API key. [{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"API_KEY_INVALID","domain":"googleapis.com","metadata":{"service":"generativelanguage.googleapis.com"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"API key not valid. Please pass a valid API key."}]',
+  question: 'give me employee details',
+  isConnected: true,
+  collectionExists: true,
+  level: 'error',
+  message: 'Error in RAG schema retrieval',
+  timestamp: '2025-09-29T08:30:16.664Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mg4vbwqtbu1rjlm151q',
+  error: 'Failed to generate embedding for the question. Please check your Gemini API configuration.',
+  responseTime: 725,
+  question: 'give me employee details',
+  level: 'error',
+  message: 'Error processing question',
+  timestamp: '2025-09-29T08:30:16.666Z'
+}
+{
+  service: 'text-to-sql-api',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  contentType: 'application/json',
+  level: 'info',
+  message: 'POST /ask',
+  timestamp: '2025-09-29T08:31:49.053Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mg4vdwlaw5ioqgz6s8',
+  question: 'give me employee details',
+  ip: '::1',
+  level: 'info',
+  message: 'Processing question',
+  timestamp: '2025-09-29T08:31:49.054Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mg4vdwlaw5ioqgz6s8',
+  level: 'debug',
+  message: 'Cache miss, processing new question',
+  timestamp: '2025-09-29T08:31:49.055Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mg4vdwlaw5ioqgz6s8',
+  level: 'debug',
+  message: 'Starting RAG retrieval',
+  timestamp: '2025-09-29T08:31:49.055Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me employee details',
+  questionLength: 24,
+  level: 'debug',
+  message: 'Starting schema retrieval',
+  timestamp: '2025-09-29T08:31:49.056Z'
+}
+{
+  message: 'Generating embedding for question',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T08:31:49.056Z'
+}
+{
+  service: 'text-to-sql-api',
+  error: '[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/text-embedding-004:embedContent: [400 Bad Request] API key not valid. Please pass a valid API key. [{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"API_KEY_INVALID","domain":"googleapis.com","metadata":{"service":"generativelanguage.googleapis.com"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"API key not valid. Please pass a valid API key."}]',
+  question: 'give me employee details',
+  isConnected: true,
+  collectionExists: true,
+  level: 'error',
+  message: 'Error in RAG schema retrieval',
+  timestamp: '2025-09-29T08:31:49.448Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mg4vdwlaw5ioqgz6s8',
+  error: 'Failed to generate embedding for the question. Please check your Gemini API configuration.',
+  responseTime: 395,
+  question: 'give me employee details',
+  level: 'error',
+  message: 'Error processing question',
+  timestamp: '2025-09-29T08:31:49.449Z'
+}
+{
+  message: 'Received SIGINT. Starting graceful shutdown...',
+  level: 'info',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T08:32:02.858Z'
+}
+{
+  service: 'text-to-sql-api',
+  port: '3000',
+  environment: 'development',
+  nodeVersion: 'v23.1.0',
+  level: 'info',
+  message: '🚀 Server started successfully',
+  timestamp: '2025-09-29T10:39:02.274Z'
+}
+{
+  service: 'text-to-sql-api',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  contentType: 'application/json',
+  level: 'info',
+  message: 'POST /ask',
+  timestamp: '2025-09-29T10:39:25.187Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mg4zy03qogtwkjuqmr',
+  question: 'give me employee details',
+  ip: '::1',
+  level: 'info',
+  message: 'Processing question',
+  timestamp: '2025-09-29T10:39:25.190Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mg4zy03qogtwkjuqmr',
+  level: 'debug',
+  message: 'Cache miss, processing new question',
+  timestamp: '2025-09-29T10:39:25.190Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mg4zy03qogtwkjuqmr',
+  level: 'debug',
+  message: 'Starting RAG retrieval',
+  timestamp: '2025-09-29T10:39:25.191Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me employee details',
+  questionLength: 24,
+  level: 'debug',
+  message: 'Starting schema retrieval',
+  timestamp: '2025-09-29T10:39:25.192Z'
+}
+{
+  service: 'text-to-sql-api',
+  collectionName: 'sql_schemas',
+  level: 'info',
+  message: '✅ Connected to ChromaDB successfully',
+  timestamp: '2025-09-29T10:39:25.288Z'
+}
+{
+  message: 'Generating embedding for question',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T10:39:25.289Z'
+}
+{
+  message: 'Querying ChromaDB for similar schemas',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T10:39:25.909Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me employee details',
+  retrievedTables: [ 'mas_employees', 'Acccontact', 'mas_desg' ],
+  tableCount: 3,
+  similarities: [ 0.75432, 0.9519986, 1.00689 ],
+  level: 'info',
+  message: 'Retrieved relevant schemas',
+  timestamp: '2025-09-29T10:39:25.928Z'
+}
+{
+  service: 'text-to-sql-api',
+  contextLength: 5735,
+  tableCount: 3,
+  level: 'debug',
+  message: 'Schema context created',
+  timestamp: '2025-09-29T10:39:25.928Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mg4zy03qogtwkjuqmr',
+  level: 'debug',
+  message: 'Generating SQL query',
+  timestamp: '2025-09-29T10:39:25.929Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me employee details',
+  schemaLength: 5735,
+  promptLength: 6913,
+  level: 'debug',
+  message: 'Generating SQL - Attempt 1',
+  timestamp: '2025-09-29T10:39:25.930Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  error: '[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [404 Not Found] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.',
+  generationTime: 1090,
+  question: 'give me employee details',
+  level: 'warn',
+  message: 'SQL generation attempt 1 failed',
+  timestamp: '2025-09-29T10:39:27.021Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me employee details',
+  schemaLength: 5735,
+  promptLength: 6913,
+  level: 'debug',
+  message: 'Generating SQL - Attempt 2',
+  timestamp: '2025-09-29T10:39:28.037Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 2,
+  error: '[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [404 Not Found] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.',
+  generationTime: 2457,
+  question: 'give me employee details',
+  level: 'warn',
+  message: 'SQL generation attempt 2 failed',
+  timestamp: '2025-09-29T10:39:28.387Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me employee details',
+  schemaLength: 5735,
+  promptLength: 6913,
+  level: 'debug',
+  message: 'Generating SQL - Attempt 3',
+  timestamp: '2025-09-29T10:39:30.390Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 3,
+  error: '[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [404 Not Found] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.',
+  generationTime: 4796,
+  question: 'give me employee details',
+  level: 'warn',
+  message: 'SQL generation attempt 3 failed',
+  timestamp: '2025-09-29T10:39:30.726Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me employee details',
+  finalError: '[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [404 Not Found] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.',
+  level: 'error',
+  message: 'SQL generation failed after 3 attempts',
+  timestamp: '2025-09-29T10:39:30.726Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mg4zy03qogtwkjuqmr',
+  error: 'Failed to generate SQL query after 3 attempts. Last error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [404 Not Found] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.',
+  responseTime: 5537,
+  question: 'give me employee details',
+  level: 'error',
+  message: 'Error processing question',
+  timestamp: '2025-09-29T10:39:30.727Z'
+}
+{
+  service: 'text-to-sql-api',
+  port: '3000',
+  environment: 'development',
+  nodeVersion: 'v23.1.0',
+  level: 'info',
+  message: '🚀 Server started successfully',
+  timestamp: '2025-09-29T10:50:52.101Z'
+}
+{
+  message: 'Received SIGINT. Starting graceful shutdown...',
+  level: 'info',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T10:50:57.705Z'
+}
+{
+  service: 'text-to-sql-api',
+  port: '3000',
+  environment: 'development',
+  nodeVersion: 'v23.1.0',
+  level: 'info',
+  message: '🚀 Server started successfully',
+  timestamp: '2025-09-29T10:51:01.152Z'
+}
+{
+  service: 'text-to-sql-api',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  contentType: 'application/json',
+  level: 'info',
+  message: 'POST /ask',
+  timestamp: '2025-09-29T10:51:09.706Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mg50d3ppfqb7j7yvmej',
+  question: 'give me employee details',
+  ip: '::1',
+  level: 'info',
+  message: 'Processing question',
+  timestamp: '2025-09-29T10:51:09.710Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mg50d3ppfqb7j7yvmej',
+  level: 'debug',
+  message: 'Cache miss, processing new question',
+  timestamp: '2025-09-29T10:51:09.711Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mg50d3ppfqb7j7yvmej',
+  level: 'debug',
+  message: 'Starting RAG retrieval',
+  timestamp: '2025-09-29T10:51:09.712Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me employee details',
+  questionLength: 24,
+  level: 'debug',
+  message: 'Starting schema retrieval',
+  timestamp: '2025-09-29T10:51:09.713Z'
+}
+{
+  service: 'text-to-sql-api',
+  collectionName: 'sql_schemas',
+  level: 'info',
+  message: '✅ Connected to ChromaDB successfully',
+  timestamp: '2025-09-29T10:51:09.907Z'
+}
+{
+  message: 'Generating embedding for question',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T10:51:09.908Z'
+}
+{
+  message: 'Querying ChromaDB for similar schemas',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T10:51:11.040Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me employee details',
+  retrievedTables: [ 'mas_employees', 'Acccontact', 'mas_desg' ],
+  tableCount: 3,
+  similarities: [ 0.75432, 0.9519986, 1.00689 ],
+  level: 'info',
+  message: 'Retrieved relevant schemas',
+  timestamp: '2025-09-29T10:51:11.067Z'
+}
+{
+  service: 'text-to-sql-api',
+  contextLength: 5735,
+  tableCount: 3,
+  level: 'debug',
+  message: 'Schema context created',
+  timestamp: '2025-09-29T10:51:11.068Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mg50d3ppfqb7j7yvmej',
+  level: 'debug',
+  message: 'Generating SQL query',
+  timestamp: '2025-09-29T10:51:11.069Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me employee details',
+  schemaLength: 5735,
+  promptLength: 6913,
+  level: 'debug',
+  message: 'Generating SQL - Attempt 1',
+  timestamp: '2025-09-29T10:51:11.070Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  generationTime: 1378,
+  queryLength: 405,
+  question: 'give me employee details',
+  level: 'info',
+  message: 'SQL generated successfully',
+  timestamp: '2025-09-29T10:51:12.448Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mg50d3ppfqb7j7yvmej',
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-29T10:51:12.449Z'
+}
+{
+  service: 'text-to-sql-api',
+  server: '115.124.123.77',
+  database: 'AI_DB',
+  level: 'info',
+  message: '✅ Connected to SQL Server successfully!',
+  timestamp: '2025-09-29T10:51:12.532Z'
+}
+{
+  service: 'text-to-sql-api',
+  query: 'SELECT Fid, Encrypted_Id, EmployeeName, EmployeeCategory, MobileNo, AlternateMobNo, BloodGroup, Gender, EmailId, JoiningDate, BirthDate, EmployeeId, MAS_DEPT, MAS_DESG, PermanentAddress, PermanentPinc...',
+  queryLength: 405,
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-29T10:51:12.533Z'
+}
+{
+  service: 'text-to-sql-api',
+  executionTime: 3617,
+  rowCount: 4267,
+  queryLength: 405,
+  level: 'info',
+  message: 'SQL query executed successfully',
+  timestamp: '2025-09-29T10:51:16.066Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mg50d3ppfqb7j7yvmej',
+  originalCount: 4267,
+  truncatedTo: 1000,
+  level: 'warn',
+  message: 'Query returned too many rows, truncating',
+  timestamp: '2025-09-29T10:51:16.067Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mg50d3ppfqb7j7yvmej',
+  level: 'debug',
+  message: 'Generating analysis',
+  timestamp: '2025-09-29T10:51:16.068Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me employee details',
+  resultCount: 1000,
+  promptLength: 1073415,
+  level: 'debug',
+  message: 'Generating analysis - Attempt 1',
+  timestamp: '2025-09-29T10:51:16.080Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  error: '[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [404 Not Found] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.',
+  analysisTime: 4129,
+  question: 'give me employee details',
+  level: 'warn',
+  message: 'Analysis generation attempt 1 failed',
+  timestamp: '2025-09-29T10:51:20.197Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me employee details',
+  resultCount: 1000,
+  promptLength: 1073415,
+  level: 'debug',
+  message: 'Generating analysis - Attempt 2',
+  timestamp: '2025-09-29T10:51:21.222Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 2,
+  error: '[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [404 Not Found] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.',
+  analysisTime: 8125,
+  question: 'give me employee details',
+  level: 'warn',
+  message: 'Analysis generation attempt 2 failed',
+  timestamp: '2025-09-29T10:51:24.193Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me employee details',
+  resultCount: 1000,
+  promptLength: 1073415,
+  level: 'debug',
+  message: 'Generating analysis - Attempt 3',
+  timestamp: '2025-09-29T10:51:26.210Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 3,
+  error: '[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [404 Not Found] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.',
+  analysisTime: 18233,
+  question: 'give me employee details',
+  level: 'warn',
+  message: 'Analysis generation attempt 3 failed',
+  timestamp: '2025-09-29T10:51:34.301Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me employee details',
+  finalError: '[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [404 Not Found] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.',
+  level: 'error',
+  message: 'Analysis generation failed after 3 attempts',
+  timestamp: '2025-09-29T10:51:34.302Z'
+}
+{
+  message: 'Cache SET: Z2l2ZSBtZSBlbXBsb3llZSBkZXRhaWxz',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T10:51:34.303Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mg50d3ppfqb7j7yvmej',
+  responseTime: 24595,
+  resultCount: 1000,
+  level: 'info',
+  message: 'Question processed successfully',
+  timestamp: '2025-09-29T10:51:34.304Z'
+}
+{
+  service: 'text-to-sql-api',
+  port: '3000',
+  environment: 'development',
+  nodeVersion: 'v23.1.0',
+  level: 'info',
+  message: '🚀 Server started successfully',
+  timestamp: '2025-09-29T10:57:29.111Z'
+}
+{
+  service: 'text-to-sql-api',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  contentType: 'application/json',
+  level: 'info',
+  message: 'POST /ask',
+  timestamp: '2025-09-29T10:57:44.759Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mg50lkje9e7vdqsxi0n',
+  question: 'give me site details',
+  ip: '::1',
+  level: 'info',
+  message: 'Processing question',
+  timestamp: '2025-09-29T10:57:44.762Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mg50lkje9e7vdqsxi0n',
+  level: 'debug',
+  message: 'Cache miss, processing new question',
+  timestamp: '2025-09-29T10:57:44.763Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mg50lkje9e7vdqsxi0n',
+  level: 'debug',
+  message: 'Starting RAG retrieval',
+  timestamp: '2025-09-29T10:57:44.764Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me site details',
+  questionLength: 20,
+  level: 'debug',
+  message: 'Starting schema retrieval',
+  timestamp: '2025-09-29T10:57:44.765Z'
+}
+{
+  service: 'text-to-sql-api',
+  collectionName: 'sql_schemas',
+  level: 'info',
+  message: '✅ Connected to ChromaDB successfully',
+  timestamp: '2025-09-29T10:57:44.858Z'
+}
+{
+  message: 'Generating embedding for question',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T10:57:44.859Z'
+}
+{
+  message: 'Querying ChromaDB for similar schemas',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T10:57:46.413Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me site details',
+  retrievedTables: [ 'Accsites', 'Accsiteloct', 'Acclocation' ],
+  tableCount: 3,
+  similarities: [ 0.8827035, 0.93927956, 1.1723666 ],
+  level: 'info',
+  message: 'Retrieved relevant schemas',
+  timestamp: '2025-09-29T10:57:46.435Z'
+}
+{
+  service: 'text-to-sql-api',
+  contextLength: 4386,
+  tableCount: 3,
+  level: 'debug',
+  message: 'Schema context created',
+  timestamp: '2025-09-29T10:57:46.436Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mg50lkje9e7vdqsxi0n',
+  level: 'debug',
+  message: 'Generating SQL query',
+  timestamp: '2025-09-29T10:57:46.437Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me site details',
+  schemaLength: 4386,
+  promptLength: 5560,
+  level: 'debug',
+  message: 'Generating SQL - Attempt 1',
+  timestamp: '2025-09-29T10:57:46.439Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  generationTime: 4120,
+  queryLength: 444,
+  question: 'give me site details',
+  level: 'info',
+  message: 'SQL generated successfully',
+  timestamp: '2025-09-29T10:57:50.559Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mg50lkje9e7vdqsxi0n',
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-29T10:57:50.560Z'
+}
+{
+  service: 'text-to-sql-api',
+  server: '115.124.123.77',
+  database: 'AI_DB',
+  level: 'info',
+  message: '✅ Connected to SQL Server successfully!',
+  timestamp: '2025-09-29T10:57:50.820Z'
+}
+{
+  service: 'text-to-sql-api',
+  query: 'SELECT\n' +
+    'dbo.Accsites.Fid,\n' +
+    'dbo.Accsites.SiteName,\n' +
+    'dbo.Accsites.SiteCode,\n' +
+    'dbo.Accsites.ACCMAIN_Fid,\n' +
+    'dbo.Accsites.ACCCONTRACT_Fid,\n' +
+    'dbo.Accsites.ACCCONTACT_Fid,\n' +
+    'dbo.Accsites.Lattitude,\n' +
+    'dbo.Accsites.Longitu...',
+  queryLength: 444,
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-29T10:57:50.821Z'
+}
+{
+  service: 'text-to-sql-api',
+  executionTime: 3016,
+  rowCount: 822,
+  queryLength: 444,
+  level: 'info',
+  message: 'SQL query executed successfully',
+  timestamp: '2025-09-29T10:57:53.577Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mg50lkje9e7vdqsxi0n',
+  level: 'debug',
+  message: 'Generating analysis',
+  timestamp: '2025-09-29T10:57:53.577Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me site details',
+  resultCount: 822,
+  promptLength: 460586,
+  level: 'debug',
+  message: 'Generating analysis - Attempt 1',
+  timestamp: '2025-09-29T10:57:53.582Z'
+}
+{
+  service: 'text-to-sql-api',
+  attempt: 1,
+  analysisTime: 12169,
+  responseLength: 0,
+  question: 'give me site details',
+  level: 'info',
+  message: 'Analysis generated successfully',
+  timestamp: '2025-09-29T10:58:05.747Z'
+}
+{
+  message: 'Cache SET: Z2l2ZSBtZSBzaXRlIGRldGFpbHM=',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T10:58:05.749Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mg50lkje9e7vdqsxi0n',
+  responseTime: 20987,
+  resultCount: 822,
+  level: 'info',
+  message: 'Question processed successfully',
+  timestamp: '2025-09-29T10:58:05.749Z'
+}
+{
+  service: 'text-to-sql-api',
+  port: '3000',
+  environment: 'development',
+  nodeVersion: 'v23.1.0',
+  level: 'info',
+  message: '🚀 Server started successfully',
+  timestamp: '2025-09-29T11:01:51.969Z'
+}
+{
+  service: 'text-to-sql-api',
+  port: '3000',
+  environment: 'development',
+  nodeVersion: 'v23.1.0',
+  level: 'info',
+  message: '🚀 Server started successfully',
+  timestamp: '2025-09-29T11:02:27.621Z'
+}
+{
+  service: 'text-to-sql-api',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  contentType: 'application/json',
+  level: 'info',
+  message: 'POST /ask',
+  timestamp: '2025-09-29T11:02:49.168Z'
+}
+{
+  message: 'New session started: d7ab485e-61a6-4adf-81e5-cd39f1583908',
+  level: 'info',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:02:49.173Z'
+}
+{
+  service: 'text-to-sql-api',
+  sessionId: 'd7ab485e-61a6-4adf-81e5-cd39f1583908',
+  level: 'info',
+  message: 'Rewritten question for RAG: "give me the employee details"',
+  timestamp: '2025-09-29T11:02:49.175Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me the employee details',
+  questionLength: 28,
+  level: 'debug',
+  message: 'Starting schema retrieval',
+  timestamp: '2025-09-29T11:02:49.176Z'
+}
+{
+  service: 'text-to-sql-api',
+  collectionName: 'sql_schemas',
+  level: 'info',
+  message: '✅ Connected to ChromaDB successfully',
+  timestamp: '2025-09-29T11:02:49.279Z'
+}
+{
+  message: 'Generating embedding for question',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:02:49.280Z'
+}
+{
+  message: 'Querying ChromaDB for similar schemas',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:02:49.871Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me the employee details',
+  retrievedTables: [ 'mas_employees', 'Acccontact', 'mas_desg' ],
+  tableCount: 3,
+  similarities: [ 0.70005625, 0.9335928, 0.9678518 ],
+  level: 'info',
+  message: 'Retrieved relevant schemas',
+  timestamp: '2025-09-29T11:02:49.894Z'
+}
+{
+  service: 'text-to-sql-api',
+  contextLength: 5735,
+  tableCount: 3,
+  level: 'debug',
+  message: 'Schema context created',
+  timestamp: '2025-09-29T11:02:49.896Z'
+}
+{
+  message: 'Generating SQL - Attempt 1',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:02:49.897Z'
+}
+{
+  message: 'SQL generated successfully in 2964ms',
+  level: 'info',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:02:52.861Z'
+}
+{
+  service: 'text-to-sql-api',
+  server: '115.124.123.77',
+  database: 'AI_DB',
+  level: 'info',
+  message: '✅ Connected to SQL Server successfully!',
+  timestamp: '2025-09-29T11:02:55.139Z'
+}
+{
+  service: 'text-to-sql-api',
+  query: 'SELECT Fid, Encrypted_Id, EmployeeName, EmployeeCategory, MobileNo, AlternateMobNo, BloodGroup, Gender, EmailId, JoiningDate, BirthDate, EmployeeId, MAS_DEPT, MAS_DESG, PermanentAddress, PermanentPinc...',
+  queryLength: 405,
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-29T11:02:55.140Z'
+}
+{
+  service: 'text-to-sql-api',
+  executionTime: 10603,
+  rowCount: 4267,
+  queryLength: 405,
+  level: 'info',
+  message: 'SQL query executed successfully',
+  timestamp: '2025-09-29T11:03:03.465Z'
+}
+{
+  service: 'text-to-sql-api',
+  error: '[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.\n' +
+    '* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 250000\n' +
+    'Please retry in 43.974910812s. [{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerMinute-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.5-flash"},"quotaValue":"250000"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"43s"}]',
+  level: 'warn',
+  message: 'Analysis generation attempt 1 failed',
+  timestamp: '2025-09-29T11:03:12.092Z'
+}
+{
+  service: 'text-to-sql-api',
+  error: '[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.\n' +
+    '* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 250000\n' +
+    'Please retry in 36.614169682s. [{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerMinute-FreeTier","quotaDimensions":{"model":"gemini-2.5-flash","location":"global"},"quotaValue":"250000"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"36s"}]',
+  level: 'warn',
+  message: 'Analysis generation attempt 2 failed',
+  timestamp: '2025-09-29T11:03:19.604Z'
+}
+{
+  service: 'text-to-sql-api',
+  error: '[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.\n' +
+    '* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 250000\n' +
+    'Please retry in 28.916629501s. [{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerMinute-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.5-flash"},"quotaValue":"250000"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"28s"}]',
+  level: 'warn',
+  message: 'Analysis generation attempt 3 failed',
+  timestamp: '2025-09-29T11:03:27.269Z'
+}
+{
+  service: 'text-to-sql-api',
+  lastError: GoogleGenerativeAIError: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.
+  * Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 250000
+  Please retry in 28.916629501s. [{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerMinute-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.5-flash"},"quotaValue":"250000"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"28s"}]
+      at _makeRequestInternal (C:\Users\purushottam kumar\Desktop\probus_with_rag\node_modules\@google\generative-ai\dist\index.js:303:19)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async generateContent (C:\Users\purushottam kumar\Desktop\probus_with_rag\node_modules\@google\generative-ai\dist\index.js:692:22)
+      at async Object.generateAnalysis (C:\Users\purushottam kumar\Desktop\probus_with_rag\src\services\geminiService.js:67:28)
+      at async C:\Users\purushottam kumar\Desktop\probus_with_rag\src\routes\ask.js:49:29,
+  level: 'error',
+  message: 'Analysis failed after all retries',
+  timestamp: '2025-09-29T11:03:27.270Z'
+}
+{
+  message: 'History for session d7ab485e-61a6-4adf-81e5-cd39f1583908 updated.',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:03:27.275Z'
+}
+{
+  service: 'text-to-sql-api',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  contentType: 'application/json',
+  level: 'info',
+  message: 'POST /ask',
+  timestamp: '2025-09-29T11:03:45.293Z'
+}
+{
+  service: 'text-to-sql-api',
+  sessionId: 'd7ab485e-61a6-4adf-81e5-cd39f1583908',
+  level: 'info',
+  message: 'Rewritten question for RAG: "Please provide only the phone numbers for the employees."',
+  timestamp: '2025-09-29T11:03:51.507Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'Please provide only the phone numbers for the employees.',
+  questionLength: 56,
+  level: 'debug',
+  message: 'Starting schema retrieval',
+  timestamp: '2025-09-29T11:03:51.507Z'
+}
+{
+  message: 'Generating embedding for question',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:03:51.508Z'
+}
+{
+  message: 'Querying ChromaDB for similar schemas',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:03:51.998Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'Please provide only the phone numbers for the empl',
+  retrievedTables: [ 'mas_employees', 'Acccontact', 'mas_dept' ],
+  tableCount: 3,
+  similarities: [ 0.91145027, 0.9309637, 1.0988721 ],
+  level: 'info',
+  message: 'Retrieved relevant schemas',
+  timestamp: '2025-09-29T11:03:52.028Z'
+}
+{
+  service: 'text-to-sql-api',
+  contextLength: 5538,
+  tableCount: 3,
+  level: 'debug',
+  message: 'Schema context created',
+  timestamp: '2025-09-29T11:03:52.029Z'
+}
+{
+  message: 'Generating SQL - Attempt 1',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:03:52.030Z'
+}
+{
+  message: 'SQL generated successfully in 1959ms',
+  level: 'info',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:03:53.990Z'
+}
+{
+  service: 'text-to-sql-api',
+  query: 'SELECT MobileNo, AlternateMobNo FROM dbo.mas_employees;',
+  queryLength: 55,
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-29T11:03:53.991Z'
+}
+{
+  service: 'text-to-sql-api',
+  executionTime: 1158,
+  rowCount: 4267,
+  queryLength: 55,
+  level: 'info',
+  message: 'SQL query executed successfully',
+  timestamp: '2025-09-29T11:03:55.148Z'
+}
+{
+  service: 'text-to-sql-api',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  contentType: 'application/json',
+  level: 'info',
+  message: 'POST /ask',
+  timestamp: '2025-09-29T11:06:17.186Z'
+}
+{
+  message: 'New session started: 0b539ea4-3249-4dde-9dc6-872e815426b0',
+  level: 'info',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:06:17.187Z'
+}
+{
+  service: 'text-to-sql-api',
+  sessionId: '0b539ea4-3249-4dde-9dc6-872e815426b0',
+  level: 'info',
+  message: 'Rewritten question for RAG: "give me the employee details"',
+  timestamp: '2025-09-29T11:06:17.188Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me the employee details',
+  questionLength: 28,
+  level: 'debug',
+  message: 'Starting schema retrieval',
+  timestamp: '2025-09-29T11:06:17.188Z'
+}
+{
+  message: 'Generating embedding for question',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:06:17.189Z'
+}
+{
+  message: 'Querying ChromaDB for similar schemas',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:06:17.788Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me the employee details',
+  retrievedTables: [ 'mas_employees', 'Acccontact', 'mas_desg' ],
+  tableCount: 3,
+  similarities: [ 0.70005625, 0.9335928, 0.9678518 ],
+  level: 'info',
+  message: 'Retrieved relevant schemas',
+  timestamp: '2025-09-29T11:06:17.817Z'
+}
+{
+  service: 'text-to-sql-api',
+  contextLength: 5735,
+  tableCount: 3,
+  level: 'debug',
+  message: 'Schema context created',
+  timestamp: '2025-09-29T11:06:17.818Z'
+}
+{
+  message: 'Generating SQL - Attempt 1',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:06:17.818Z'
+}
+{
+  message: 'SQL generated successfully in 2522ms',
+  level: 'info',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:06:20.340Z'
+}
+{
+  service: 'text-to-sql-api',
+  query: 'SELECT * FROM dbo.mas_employees;',
+  queryLength: 32,
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-29T11:06:20.342Z'
+}
+{
+  service: 'text-to-sql-api',
+  executionTime: 3616,
+  rowCount: 4267,
+  queryLength: 32,
+  level: 'info',
+  message: 'SQL query executed successfully',
+  timestamp: '2025-09-29T11:06:23.957Z'
+}
+{
+  service: 'text-to-sql-api',
+  error: '[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.\n' +
+    '* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 250000\n' +
+    'Please retry in 14.967425309s. [{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerMinute-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.5-flash"},"quotaValue":"250000"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"14s"}]',
+  level: 'warn',
+  message: 'Analysis generation attempt 1 failed',
+  timestamp: '2025-09-29T11:06:41.004Z'
+}
+{
+  message: 'Received SIGINT. Starting graceful shutdown...',
+  level: 'info',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:06:47.151Z'
+}
+{
+  service: 'text-to-sql-api',
+  port: '3000',
+  environment: 'development',
+  nodeVersion: 'v23.1.0',
+  level: 'info',
+  message: '🚀 Server started successfully',
+  timestamp: '2025-09-29T11:07:01.032Z'
+}
+{
+  service: 'text-to-sql-api',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  contentType: 'application/json',
+  level: 'info',
+  message: 'POST /ask',
+  timestamp: '2025-09-29T11:07:13.063Z'
+}
+{
+  message: 'New session started: 11c2b0e9-c695-40a3-bada-3daeec14a30b',
+  level: 'info',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:07:13.066Z'
+}
+{
+  service: 'text-to-sql-api',
+  sessionId: '11c2b0e9-c695-40a3-bada-3daeec14a30b',
+  level: 'info',
+  message: 'Rewritten question for RAG: "give me the employee details"',
+  timestamp: '2025-09-29T11:07:13.067Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me the employee details',
+  questionLength: 28,
+  level: 'debug',
+  message: 'Starting schema retrieval',
+  timestamp: '2025-09-29T11:07:13.068Z'
+}
+{
+  service: 'text-to-sql-api',
+  collectionName: 'sql_schemas',
+  level: 'info',
+  message: '✅ Connected to ChromaDB successfully',
+  timestamp: '2025-09-29T11:07:13.159Z'
+}
+{
+  message: 'Generating embedding for question',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:07:13.159Z'
+}
+{
+  message: 'Querying ChromaDB for similar schemas',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:07:13.883Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me the employee details',
+  retrievedTables: [ 'mas_employees', 'Acccontact', 'mas_desg' ],
+  tableCount: 3,
+  similarities: [ 0.70005625, 0.9335928, 0.9678518 ],
+  level: 'info',
+  message: 'Retrieved relevant schemas',
+  timestamp: '2025-09-29T11:07:13.904Z'
+}
+{
+  service: 'text-to-sql-api',
+  contextLength: 5735,
+  tableCount: 3,
+  level: 'debug',
+  message: 'Schema context created',
+  timestamp: '2025-09-29T11:07:13.905Z'
+}
+{
+  message: 'Generating SQL - Attempt 1',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:07:13.907Z'
+}
+{
+  message: 'SQL generated successfully in 2992ms',
+  level: 'info',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:07:16.899Z'
+}
+{
+  service: 'text-to-sql-api',
+  server: '115.124.123.77',
+  database: 'AI_DB',
+  level: 'info',
+  message: '✅ Connected to SQL Server successfully!',
+  timestamp: '2025-09-29T11:07:17.040Z'
+}
+{
+  service: 'text-to-sql-api',
+  query: 'SELECT\n' +
+    'dbo.mas_employees.Fid,\n' +
+    'dbo.mas_employees.Encrypted_Id,\n' +
+    'dbo.mas_employees.EmployeeName,\n' +
+    'dbo.mas_employees.EmployeeCategory,\n' +
+    'dbo.mas_employees.MobileNo,\n' +
+    'dbo.mas_employees.AlternateMobNo,\n' +
+    'dbo.mas_...',
+  queryLength: 945,
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-29T11:07:17.041Z'
+}
+{
+  service: 'text-to-sql-api',
+  executionTime: 2406,
+  rowCount: 4267,
+  queryLength: 945,
+  level: 'info',
+  message: 'SQL query executed successfully',
+  timestamp: '2025-09-29T11:07:19.306Z'
+}
+{
+  service: 'text-to-sql-api',
+  error: '[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.\n' +
+    '* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 250000\n' +
+    'Please retry in 29.461980978s. [{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerMinute-FreeTier","quotaDimensions":{"model":"gemini-2.5-flash","location":"global"},"quotaValue":"250000"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"29s"}]',
+  level: 'warn',
+  message: 'Analysis generation attempt 1 failed',
+  timestamp: '2025-09-29T11:07:26.585Z'
+}
+{
+  service: 'text-to-sql-api',
+  error: '[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.\n' +
+    '* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 250000\n' +
+    'Please retry in 20.463518606s. [{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerMinute-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.5-flash"},"quotaValue":"250000"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"20s"}]',
+  level: 'warn',
+  message: 'Analysis generation attempt 2 failed',
+  timestamp: '2025-09-29T11:07:35.752Z'
+}
+{
+  service: 'text-to-sql-api',
+  error: '[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.\n' +
+    '* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 250000\n' +
+    'Please retry in 13.193823744s. [{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerMinute-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.5-flash"},"quotaValue":"250000"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"13s"}]',
+  level: 'warn',
+  message: 'Analysis generation attempt 3 failed',
+  timestamp: '2025-09-29T11:07:42.843Z'
+}
+{
+  service: 'text-to-sql-api',
+  lastError: GoogleGenerativeAIError: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.
+  * Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 250000
+  Please retry in 13.193823744s. [{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerMinute-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.5-flash"},"quotaValue":"250000"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"13s"}]
+      at _makeRequestInternal (C:\Users\purushottam kumar\Desktop\probus_with_rag\node_modules\@google\generative-ai\dist\index.js:303:19)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async generateContent (C:\Users\purushottam kumar\Desktop\probus_with_rag\node_modules\@google\generative-ai\dist\index.js:692:22)
+      at async Object.generateAnalysis (C:\Users\purushottam kumar\Desktop\probus_with_rag\src\services\geminiService.js:67:28)
+      at async C:\Users\purushottam kumar\Desktop\probus_with_rag\src\routes\ask.js:49:29,
+  level: 'error',
+  message: 'Analysis failed after all retries',
+  timestamp: '2025-09-29T11:07:42.844Z'
+}
+{
+  message: 'History for session 11c2b0e9-c695-40a3-bada-3daeec14a30b updated.',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:07:42.847Z'
+}
+{
+  service: 'text-to-sql-api',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  contentType: 'application/json',
+  level: 'info',
+  message: 'POST /ask',
+  timestamp: '2025-09-29T11:08:01.582Z'
+}
+{
+  service: 'text-to-sql-api',
+  sessionId: '11c2b0e9-c695-40a3-bada-3daeec14a30b',
+  level: 'info',
+  message: 'Rewritten question for RAG: "Please provide the phone numbers for the employees."',
+  timestamp: '2025-09-29T11:08:10.369Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'Please provide the phone numbers for the employees.',
+  questionLength: 51,
+  level: 'debug',
+  message: 'Starting schema retrieval',
+  timestamp: '2025-09-29T11:08:10.370Z'
+}
+{
+  message: 'Generating embedding for question',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:08:10.371Z'
+}
+{
+  message: 'Querying ChromaDB for similar schemas',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:08:10.837Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'Please provide the phone numbers for the employees',
+  retrievedTables: [ 'mas_employees', 'Acccontact', 'mas_dept' ],
+  tableCount: 3,
+  similarities: [ 1.0067858, 1.0264907, 1.1909328 ],
+  level: 'info',
+  message: 'Retrieved relevant schemas',
+  timestamp: '2025-09-29T11:08:10.865Z'
+}
+{
+  service: 'text-to-sql-api',
+  contextLength: 5538,
+  tableCount: 3,
+  level: 'debug',
+  message: 'Schema context created',
+  timestamp: '2025-09-29T11:08:10.866Z'
+}
+{
+  message: 'Generating SQL - Attempt 1',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:08:10.866Z'
+}
+{
+  message: 'SQL generated successfully in 2740ms',
+  level: 'info',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:08:13.607Z'
+}
+{
+  service: 'text-to-sql-api',
+  query: 'SELECT MobileNo FROM dbo.mas_employees;',
+  queryLength: 39,
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-29T11:08:13.608Z'
+}
+{
+  service: 'text-to-sql-api',
+  executionTime: 115,
+  rowCount: 4267,
+  queryLength: 39,
+  level: 'info',
+  message: 'SQL query executed successfully',
+  timestamp: '2025-09-29T11:08:13.722Z'
+}
+{
+  service: 'text-to-sql-api',
+  port: '3000',
+  environment: 'development',
+  nodeVersion: 'v23.1.0',
+  level: 'info',
+  message: '🚀 Server started successfully',
+  timestamp: '2025-09-29T11:12:06.254Z'
+}
+{
+  service: 'text-to-sql-api',
+  ip: '::ffff:127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  contentType: 'application/json',
+  level: 'info',
+  message: 'POST /ask',
+  timestamp: '2025-09-29T11:12:06.290Z'
+}
+{
+  service: 'text-to-sql-api',
+  sessionId: '11c2b0e9-c695-40a3-bada-3daeec14a30b',
+  level: 'info',
+  message: 'Rewritten question for RAG: "give me their phone number"',
+  timestamp: '2025-09-29T11:12:06.293Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me their phone number',
+  questionLength: 26,
+  level: 'debug',
+  message: 'Starting schema retrieval',
+  timestamp: '2025-09-29T11:12:06.295Z'
+}
+{
+  service: 'text-to-sql-api',
+  collectionName: 'sql_schemas',
+  level: 'info',
+  message: '✅ Connected to ChromaDB successfully',
+  timestamp: '2025-09-29T11:12:06.371Z'
+}
+{
+  message: 'Generating embedding for question',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:12:06.372Z'
+}
+{
+  message: 'Querying ChromaDB for similar schemas',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:12:07.012Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me their phone number',
+  retrievedTables: [ 'Acccontact', 'mas_employees', 'Accsites' ],
+  tableCount: 3,
+  similarities: [ 1.0480976, 1.1588051, 1.2849168 ],
+  level: 'info',
+  message: 'Retrieved relevant schemas',
+  timestamp: '2025-09-29T11:12:07.023Z'
+}
+{
+  service: 'text-to-sql-api',
+  contextLength: 6349,
+  tableCount: 3,
+  level: 'debug',
+  message: 'Schema context created',
+  timestamp: '2025-09-29T11:12:07.024Z'
+}
+{
+  message: 'Generating SQL - Attempt 1',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:12:07.026Z'
+}
+{
+  service: 'text-to-sql-api',
+  error: 'This question cannot be answered using the available database schema.',
+  level: 'warn',
+  message: 'SQL generation attempt 1 failed',
+  timestamp: '2025-09-29T11:12:09.867Z'
+}
+{
+  message: 'Generating SQL - Attempt 2',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:12:10.883Z'
+}
+{
+  service: 'text-to-sql-api',
+  error: 'This question cannot be answered using the available database schema.',
+  level: 'warn',
+  message: 'SQL generation attempt 2 failed',
+  timestamp: '2025-09-29T11:12:15.178Z'
+}
+{
+  message: 'Generating SQL - Attempt 3',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:12:17.194Z'
+}
+{
+  service: 'text-to-sql-api',
+  error: 'This question cannot be answered using the available database schema.',
+  level: 'warn',
+  message: 'SQL generation attempt 3 failed',
+  timestamp: '2025-09-29T11:12:19.547Z'
+}
+{
+  service: 'text-to-sql-api',
+  error: 'Failed to generate SQL query after 3 attempts. Last error: This question cannot be answered using the available database schema.',
+  question: 'give me their phone number',
+  level: 'error',
+  message: 'Error in /ask route for session 11c2b0e9-c695-40a3-bada-3daeec14a30b',
+  timestamp: '2025-09-29T11:12:19.548Z'
+}
+{
+  service: 'text-to-sql-api',
+  port: '3000',
+  environment: 'development',
+  nodeVersion: 'v23.1.0',
+  level: 'info',
+  message: '🚀 Server started successfully',
+  timestamp: '2025-09-29T11:13:22.579Z'
+}
+{
+  message: 'Received SIGINT. Starting graceful shutdown...',
+  level: 'info',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:13:32.635Z'
+}
+{
+  service: 'text-to-sql-api',
+  port: '3000',
+  environment: 'development',
+  nodeVersion: 'v23.1.0',
+  level: 'info',
+  message: '🚀 Server started successfully',
+  timestamp: '2025-09-29T11:13:36.247Z'
+}
+{
+  service: 'text-to-sql-api',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  contentType: 'application/json',
+  level: 'info',
+  message: 'POST /ask',
+  timestamp: '2025-09-29T11:14:01.767Z'
+}
+{
+  service: 'text-to-sql-api',
+  sessionId: '11c2b0e9-c695-40a3-bada-3daeec14a30b',
+  level: 'info',
+  message: 'Rewritten question for RAG: "give me the employee details"',
+  timestamp: '2025-09-29T11:14:01.773Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me the employee details',
+  questionLength: 28,
+  level: 'debug',
+  message: 'Starting schema retrieval',
+  timestamp: '2025-09-29T11:14:01.776Z'
+}
+{
+  service: 'text-to-sql-api',
+  collectionName: 'sql_schemas',
+  level: 'info',
+  message: '✅ Connected to ChromaDB successfully',
+  timestamp: '2025-09-29T11:14:01.882Z'
+}
+{
+  message: 'Generating embedding for question',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:14:01.884Z'
+}
+{
+  message: 'Querying ChromaDB for similar schemas',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:14:03.041Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me the employee details',
+  retrievedTables: [ 'mas_employees', 'Acccontact', 'mas_desg' ],
+  tableCount: 3,
+  similarities: [ 0.70005625, 0.9335928, 0.9678518 ],
+  level: 'info',
+  message: 'Retrieved relevant schemas',
+  timestamp: '2025-09-29T11:14:03.054Z'
+}
+{
+  service: 'text-to-sql-api',
+  contextLength: 5735,
+  tableCount: 3,
+  level: 'debug',
+  message: 'Schema context created',
+  timestamp: '2025-09-29T11:14:03.055Z'
+}
+{
+  message: 'Generating SQL - Attempt 1',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:14:03.056Z'
+}
+{
+  message: 'SQL generated successfully in 3546ms',
+  level: 'info',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:14:06.603Z'
+}
+{
+  service: 'text-to-sql-api',
+  server: '115.124.123.77',
+  database: 'AI_DB',
+  level: 'info',
+  message: '✅ Connected to SQL Server successfully!',
+  timestamp: '2025-09-29T11:14:06.684Z'
+}
+{
+  service: 'text-to-sql-api',
+  query: 'SELECT\n' +
+    '    Fid,\n' +
+    '    Encrypted_Id,\n' +
+    '    EmployeeName,\n' +
+    '    EmployeeCategory,\n' +
+    '    MobileNo,\n' +
+    '    AlternateMobNo,\n' +
+    '    BloodGroup,\n' +
+    '    Gender,\n' +
+    '    EmailId,\n' +
+    '    JoiningDate,\n' +
+    '    BirthDate,\n' +
+    '    EmployeeId,\n' +
+    '   ...',
+  queryLength: 529,
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-29T11:14:06.685Z'
+}
+{
+  service: 'text-to-sql-api',
+  executionTime: 1183,
+  rowCount: 4267,
+  queryLength: 529,
+  level: 'info',
+  message: 'SQL query executed successfully',
+  timestamp: '2025-09-29T11:14:07.787Z'
+}
+{
+  message: 'Query results exceeded analysis limit. Truncating from 4267 to 50 rows.',
+  level: 'warn',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:14:07.788Z'
+}
+{
+  message: 'History for session 11c2b0e9-c695-40a3-bada-3daeec14a30b updated.',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:14:17.052Z'
+}
+{
+  service: 'text-to-sql-api',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  contentType: 'application/json',
+  level: 'info',
+  message: 'POST /ask',
+  timestamp: '2025-09-29T11:14:38.651Z'
+}
+{
+  service: 'text-to-sql-api',
+  sessionId: '11c2b0e9-c695-40a3-bada-3daeec14a30b',
+  level: 'info',
+  message: 'Rewritten question for RAG: "Please provide only the phone numbers for the employees."',
+  timestamp: '2025-09-29T11:14:46.275Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'Please provide only the phone numbers for the employees.',
+  questionLength: 56,
+  level: 'debug',
+  message: 'Starting schema retrieval',
+  timestamp: '2025-09-29T11:14:46.276Z'
+}
+{
+  message: 'Generating embedding for question',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:14:46.276Z'
+}
+{
+  message: 'Querying ChromaDB for similar schemas',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:14:46.749Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'Please provide only the phone numbers for the empl',
+  retrievedTables: [ 'mas_employees', 'Acccontact', 'mas_dept' ],
+  tableCount: 3,
+  similarities: [ 0.91145027, 0.9309637, 1.0988721 ],
+  level: 'info',
+  message: 'Retrieved relevant schemas',
+  timestamp: '2025-09-29T11:14:46.770Z'
+}
+{
+  service: 'text-to-sql-api',
+  contextLength: 5538,
+  tableCount: 3,
+  level: 'debug',
+  message: 'Schema context created',
+  timestamp: '2025-09-29T11:14:46.771Z'
+}
+{
+  message: 'Generating SQL - Attempt 1',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:14:46.772Z'
+}
+{
+  message: 'SQL generated successfully in 1321ms',
+  level: 'info',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:14:48.093Z'
+}
+{
+  service: 'text-to-sql-api',
+  query: 'SELECT\n    MobileNo\nFROM\n    dbo.mas_employees;',
+  queryLength: 47,
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-29T11:14:48.095Z'
+}
+{
+  service: 'text-to-sql-api',
+  executionTime: 130,
+  rowCount: 4267,
+  queryLength: 47,
+  level: 'info',
+  message: 'SQL query executed successfully',
+  timestamp: '2025-09-29T11:14:48.224Z'
+}
+{
+  message: 'Query results exceeded analysis limit. Truncating from 4267 to 50 rows.',
+  level: 'warn',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:14:48.225Z'
+}
+{
+  message: 'History for session 11c2b0e9-c695-40a3-bada-3daeec14a30b updated.',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:15:07.149Z'
+}
+{
+  service: 'text-to-sql-api',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  contentType: 'application/json',
+  level: 'info',
+  message: 'POST /ask',
+  timestamp: '2025-09-29T11:15:20.937Z'
+}
+{
+  service: 'text-to-sql-api',
+  sessionId: '11c2b0e9-c695-40a3-bada-3daeec14a30b',
+  level: 'info',
+  message: 'Rewritten question for RAG: "What are the details of the work sites or locations associated with the employee information?"',
+  timestamp: '2025-09-29T11:15:35.458Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'What are the details of the work sites or locations associated with the employee information?',
+  questionLength: 93,
+  level: 'debug',
+  message: 'Starting schema retrieval',
+  timestamp: '2025-09-29T11:15:35.458Z'
+}
+{
+  message: 'Generating embedding for question',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:15:35.459Z'
+}
+{
+  message: 'Querying ChromaDB for similar schemas',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:15:35.927Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'What are the details of the work sites or location',
+  retrievedTables: [ 'Accsites', 'Accsiteloct', 'mas_employees' ],
+  tableCount: 3,
+  similarities: [ 0.7765334, 0.8032229, 0.824069 ],
+  level: 'info',
+  message: 'Retrieved relevant schemas',
+  timestamp: '2025-09-29T11:15:35.945Z'
+}
+{
+  service: 'text-to-sql-api',
+  contextLength: 6242,
+  tableCount: 3,
+  level: 'debug',
+  message: 'Schema context created',
+  timestamp: '2025-09-29T11:15:35.946Z'
+}
+{
+  message: 'Generating SQL - Attempt 1',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:15:35.946Z'
+}
+{
+  service: 'text-to-sql-api',
+  error: 'This question cannot be answered using the available database schema.',
+  level: 'warn',
+  message: 'SQL generation attempt 1 failed',
+  timestamp: '2025-09-29T11:15:38.742Z'
+}
+{
+  message: 'Generating SQL - Attempt 2',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:15:39.747Z'
+}
+{
+  service: 'text-to-sql-api',
+  error: 'This question cannot be answered using the available database schema.',
+  level: 'warn',
+  message: 'SQL generation attempt 2 failed',
+  timestamp: '2025-09-29T11:15:43.430Z'
+}
+{
+  message: 'Generating SQL - Attempt 3',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:15:45.446Z'
+}
+{
+  service: 'text-to-sql-api',
+  error: 'This question cannot be answered using the available database schema.',
+  level: 'warn',
+  message: 'SQL generation attempt 3 failed',
+  timestamp: '2025-09-29T11:15:48.874Z'
+}
+{
+  service: 'text-to-sql-api',
+  error: 'Failed to generate SQL query after 3 attempts. Last error: This question cannot be answered using the available database schema.',
+  question: 'give the site details',
+  level: 'error',
+  message: 'Error in /ask route for session 11c2b0e9-c695-40a3-bada-3daeec14a30b',
+  timestamp: '2025-09-29T11:15:48.875Z'
+}
+{
+  service: 'text-to-sql-api',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  contentType: 'application/json',
+  level: 'info',
+  message: 'POST /ask',
+  timestamp: '2025-09-29T11:16:04.478Z'
+}
+{
+  service: 'text-to-sql-api',
+  sessionId: '11c2b0e9-c695-40a3-bada-3daeec14a30b',
+  level: 'info',
+  message: 'Rewritten question for RAG: "Please provide a list of permanent and current employee addresses that are located in Pune."',
+  timestamp: '2025-09-29T11:16:16.482Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'Please provide a list of permanent and current employee addresses that are located in Pune.',
+  questionLength: 91,
+  level: 'debug',
+  message: 'Starting schema retrieval',
+  timestamp: '2025-09-29T11:16:16.482Z'
+}
+{
+  message: 'Generating embedding for question',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:16:16.483Z'
+}
+{
+  message: 'Querying ChromaDB for similar schemas',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:16:16.955Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'Please provide a list of permanent and current emp',
+  retrievedTables: [ 'mas_employees', 'Acclocation', 'Accsites' ],
+  tableCount: 3,
+  similarities: [ 0.8604909, 0.89067185, 0.96848565 ],
+  level: 'info',
+  message: 'Retrieved relevant schemas',
+  timestamp: '2025-09-29T11:16:16.971Z'
+}
+{
+  service: 'text-to-sql-api',
+  contextLength: 6332,
+  tableCount: 3,
+  level: 'debug',
+  message: 'Schema context created',
+  timestamp: '2025-09-29T11:16:16.971Z'
+}
+{
+  message: 'Generating SQL - Attempt 1',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:16:16.972Z'
+}
+{
+  service: 'text-to-sql-api',
+  error: 'This question cannot be answered using the available database schema.',
+  level: 'warn',
+  message: 'SQL generation attempt 1 failed',
+  timestamp: '2025-09-29T11:16:19.079Z'
+}
+{
+  message: 'Generating SQL - Attempt 2',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:16:20.081Z'
+}
+{
+  service: 'text-to-sql-api',
+  error: 'This question cannot be answered using the available database schema.',
+  level: 'warn',
+  message: 'SQL generation attempt 2 failed',
+  timestamp: '2025-09-29T11:16:23.608Z'
+}
+{
+  message: 'Generating SQL - Attempt 3',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:16:25.621Z'
+}
+{
+  message: 'SQL generated successfully in 20580ms',
+  level: 'info',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:16:37.552Z'
+}
+{
+  service: 'text-to-sql-api',
+  query: 'SELECT\n' +
+    '    EmployeeName,\n' +
+    '    PermanentAddress,\n' +
+    '    CurrentAddress\n' +
+    'FROM\n' +
+    '    dbo.mas_employees\n' +
+    'WHERE\n' +
+    "    PermanentAddress LIKE '%Pune%' OR CurrentAddress LIKE '%Pune%';",
+  queryLength: 166,
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-29T11:16:37.553Z'
+}
+{
+  service: 'text-to-sql-api',
+  executionTime: 234,
+  rowCount: 178,
+  queryLength: 166,
+  level: 'info',
+  message: 'SQL query executed successfully',
+  timestamp: '2025-09-29T11:16:37.787Z'
+}
+{
+  message: 'Query results exceeded analysis limit. Truncating from 178 to 50 rows.',
+  level: 'warn',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:16:37.788Z'
+}
+{
+  message: 'History for session 11c2b0e9-c695-40a3-bada-3daeec14a30b updated.',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:18:52.362Z'
+}
+{
+  service: 'text-to-sql-api',
+  port: '3000',
+  environment: 'development',
+  nodeVersion: 'v23.1.0',
+  level: 'info',
+  message: '🚀 Server started successfully',
+  timestamp: '2025-09-29T11:22:45.133Z'
+}
+{
+  service: 'text-to-sql-api',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  contentType: 'application/json',
+  level: 'info',
+  message: 'POST /ask',
+  timestamp: '2025-09-29T11:23:12.357Z'
+}
+{
+  service: 'text-to-sql-api',
+  sessionId: '11c2b0e9-c695-40a3-bada-3daeec14a30b',
+  level: 'info',
+  message: 'Rewritten question for RAG: "give me the site location only"',
+  timestamp: '2025-09-29T11:23:12.360Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me the site location only',
+  questionLength: 30,
+  level: 'debug',
+  message: 'Starting schema retrieval',
+  timestamp: '2025-09-29T11:23:12.362Z'
+}
+{
+  service: 'text-to-sql-api',
+  collectionName: 'sql_schemas',
+  level: 'info',
+  message: '✅ Connected to ChromaDB successfully',
+  timestamp: '2025-09-29T11:23:12.523Z'
+}
+{
+  message: 'Generating embedding for question',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:23:12.524Z'
+}
+{
+  message: 'Querying ChromaDB for similar schemas',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:23:13.085Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me the site location only',
+  retrievedTables: [ 'Accsites', 'Accsiteloct', 'Acclocation' ],
+  tableCount: 3,
+  similarities: [ 0.84852093, 0.8711898, 1.0483779 ],
+  level: 'info',
+  message: 'Retrieved relevant schemas',
+  timestamp: '2025-09-29T11:23:13.101Z'
+}
+{
+  service: 'text-to-sql-api',
+  contextLength: 4386,
+  tableCount: 3,
+  level: 'debug',
+  message: 'Schema context created',
+  timestamp: '2025-09-29T11:23:13.102Z'
+}
+{
+  message: 'Generating SQL - Attempt 1',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:23:13.105Z'
+}
+{
+  message: 'SQL generated successfully in 2394ms',
+  level: 'info',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:23:15.498Z'
+}
+{
+  service: 'text-to-sql-api',
+  server: '115.124.123.77',
+  database: 'AI_DB',
+  level: 'info',
+  message: '✅ Connected to SQL Server successfully!',
+  timestamp: '2025-09-29T11:23:15.563Z'
+}
+{
+  service: 'text-to-sql-api',
+  query: 'SELECT\n' +
+    '    ACCSITES_Fid,\n' +
+    '    LocationName,\n' +
+    '    Address,\n' +
+    '    GPSLattitude,\n' +
+    '    GPSLongitude\n' +
+    'FROM\n' +
+    '    dbo.Accsiteloct;',
+  queryLength: 116,
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-29T11:23:15.564Z'
+}
+{
+  service: 'text-to-sql-api',
+  executionTime: 560,
+  rowCount: 726,
+  queryLength: 116,
+  level: 'info',
+  message: 'SQL query executed successfully',
+  timestamp: '2025-09-29T11:23:16.059Z'
+}
+{
+  message: 'Analysis optimized: Processing 50 of 726 rows',
+  level: 'info',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:23:16.061Z'
+}
+{
+  message: 'History for session 11c2b0e9-c695-40a3-bada-3daeec14a30b updated.',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:23:19.042Z'
+}
+{
+  service: 'text-to-sql-api',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  contentType: 'application/json',
+  level: 'info',
+  message: 'POST /ask',
+  timestamp: '2025-09-29T11:23:42.077Z'
+}
+{
+  service: 'text-to-sql-api',
+  sessionId: '11c2b0e9-c695-40a3-bada-3daeec14a30b',
+  level: 'info',
+  message: 'Rewritten question for RAG: "Please provide the employees and their corresponding departments."',
+  timestamp: '2025-09-29T11:23:45.489Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'Please provide the employees and their corresponding departments.',
+  questionLength: 65,
+  level: 'debug',
+  message: 'Starting schema retrieval',
+  timestamp: '2025-09-29T11:23:45.489Z'
+}
+{
+  message: 'Generating embedding for question',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:23:45.490Z'
+}
+{
+  message: 'Querying ChromaDB for similar schemas',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:23:45.970Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'Please provide the employees and their correspondi',
+  retrievedTables: [ 'mas_employees', 'mas_dept', 'mas_desg' ],
+  tableCount: 3,
+  similarities: [ 0.892859, 0.9305382, 1.0541742 ],
+  level: 'info',
+  message: 'Retrieved relevant schemas',
+  timestamp: '2025-09-29T11:23:46.001Z'
+}
+{
+  service: 'text-to-sql-api',
+  contextLength: 5535,
+  tableCount: 3,
+  level: 'debug',
+  message: 'Schema context created',
+  timestamp: '2025-09-29T11:23:46.002Z'
+}
+{
+  message: 'Generating SQL - Attempt 1',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:23:46.003Z'
+}
+{
+  message: 'SQL generated successfully in 2231ms',
+  level: 'info',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:23:48.234Z'
+}
+{
+  service: 'text-to-sql-api',
+  query: 'SELECT\n' +
+    '    e.EmployeeName,\n' +
+    '    d.Department\n' +
+    'FROM\n' +
+    '    dbo.mas_employees AS e\n' +
+    'JOIN\n' +
+    '    dbo.mas_dept AS d\n' +
+    'ON\n' +
+    '    e.MAS_DEPT = d.Fid;',
+  queryLength: 129,
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-29T11:23:48.235Z'
+}
+{
+  service: 'text-to-sql-api',
+  executionTime: 192,
+  rowCount: 4267,
+  queryLength: 129,
+  level: 'info',
+  message: 'SQL query executed successfully',
+  timestamp: '2025-09-29T11:23:48.427Z'
+}
+{
+  message: 'Analysis optimized: Processing 50 of 4267 rows',
+  level: 'info',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:23:48.428Z'
+}
+{
+  message: 'History for session 11c2b0e9-c695-40a3-bada-3daeec14a30b updated.',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:24:00.245Z'
+}
+{
+  service: 'text-to-sql-api',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  contentType: 'application/json',
+  level: 'info',
+  message: 'POST /ask',
+  timestamp: '2025-09-29T11:26:03.658Z'
+}
+{
+  service: 'text-to-sql-api',
+  sessionId: '11c2b0e9-c695-40a3-bada-3daeec14a30b',
+  level: 'info',
+  message: 'Rewritten question for RAG: "Please list all site locations that are located in Pune."',
+  timestamp: '2025-09-29T11:26:07.335Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'Please list all site locations that are located in Pune.',
+  questionLength: 56,
+  level: 'debug',
+  message: 'Starting schema retrieval',
+  timestamp: '2025-09-29T11:26:07.336Z'
+}
+{
+  message: 'Generating embedding for question',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:26:07.336Z'
+}
+{
+  message: 'Querying ChromaDB for similar schemas',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:26:07.903Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'Please list all site locations that are located in',
+  retrievedTables: [ 'Accsites', 'Acclocation', 'Accsiteloct' ],
+  tableCount: 3,
+  similarities: [ 0.8460213, 0.99039763, 1.009443 ],
+  level: 'info',
+  message: 'Retrieved relevant schemas',
+  timestamp: '2025-09-29T11:26:07.951Z'
+}
+{
+  service: 'text-to-sql-api',
+  contextLength: 4386,
+  tableCount: 3,
+  level: 'debug',
+  message: 'Schema context created',
+  timestamp: '2025-09-29T11:26:07.952Z'
+}
+{
+  message: 'Generating SQL - Attempt 1',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:26:07.952Z'
+}
+{
+  message: 'SQL generated successfully in 2770ms',
+  level: 'info',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:26:10.722Z'
+}
+{
+  service: 'text-to-sql-api',
+  query: "SELECT\n    LocationName\nFROM\n    dbo.Acclocation\nWHERE\n    City = 'Pune';",
+  queryLength: 73,
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-29T11:26:10.723Z'
+}
+{
+  service: 'text-to-sql-api',
+  executionTime: 1026,
+  rowCount: 25,
+  queryLength: 73,
+  level: 'info',
+  message: 'SQL query executed successfully',
+  timestamp: '2025-09-29T11:26:11.749Z'
+}
+{
+  message: 'History for session 11c2b0e9-c695-40a3-bada-3daeec14a30b updated.',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:26:15.825Z'
+}
+{
+  message: 'Received SIGINT. Starting graceful shutdown...',
+  level: 'info',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:26:48.035Z'
+}
+{
+  service: 'text-to-sql-api',
+  port: '3000',
+  environment: 'development',
+  nodeVersion: 'v23.1.0',
+  level: 'info',
+  message: '🚀 Server started successfully',
+  timestamp: '2025-09-29T11:26:51.088Z'
+}
+{
+  service: 'text-to-sql-api',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  contentType: 'application/json',
+  level: 'info',
+  message: 'POST /ask',
+  timestamp: '2025-09-29T11:27:25.795Z'
+}
+{
+  service: 'text-to-sql-api',
+  sessionId: '11c2b0e9-c695-40a3-bada-3daeec14a30b',
+  level: 'info',
+  message: 'Rewritten question for RAG: "give te mumbai location site"',
+  timestamp: '2025-09-29T11:27:25.798Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give te mumbai location site',
+  questionLength: 28,
+  level: 'debug',
+  message: 'Starting schema retrieval',
+  timestamp: '2025-09-29T11:27:25.800Z'
+}
+{
+  service: 'text-to-sql-api',
+  collectionName: 'sql_schemas',
+  level: 'info',
+  message: '✅ Connected to ChromaDB successfully',
+  timestamp: '2025-09-29T11:27:25.956Z'
+}
+{
+  message: 'Generating embedding for question',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:27:25.959Z'
+}
+{
+  message: 'Querying ChromaDB for similar schemas',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:27:26.615Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give te mumbai location site',
+  retrievedTables: [ 'Acclocation', 'Accsites', 'Accsiteloct' ],
+  tableCount: 3,
+  similarities: [ 0.9715965, 1.0036627, 1.1127084 ],
+  level: 'info',
+  message: 'Retrieved relevant schemas',
+  timestamp: '2025-09-29T11:27:26.636Z'
+}
+{
+  service: 'text-to-sql-api',
+  contextLength: 4386,
+  tableCount: 3,
+  level: 'debug',
+  message: 'Schema context created',
+  timestamp: '2025-09-29T11:27:26.637Z'
+}
+{
+  message: 'Generating SQL - Attempt 1',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:27:26.640Z'
+}
+{
+  message: 'SQL generated successfully in 13941ms',
+  level: 'info',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:27:40.580Z'
+}
+{
+  service: 'text-to-sql-api',
+  server: '115.124.123.77',
+  database: 'AI_DB',
+  level: 'info',
+  message: '✅ Connected to SQL Server successfully!',
+  timestamp: '2025-09-29T11:27:40.846Z'
+}
+{
+  service: 'text-to-sql-api',
+  query: 'SELECT\n' +
+    '    dbo.Acclocation.LocationName,\n' +
+    '    dbo.Acclocation.Area,\n' +
+    '    dbo.Acclocation.Address,\n' +
+    '    dbo.Acclocation.Pincode,\n' +
+    '    dbo.Acclocation.City\n' +
+    'FROM\n' +
+    '    dbo.Acclocation\n' +
+    'WHERE\n' +
+    '    dbo.Acclocation...',
+  queryLength: 253,
+  level: 'debug',
+  message: 'Executing SQL query',
+  timestamp: '2025-09-29T11:27:40.848Z'
+}
+{
+  service: 'text-to-sql-api',
+  executionTime: 632,
+  rowCount: 53,
+  queryLength: 253,
+  level: 'info',
+  message: 'SQL query executed successfully',
+  timestamp: '2025-09-29T11:27:41.213Z'
+}
+{
+  message: 'Analysis optimized: Processing 50 of 53 rows',
+  level: 'info',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:27:41.214Z'
+}
+{
+  message: 'History for session 11c2b0e9-c695-40a3-bada-3daeec14a30b updated.',
+  level: 'debug',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:27:50.972Z'
+}
+{
+  message: 'Received SIGINT. Starting graceful shutdown...',
+  level: 'info',
+  service: 'text-to-sql-api',
+  timestamp: '2025-09-29T11:29:50.105Z'
+}

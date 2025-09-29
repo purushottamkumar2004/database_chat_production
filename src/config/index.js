@@ -24,9 +24,10 @@ const config = {
     },
     gemini: {
         apiKey: process.env.GEMINI_API_KEY,
-        sqlModel: process.env.GEMINI_SQL_MODEL || 'gemini-1.5-flash',
+        // UPDATED: Both models now default to gemini-2.5-flash
+        sqlModel: process.env.GEMINI_SQL_MODEL || 'gemini-2.5-flash',
         embeddingModel: process.env.GEMINI_EMBEDDING_MODEL || 'text-embedding-004',
-        analysisModel: process.env.GEMINI_ANALYSIS_MODEL || 'gemini-1.5-flash',
+        analysisModel: process.env.GEMINI_ANALYSIS_MODEL || 'gemini-2.5-flash',
         maxRetries: parseInt(process.env.GEMINI_MAX_RETRIES) || 3,
         retryDelay: parseInt(process.env.GEMINI_RETRY_DELAY) || 1000,
     },

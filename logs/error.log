@@ -71,3 +71,113 @@
   message: 'Error processing question',
   timestamp: '2025-09-22T10:56:52.738Z'
 }
+{
+  service: 'text-to-sql-api',
+  error: '[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/text-embedding-004:embedContent: [400 Bad Request] API key not valid. Please pass a valid API key. [{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"API_KEY_INVALID","domain":"googleapis.com","metadata":{"service":"generativelanguage.googleapis.com"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"API key not valid. Please pass a valid API key."}]',
+  question: 'give me employee details',
+  isConnected: true,
+  collectionExists: true,
+  level: 'error',
+  message: 'Error in RAG schema retrieval',
+  timestamp: '2025-09-29T08:30:16.664Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mg4vbwqtbu1rjlm151q',
+  error: 'Failed to generate embedding for the question. Please check your Gemini API configuration.',
+  responseTime: 725,
+  question: 'give me employee details',
+  level: 'error',
+  message: 'Error processing question',
+  timestamp: '2025-09-29T08:30:16.666Z'
+}
+{
+  service: 'text-to-sql-api',
+  error: '[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/text-embedding-004:embedContent: [400 Bad Request] API key not valid. Please pass a valid API key. [{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"API_KEY_INVALID","domain":"googleapis.com","metadata":{"service":"generativelanguage.googleapis.com"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"API key not valid. Please pass a valid API key."}]',
+  question: 'give me employee details',
+  isConnected: true,
+  collectionExists: true,
+  level: 'error',
+  message: 'Error in RAG schema retrieval',
+  timestamp: '2025-09-29T08:31:49.448Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mg4vdwlaw5ioqgz6s8',
+  error: 'Failed to generate embedding for the question. Please check your Gemini API configuration.',
+  responseTime: 395,
+  question: 'give me employee details',
+  level: 'error',
+  message: 'Error processing question',
+  timestamp: '2025-09-29T08:31:49.449Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me employee details',
+  finalError: '[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [404 Not Found] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.',
+  level: 'error',
+  message: 'SQL generation failed after 3 attempts',
+  timestamp: '2025-09-29T10:39:30.726Z'
+}
+{
+  service: 'text-to-sql-api',
+  requestId: 'mg4zy03qogtwkjuqmr',
+  error: 'Failed to generate SQL query after 3 attempts. Last error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [404 Not Found] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.',
+  responseTime: 5537,
+  question: 'give me employee details',
+  level: 'error',
+  message: 'Error processing question',
+  timestamp: '2025-09-29T10:39:30.727Z'
+}
+{
+  service: 'text-to-sql-api',
+  question: 'give me employee details',
+  finalError: '[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [404 Not Found] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.',
+  level: 'error',
+  message: 'Analysis generation failed after 3 attempts',
+  timestamp: '2025-09-29T10:51:34.302Z'
+}
+{
+  service: 'text-to-sql-api',
+  lastError: GoogleGenerativeAIError: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.
+  * Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 250000
+  Please retry in 28.916629501s. [{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerMinute-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.5-flash"},"quotaValue":"250000"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"28s"}]
+      at _makeRequestInternal (C:\Users\purushottam kumar\Desktop\probus_with_rag\node_modules\@google\generative-ai\dist\index.js:303:19)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async generateContent (C:\Users\purushottam kumar\Desktop\probus_with_rag\node_modules\@google\generative-ai\dist\index.js:692:22)
+      at async Object.generateAnalysis (C:\Users\purushottam kumar\Desktop\probus_with_rag\src\services\geminiService.js:67:28)
+      at async C:\Users\purushottam kumar\Desktop\probus_with_rag\src\routes\ask.js:49:29,
+  level: 'error',
+  message: 'Analysis failed after all retries',
+  timestamp: '2025-09-29T11:03:27.270Z'
+}
+{
+  service: 'text-to-sql-api',
+  lastError: GoogleGenerativeAIError: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.
+  * Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 250000
+  Please retry in 13.193823744s. [{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerMinute-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.5-flash"},"quotaValue":"250000"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"13s"}]
+      at _makeRequestInternal (C:\Users\purushottam kumar\Desktop\probus_with_rag\node_modules\@google\generative-ai\dist\index.js:303:19)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async generateContent (C:\Users\purushottam kumar\Desktop\probus_with_rag\node_modules\@google\generative-ai\dist\index.js:692:22)
+      at async Object.generateAnalysis (C:\Users\purushottam kumar\Desktop\probus_with_rag\src\services\geminiService.js:67:28)
+      at async C:\Users\purushottam kumar\Desktop\probus_with_rag\src\routes\ask.js:49:29,
+  level: 'error',
+  message: 'Analysis failed after all retries',
+  timestamp: '2025-09-29T11:07:42.844Z'
+}
+{
+  service: 'text-to-sql-api',
+  error: 'Failed to generate SQL query after 3 attempts. Last error: This question cannot be answered using the available database schema.',
+  question: 'give me their phone number',
+  level: 'error',
+  message: 'Error in /ask route for session 11c2b0e9-c695-40a3-bada-3daeec14a30b',
+  timestamp: '2025-09-29T11:12:19.548Z'
+}
+{
+  service: 'text-to-sql-api',
+  error: 'Failed to generate SQL query after 3 attempts. Last error: This question cannot be answered using the available database schema.',
+  question: 'give the site details',
+  level: 'error',
+  message: 'Error in /ask route for session 11c2b0e9-c695-40a3-bada-3daeec14a30b',
+  timestamp: '2025-09-29T11:15:48.875Z'
+}

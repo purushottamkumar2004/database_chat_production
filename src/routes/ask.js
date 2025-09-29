@@ -1,5 +1,7 @@
+// src/routes/ask.js
 const express = require('express');
 const NodeCache = require('node-cache');
+const { v4: uuidv4 } = require('uuid'); // Import uuid for session IDs
 const config = require('../config');
 const dbService = require('../services/dbService');
 const geminiService = require('../services/geminiService');
@@ -9,145 +11,73 @@ const logger = require('../utils/logger');
 
 const router = express.Router();
 
-// Initialize cache with enhanced configuration
-const cache = new NodeCache({ 
-    stdTTL: config.cache.ttl,
-    maxKeys: config.cache.maxKeys,
-    checkperiod: config.cache.checkPeriod,
-    useClones: false
-});
-
-// Cache event handlers
-cache.on('set', (key, value) => {
-    logger.debug(`Cache SET: ${key}`);
-});
-
-cache.on('expired', (key, value) => {
-    logger.debug(`Cache EXPIRED: ${key}`);
+// This cache will now be used to store session histories
+const sessionCache = new NodeCache({ 
+    stdTTL: (config.conversation?.sessionTimeoutMinutes || 30) * 60, // Use TTL for session expiration
+    checkperiod: 120 
 });
 
 router.post('/', validateQuestion, async (req, res, next) => {
-    const { question } = req.body;
+    // Now expecting `question` and an optional `sessionId`
+    let { question, sessionId } = req.body;
     const startTime = Date.now();
-    const requestId = Date.now().toString(36) + Math.random().toString(36).substr(2);
-
-    logger.info(`Processing question`, {
-        requestId,
-        question: question.substring(0, 100) + (question.length > 100 ? '...' : ''),
-        ip: req.ip
-    });
 
     try {
-        // Check cache first
-        const cacheKey = Buffer.from(question.toLowerCase().trim()).toString('base64');
-        const cachedResult = cache.get(cacheKey);
-        
-        if (cachedResult) {
-            const responseTime = Date.now() - startTime;
-            logger.info(`Cache hit`, { requestId, responseTime });
-            
-            return res.json({
-                ...cachedResult,
-                cached: true,
-                requestId,
-                responseTime
-            });
+        // 1. MANAGE SESSION & RETRIEVE CHAT HISTORY
+        if (!sessionId) {
+            sessionId = uuidv4();
+            logger.info(`New session started: ${sessionId}`);
         }
+        const historyKey = `history_${sessionId}`;
+        const chatHistory = sessionCache.get(historyKey) || [];
 
-        logger.debug(`Cache miss, processing new question`, { requestId });
+        // 2. CREATE STANDALONE QUESTION (THE "MEMORY" STEP)
+        const standaloneQuestion = await geminiService.createStandaloneQuestion(question, chatHistory);
+        logger.info(`Rewritten question for RAG: "${standaloneQuestion}"`, { sessionId });
 
-        // Step 1: RAG - Retrieve relevant schemas
-        logger.debug(`Starting RAG retrieval`, { requestId });
-        const schemaContext = await ragService.retrieveRelevantSchemas(question);
+        // 3. USE STANDALONE QUESTION IN RAG & SQL PIPELINE
+        const schemaContext = await ragService.retrieveRelevantSchemas(standaloneQuestion);
         
-        if (!schemaContext || schemaContext.trim().length === 0) {
+        if (!schemaContext || !schemaContext.trim()) {
             throw new Error("No relevant database schemas found for this question.");
         }
 
-        // Step 2: Generate SQL using the retrieved context
-        logger.debug(`Generating SQL query`, { requestId });
-        const sqlQuery = await geminiService.generateSql(question, schemaContext);
+        const sqlQuery = await geminiService.generateSql(standaloneQuestion, schemaContext);
+        const queryResults = await dbService.executeQuery(sqlQuery);
+        
+        // Use the standalone question for analysis to give the AI better context
+        const finalAnswer = await geminiService.generateAnalysis(standaloneQuestion, queryResults);
 
-        // Step 3: Execute the SQL query with timeout
-        logger.debug(`Executing SQL query`, { requestId });
-        const queryResults = await Promise.race([
-            dbService.executeQuery(sqlQuery),
-            new Promise((_, reject) => 
-                setTimeout(() => reject(new Error('Query execution timeout')), config.security.queryTimeoutMs)
-            )
-        ]);
-
-        // Check result size limit
-        if (queryResults.length > config.security.maxResultRows) {
-            logger.warn(`Query returned too many rows, truncating`, { 
-                requestId, 
-                originalCount: queryResults.length,
-                truncatedTo: config.security.maxResultRows
-            });
-            queryResults.splice(config.security.maxResultRows);
+        // 4. UPDATE AND SAVE HISTORY
+        // Add the original user question and the bot's final answer to the history
+        chatHistory.push({ role: 'user', content: question });
+        chatHistory.push({ role: 'bot', content: finalAnswer });
+        
+        // Trim history if it exceeds the max length
+        if (chatHistory.length > (config.conversation?.maxHistoryLength || 10) * 2) {
+            chatHistory.splice(0, 2); // Remove the oldest user/bot pair
         }
 
-        // Step 4: Generate natural language analysis
-        logger.debug(`Generating analysis`, { requestId });
-        const finalAnswer = await geminiService.generateAnalysis(question, queryResults);
+        sessionCache.set(historyKey, chatHistory);
+        logger.debug(`History for session ${sessionId} updated.`);
 
-        const responsePayload = {
-            answer: finalAnswer,
-            generatedSql: sqlQuery,
-            rawData: queryResults,
-            metadata: {
-                schemaTablesUsed: schemaContext.split('Table:').length - 1,
-                resultCount: queryResults.length,
-                executionTimeMs: Date.now() - startTime
-            },
-            cached: false,
-            requestId
-        };
-
-        // Cache successful results
-        cache.set(cacheKey, {
-            answer: finalAnswer,
-            generatedSql: sqlQuery,
-            rawData: queryResults,
-            metadata: responsePayload.metadata
-        });
-
-        const responseTime = Date.now() - startTime;
-        logger.info(`Question processed successfully`, {
-            requestId,
-            responseTime,
-            resultCount: queryResults.length
-        });
-
+        // 5. SEND RESPONSE
         res.json({
-            ...responsePayload,
-            responseTime
+            answer: finalAnswer,
+            generatedSql: sqlQuery,
+            rawData: queryResults,
+            sessionId: sessionId, // Always return the sessionId
+            responseTimeMs: Date.now() - startTime
         });
 
     } catch (error) {
-        const responseTime = Date.now() - startTime;
-        logger.error(`Error processing question`, {
-            requestId,
+        logger.error(`Error in /ask route for session ${sessionId}`, {
             error: error.message,
-            responseTime,
-            question: question.substring(0, 100) + (question.length > 100 ? '...' : '')
+            question,
         });
-
-        // Enhanced error details for debugging
-        error.requestId = requestId;
-        error.responseTime = responseTime;
+        error.sessionId = sessionId; // Pass sessionId for better error logging
         next(error);
     }
-});
-
-// Cache statistics endpoint (for monitoring)
-router.get('/cache/stats', (req, res) => {
-    const stats = cache.getStats();
-    res.json({
-        ...stats,
-        keys: cache.keys().length,
-        memoryUsage: process.memoryUsage()
-    });
 });
 
 module.exports = router;
